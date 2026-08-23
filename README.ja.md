@@ -44,11 +44,25 @@ XXD Panel 028 は、Codex と互換 Agent のための画像生成 Skill です�
 - **紙上素材：** 細い墨線、平坦な色面、同色階、隣接色、軽い投影、薄い紙粒で構造を作ります。
 - **細い編集文字：** 短い題と小文字を余白縁、紙基台、水平軸、等距構造へ揃えます。
 
-## 作例 · 近日追加
+## 作例 · X より
 
-リポジトリには将来の作例用に [`assets/examples/`](assets/examples/) を用意しています。プロジェクト作者が確認した 028 の完成作品だけを追加し、それまでは別スタイルの投稿や画像を代用しません。
+> [小小東（@xiaoxiaodong01）](https://x.com/xiaoxiaodong01/status/2090447110168822128) · 2026-08-20<br>
+> GPT2 x 立体 x 模型 x 微缩 x 美学提示词 x VOL.028
 
-将来の作例は 028 の応用範囲を示すだけで、主体、空間装置、配色、文言、画角が生成参照や既定値になることはありません。
+<table>
+  <tr>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-01.jpg" alt="XXD Panel 028 作例 1"></a></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-02.jpg" alt="XXD Panel 028 作例 2"></a></td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-03.jpg" alt="XXD Panel 028 作例 3"></a></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-04.jpg" alt="XXD Panel 028 作例 4"></a></td>
+  </tr>
+</table>
+
+<p align="center"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128">元の投稿と完全なプロンプトを見る →</a></p>
+
+これらの作例は 028 の美的意図を示すものであり、作例の被写体、構図、配色、コピー、旧キャンバス比率が生成時の参照や現在の既定値になることはありません。
 
 ## 4つの出力を支えるひとつの紙上ミニチュアロジック
 

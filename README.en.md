@@ -44,11 +44,25 @@ If an unrelated photograph could replace the source without materially changing 
 - **Paper material:** fine ink, flat matte colour, same-hue steps, neighbouring hues, light projection, and subtle paper grain create structure.
 - **Thin editorial type:** one short title and sparse microtype align with the whitespace edge, paper base, horizontal axis, or isometric form.
 
-## Samples · Coming soon
+## Samples · From X
 
-The repository reserves [`assets/examples/`](assets/examples/) for future work. Only finished 028 artwork verified by the project owner will be added; no post or image from another style is used as a placeholder.
+> [Xiaoxiaodong (@xiaoxiaodong01)](https://x.com/xiaoxiaodong01/status/2090447110168822128) · 2026-08-20<br>
+> GPT2 x 立体 x 模型 x 微缩 x 美学提示词 x VOL.028
 
-Future samples will demonstrate 028's adaptability. Their subjects, spatial devices, palette, copy, and canvas ratios will never become generation references or defaults.
+<table>
+  <tr>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-01.jpg" alt="XXD Panel 028 sample 1"></a></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-02.jpg" alt="XXD Panel 028 sample 2"></a></td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-03.jpg" alt="XXD Panel 028 sample 3"></a></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-04.jpg" alt="XXD Panel 028 sample 4"></a></td>
+  </tr>
+</table>
+
+<p align="center"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128">View the original post and full prompt →</a></p>
+
+These samples demonstrate the 028 aesthetic motive. Their subjects, composition, palette, copy, and earlier canvas ratio never become generation references or current defaults.
 
 ## Four outputs, one paper-miniature logic
 

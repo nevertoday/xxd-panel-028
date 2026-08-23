@@ -46,11 +46,25 @@ XXD Panel 028 مهارة لتوليد الصور مخصّصة لـ Codex وال�
 - **مادة ورقية:** يصنع الحبر الدقيق واللون المسطح ودرجات اللون والظل الخفيف وحبيبات الورق البنية.
 - **حروف تحريرية رفيعة:** يصطف عنوان قصير ونص مجهري مع حافة الفراغ أو القاعدة أو المحور الأفقي أو البنية المتساوية القياس.
 
-## النماذج · قريباً
+## النماذج · من X
 
-يحتفظ المستودع بمجلد [`assets/examples/`](assets/examples/) للأعمال القادمة. لن يُضاف إلا عمل مكتمل بأسلوب 028 ومؤكد من صاحب المشروع؛ ولن تُستخدم منشورات أو صور من أساليب أخرى كعناصر مؤقتة.
+> [Xiaoxiaodong (@xiaoxiaodong01)](https://x.com/xiaoxiaodong01/status/2090447110168822128) · 2026-08-20<br>
+> GPT2 x 立体 x 模型 x 微缩 x 美学提示词 x VOL.028
 
-ستعرض النماذج القادمة قدرة 028 على التكيف فقط، ولن تصبح موضوعاتها أو أجهزتها المكانية أو ألوانها أو نصوصها أو أبعادها مراجع للتوليد أو قيماً افتراضية.
+<table>
+  <tr>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-01.jpg" alt="XXD Panel 028 نموذج 1"></a></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-02.jpg" alt="XXD Panel 028 نموذج 2"></a></td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-03.jpg" alt="XXD Panel 028 نموذج 3"></a></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-04.jpg" alt="XXD Panel 028 نموذج 4"></a></td>
+  </tr>
+</table>
+
+<p align="center"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128">عرض المنشور الأصلي والتوجيه كاملاً ←</a></p>
+
+تعرض هذه النماذج الدافع الجمالي للإصدار 028 فقط؛ ولا تصبح موضوعاتها أو تكوينها أو ألوانها أو نصوصها أو نسبة اللوحة السابقة مراجع للتوليد أو إعدادات افتراضية حالية.
 
 ## أربعة مخرجات ومنطق واحد للمجسم الورقي
 
