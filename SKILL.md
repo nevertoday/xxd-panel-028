@@ -130,7 +130,7 @@ Neither option crops or mechanically resizes one wallpaper into the other device
 ### Size resolution
 
 - No silent default ratio exists.
-- For `auto`, calculate a source- and mode-aware whole canvas before generation. Preserve the photograph without forced crop and follow the source brief's own paired-proportion rule: when it requires equal halves, top-bottom resolves near source `W:2H` and left-right near `2W:H`; when it specifies a different relationship, calculate from that relationship instead. Design-only starts from the source aspect unless the source brief or intended use clearly supports a better recommendation. Show the resolved ratio and pixels.
+- For `auto`, calculate a source- and mode-aware whole canvas before generation. Preserve the photograph without forced crop and use the source brief's paired relationship as a visual planning target: when it calls for equal halves, top-bottom may resolve near source `W:2H` and left-right near `2W:H`; when it suggests a different relationship, calculate from that relationship instead. Design-only starts from the source aspect unless the source brief or intended use clearly supports a better recommendation. Show the resolved ratio and pixels. This planning ratio does not authorize a pixel-level seam or midline audit after generation.
 - `source` means the source photograph's aspect for the whole requested ordinary output.
 - Exact pixels override a ratio.
 - Every distinct aspect ratio is a separate complete-canvas composition from the same source and the same verbatim style brief. Never crop one ratio from another. Multiple resolutions sharing one aspect may be exported from the highest-quality approved composition.
@@ -171,7 +171,8 @@ FINAL CANVAS: <resolved ratio and/or exact WIDTHxHEIGHT>
 DEVICE PROFILE: NONE | PHONE | IPAD | DESKTOP | WATCH
 SOURCE VISIBILITY: UPPER HALF | LEFT HALF | REFERENCE ONLY — NOT VISIBLE
 DESIGN REGION: LOWER HALF | RIGHT HALF | FULL CANVAS
-PAIRED RELATION: FOLLOW THE ORIGINAL BRIEF'S PAIRED-PROPORTION RULE | NOT APPLICABLE
+PAIRED BALANCE: USE THE ORIGINAL BRIEF AS A VISUAL COMPOSITION TARGET | NOT APPLICABLE
+MIDLINE AUDIT: NONE — MINOR GENERATIVE SPLIT OFFSETS ARE ACCEPTABLE
 WALLPAPER RELATIONSHIP: NONE | INDEPENDENT | LINKED
 
 Colour follows the original brief's existing colour instructions exactly.
@@ -223,7 +224,7 @@ If the user explicitly changes colour or another style variable, append that exa
 - If no compatible route is verified, ask the user to enable a suitable image tool or voluntarily provide an API key for the task. Never ask them to expose an existing secret, and never assert that a key is missing without a trusted sanitized result.
 - Generate finished raster imagery. SVG, HTML, CSS, Canvas, diagrams, and programmatic vector drawing are not substitutes.
 
-Use **one complete-canvas generation per output**. For paired modes, generate the faithful photo region and transformed design region together in the requested whole canvas. Retry a failed complete canvas once by restating only the failed runtime constraint. Use `scripts/compose_panel.py` only when the retry fails, the user requires pixel-identical source preservation, the route cannot realize the requested canvas, or lossless pixel calibration is necessary. The script may crop/paste/size/audit raster files; it must never invent the artwork or judge style.
+Use **one complete-canvas generation per output**. For paired modes, generate the faithful photo region and transformed design region together in the requested whole canvas. Retry a failed complete canvas once by restating only a meaningful failed content or delivery constraint. Never retry, reject, or invoke `compose_panel.py` merely because the generated boundary is a little above or below the mathematical midpoint. Use `scripts/compose_panel.py` only when the user explicitly requires pixel-exact panel geometry, the user requires pixel-identical source preservation, the route cannot realize the requested canvas, or lossless pixel calibration is necessary. The script may crop/paste/size/audit raster files; it must never invent the artwork or judge style.
 
 For a linked wallpaper pack, generate one device image first as the visual anchor, then supply both the original source and that approved anchor to each remaining device generation. Recompose each canvas; never crop an earlier wallpaper or chain derivatives. For an independent pack, every device sees only the original source.
 
@@ -251,6 +252,7 @@ Inspect every final PNG at full size and thumbnail size. Accept only when:
 - it is a fresh result from the correct current source or theme;
 - mode, source visibility, whole-canvas ratio or exact pixels, count, and PNG format match the resolved runtime variables;
 - paired source regions preserve identity and structure without stretching or replacement;
+- paired regions feel intentionally balanced, but no seam detection, coordinate measurement, midpoint percentage, or pixel-level split audit is performed; a minor generative offset is not a failure unless the user explicitly requested exact geometry;
 - the result follows `references/028-source.md`, especially its own colour, material, composition, whitespace, and typography requirements, without an outer Skill palette or added art direction;
 - prompt-generated text uses the requested language and the source brief's own text logic; user-exact text is verbatim with no additions; text-free output contains no text or pseudo-text;
 - linked and independent wallpaper rules are respected;

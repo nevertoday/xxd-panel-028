@@ -74,6 +74,8 @@ Mode and size change only the legacy 3:4 top-bottom container. In left-right mod
 
 Select one or more of `top-bottom`, `left-right`, `design-only`, and `wallpaper-pack`. Paired work is generated as one complete canvas by default; deterministic composition is only a fallback after a failed retry, for pixel-identical source preservation, or for lossless size calibration.
 
+The paired balance is a visual composition target, not a seam, midpoint-percentage, or pixel-coordinate test. Minor offsets do not fail a result; deterministic splitting is used only when the user explicitly requests pixel-exact panel geometry.
+
 Ordinary sizes are also multi-select: auto-fit, source aspect, 1:1, 3:4, 4:3, 4:5, 5:4, 2:3, 3:2, 9:16, 16:9, 21:9, 5:7, 7:5, or custom ratios/exact pixels. There is no silent default. Every distinct aspect is independently recomposed from the same verbatim source brief.
 
 Wallpaper packs may be linked or independent. A linked pack creates one anchor image, then recomposes each remaining device from the original source plus that anchor; it never crops one image into four sizes.
