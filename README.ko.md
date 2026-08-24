@@ -175,6 +175,69 @@ xxd-panel-028/
 └── references/xxd-panel-028-prompt.zh-CN.md + xxd-panel-028-prompt.en.md + 028-source.md
 ```
 
+<!-- xxd-panel-catalog:start -->
+## XXD Panel 전체 프로젝트 목록
+
+54개 Panel은 각각 독립된 원본 프롬프트와 미적 논리를 유지합니다. 아래 표에서 모든 프로젝트 주소와 핵심 스타일 특징을 확인할 수 있으며 현재 프로젝트는 굵게 표시됩니다.
+
+| 프로젝트 | 스타일 특징 |
+|---|---|
+| [xxd-panel-001](https://github.com/nevertoday/xxd-panel-001) | 소박한 선 · 레트로 종이결 · 혼합 매체 · 재치 있는 은유 · 따뜻한 여백 |
+| [xxd-panel-002](https://github.com/nevertoday/xxd-panel-002) | 서사적 윤곽 · 머뭇거리는 선 · 유사색 · 선택적 확대 · 인쇄 어긋남 |
+| [xxd-panel-003](https://github.com/nevertoday/xxd-panel-003) | 연속 검은 선 · 공공 의제 · 힘점 · 침묵의 여백 · 해방 |
+| [xxd-panel-004](https://github.com/nevertoday/xxd-panel-004) | 현지 현실 · 정밀 단선 · 기하 원근 · 주제 색 · 도시 브랜드 글자 |
+| [xxd-panel-005](https://github.com/nevertoday/xxd-panel-005) | 둔중한 큰 형태 · 어두운 구조장 · 부분 드러냄 · 3층 색 질서 · 실크스크린 × 파스텔 |
+| [xxd-panel-006](https://github.com/nevertoday/xxd-panel-006) | 주제 10–20% · 종이 여백 80–90% · 가는 손선 · 최대 네 색 · 아크릴 평면 |
+| [xxd-panel-007](https://github.com/nevertoday/xxd-panel-007) | 실물 미니어처 · 확대／단면／반복 · 엇갈린 여백 · 가는 검정 손글씨 · 스캔 종이결 |
+| [xxd-panel-008](https://github.com/nevertoday/xxd-panel-008) | 정사영 아이소메트릭 · 플랫폼／계단／문 · 공간 역설 · 동적 파스텔 · 무광 3D |
+| [xxd-panel-009](https://github.com/nevertoday/xxd-panel-009) | 작은 앵커 · 넓은 여백 · 하나의 공간 관계 · 별색 체계 · 하프톤 실크스크린 |
+| [xxd-panel-010](https://github.com/nevertoday/xxd-panel-010) | 거친 검정 실루엣 · 내부의 흰 특징 · 건식 재료 종이결 · 최소 환경 기호 · 그림책 편집 소문자 |
+| [xxd-panel-011](https://github.com/nevertoday/xxd-panel-011) | 하나의 핵심 이미지 · 하나의 관계 · 연속 검은 선 · 능동적 침묵 · 하나의 기억색 |
+| [xxd-panel-012](https://github.com/nevertoday/xxd-panel-012) | 고밀도 응집 · 외곽 희박화 · 기하학적 통제 · 하나의 생명색 · 흑회색 마이크로타입 |
+| [xxd-panel-013](https://github.com/nevertoday/xxd-panel-013) | 가로 티켓 한 장 · 74/26 분할 · 치유 수채화 · 아이보리 여백 · 현지화 정보 스텁 |
+| [xxd-panel-014](https://github.com/nevertoday/xxd-panel-014) | 접기와 절단면 · 겹침과 끼움 · 원본의 무게중심 · 실제 종이 섬유 · 읽히는 종이 문자 |
+| [xxd-panel-015](https://github.com/nevertoday/xxd-panel-015) | 해체—선별—정제—재구성 · 소수 형태 · 엄격한 색 역할 · 아이보리 여백 · 아트북 미세 조판 |
+| [xxd-panel-016](https://github.com/nevertoday/xxd-panel-016) | 하나의 주제 · 하나의 움직임 · 넓게 숨 쉬는 여백 |
+| [xxd-panel-017](https://github.com/nevertoday/xxd-panel-017) | 둥근 형태 · 거칠고 끊긴 선 · 순색 평면 채색 · 밝은 색면 · 경쾌한 비대칭 |
+| [xxd-panel-018](https://github.com/nevertoday/xxd-panel-018) | 하나의 시각 앵커 · 소수의 전중후경 종이 층 · 아이보리 여백 · 무광 종이 · 완전한 마이크로타입 |
+| [xxd-panel-019](https://github.com/nevertoday/xxd-panel-019) | 먼저 알아보고 · 의도를 갖고 덜어 내며 · 글자와 함께 구성합니다 |
+| [xxd-panel-020](https://github.com/nevertoday/xxd-panel-020) | 해체—선별—정제—재구성 · 소수 형태 · 엄격한 색 역할 · 아이보리 여백 · 아트북 미세 조판 |
+| [xxd-panel-021](https://github.com/nevertoday/xxd-panel-021) | 순검정 직사각형 · 주제 대부분은 내부 · 특징 하나만 돌파 · 떨리는 복사선 · 흰 음형과 미세 회색면 |
+| [xxd-panel-022](https://github.com/nevertoday/xxd-panel-022) | 순검정 직사각형 · 주제 대부분은 내부 · 특징 하나만 돌파 · 매끄럽고 안정적인 선 · 색 신호 하나 |
+| [xxd-panel-023](https://github.com/nevertoday/xxd-panel-023) | 원본이 고른 창 · 옅고 숨 쉬는 배경 · 부드러운 유색광 · 분사 입자 · 흐린 투영과 미세 조판 |
+| [xxd-panel-024](https://github.com/nevertoday/xxd-panel-024) | 사진적 주제 · 길고 옅은 창 · 가로／세로／사선 원본 적응 · 동양적 여백 · 프리미엄 편집 |
+| [xxd-panel-025](https://github.com/nevertoday/xxd-panel-025) | 첫눈에는 주제 · 두 번째에는 숨은 이미지 · 전경–배경 반전 · 모란디 2–4색 · 물리적 실크스크린 |
+| [xxd-panel-026](https://github.com/nevertoday/xxd-panel-026) | 조용히 알아보고 · 부드럽게 덜어 내며 · 종이가 숨 쉬게 합니다 |
+| [xxd-panel-027](https://github.com/nevertoday/xxd-panel-027) | 두꺼운 유백색 종이 · 얕은 요철 · 미세 음각선 · 무광 금빛 초점 · 박물관 질서 |
+| **[xxd-panel-028](https://github.com/nevertoday/xxd-panel-028)** | 정사영 아이소메트릭 · 작은 종이 받침 · 원본 팔레트 · 가는 먹선 · 편집형 모형 |
+| [xxd-panel-029](https://github.com/nevertoday/xxd-panel-029) | 가로 색면 · 밝은 왁스 파스텔 · 거친 수제 종이 · 리소그래프 입자 · 힘을 뺀 손글씨 |
+| [xxd-panel-030](https://github.com/nevertoday/xxd-panel-030) | 실제 자연 재료 · 사각 색면 · 자연스러운 경계 넘김 · 최소한의 검은 선 · 편집 여백 |
+| [xxd-panel-031](https://github.com/nevertoday/xxd-panel-031) | 하나의 핵심 모티프 · 원본 기반 기하 모체 · 민속 도록 · 내부의 거친 인쇄 흔적 · 외부의 정밀한 질서 |
+| [xxd-panel-032](https://github.com/nevertoday/xxd-panel-032) | 글자와 이미지의 통합 · 문자 체계에 충실한 레터링 · 원본 특징 삽입 · 시각적 자간 · 넓은 여백 |
+| [xxd-panel-033](https://github.com/nevertoday/xxd-panel-033) | 식별 가능한 모티프 · 평면 콜라주 · 크기 대비 · 원본 기반 선명한 색 · 표지 타이포그래피 |
+| [xxd-panel-034](https://github.com/nevertoday/xxd-panel-034) | 작은 도장 · 2–4가지 별색 · 손으로 판 선 · 따뜻한 종이 · 현장 주석 |
+| [xxd-panel-035](https://github.com/nevertoday/xxd-panel-035) | 하나의 블록 주체 · 원본 기반 선명한 색 · 무광 ABS · 조용한 배경 · 모듈형 글자 |
+| [xxd-panel-036](https://github.com/nevertoday/xxd-panel-036) | 하나의 관계 · 가는 연속선 · 2–4 색면 · 수채 번짐 · 숨 쉬는 여백 |
+| [xxd-panel-037](https://github.com/nevertoday/xxd-panel-037) | 배지 하나 · 원본 에나멜 색 · 백색 금속 테두리 · 유금 디테일 · 짧은 실물 그림자 |
+| [xxd-panel-038](https://github.com/nevertoday/xxd-panel-038) | 원본 기반 천색 · 올 풀린 가장자리 · 손바느질 · 능동적 여백 · 숨은 감정 |
+| [xxd-panel-039](https://github.com/nevertoday/xxd-panel-039) | 한 이미지 한 핵 · 중국 비단실 · 바늘 방향 층위 · 깨끗한 바탕 · 동양의 여백 |
+| [xxd-panel-040](https://github.com/nevertoday/xxd-panel-040) | 실제 주인공 · 검은 선 인물 · 미니 서사 · 넉넉한 여백 |
+| [xxd-panel-041](https://github.com/nevertoday/xxd-panel-041) | 주제 은유 · 등거리 질서 · 옅은 수고 · 일본식 맑은 색 · 동양의 여백 |
+| [xxd-panel-042](https://github.com/nevertoday/xxd-panel-042) | 원래 시점 · 2–5 실제 층 · 안정된 앵커 · 투명 수채 · 편집 주석 |
+| [xxd-panel-043](https://github.com/nevertoday/xxd-panel-043) | 실제 거품 · 정면 플랫레이 · 원본 기반 짙은 바탕 · 미세 기포 가장자리 · 조용한 공간 |
+| [xxd-panel-044](https://github.com/nevertoday/xxd-panel-044) | 얇은 순금 · 정면 평면 · 원본 기반 짙은 바탕 · 망치 자국 · 조용한 질서 |
+| [xxd-panel-045](https://github.com/nevertoday/xxd-panel-045) | 둥근 모듈 · 원본 색 · 등거리 깊이 · 무광 촉감 · 편집 미세 타이포 |
+| [xxd-panel-046](https://github.com/nevertoday/xxd-panel-046) | 밝은 백색 바탕 · 선명한 임파스토 · 미니어처 입체감 · 대각선 색면 · 따뜻한 빛 |
+| [xxd-panel-047](https://github.com/nevertoday/xxd-panel-047) | 아이소메트릭 미니어처 · 주제 임파스토 · 실제 접촉 · 따뜻한 흰 종이 · 밝은 색 |
+| [xxd-panel-048](https://github.com/nevertoday/xxd-panel-048) | 투명 구조 · 과학 도해 · 맑은 단색 · 정밀 주석 · 편집 여백 |
+| [xxd-panel-049](https://github.com/nevertoday/xxd-panel-049) | 제한색 목판 · 손으로 새긴 흔적 · 무광 겹인쇄 · 따뜻한 종이 · 불완전한 가장자리 |
+| [xxd-panel-050](https://github.com/nevertoday/xxd-panel-050) | 맞춤형 여행 장면 · 에어리 블루 · 미니멀 플랫 벡터 · 에디토리얼 여백 · 한 이미지, 한 정체성 |
+| [xxd-panel-051](https://github.com/nevertoday/xxd-panel-051) | 종이 공예 미니어처 · 가로형 부유 풍경대 · 손작업 증거 · 에어리 블루 · 넓은 여백 |
+| [xxd-panel-052](https://github.com/nevertoday/xxd-panel-052) | 종이 미니어처 · 가로 부유섬 · 진짜 손맛 · 공기감 있는 차가운 파랑 · 넓은 여백 |
+| [xxd-panel-053](https://github.com/nevertoday/xxd-panel-053) | 관찰 펜선 · 투명 담채 · 음악적 리듬 · 거의 흰 종이 · 능동적 여백 |
+| [xxd-panel-054](https://github.com/nevertoday/xxd-panel-054) | 선택적 기억 · 주인공 · 여섯 스티커 · 무광 인쇄 · 공기감 있는 파랑 |
+<!-- xxd-panel-catalog:end -->
+
 ## XXD 소개
 
 XXD는 Xiaoxiaodong의 브랜드 약칭입니다. 이 프로젝트는 [@xiaoxiaodong01](https://x.com/xiaoxiaodong01)이 만들고 관리합니다.

@@ -177,6 +177,69 @@ xxd-panel-028/
 └── references/xxd-panel-028-prompt.zh-CN.md + xxd-panel-028-prompt.en.md + 028-source.md
 ```
 
+<!-- xxd-panel-catalog:start -->
+## دليل مشاريع XXD Panel الكامل
+
+يحافظ كل واحد من مشاريع Panel الأربعة والخمسين على موجّهه الأصلي ومنطقه الجمالي المستقل. يعرض الجدول روابط جميع المشاريع وخصائص أسلوبها الأساسية، مع تمييز المشروع الحالي بخط عريض.
+
+| المشروع | خصائص الأسلوب |
+|---|---|
+| [xxd-panel-001](https://github.com/nevertoday/xxd-panel-001) | خط عفوي · ورق قديم · وسائط مختلطة · استعارة ذكية · فراغ دافئ |
+| [xxd-panel-002](https://github.com/nevertoday/xxd-panel-002) | محيط سردي · خط متردد · ألوان متجاورة · تكبير انتقائي · حروف مزاحة |
+| [xxd-panel-003](https://github.com/nevertoday/xxd-panel-003) | خط أسود متصل · قضية عامة · نقاط قوة · فراغ صامت · تحرر |
+| [xxd-panel-004](https://github.com/nevertoday/xxd-panel-004) | واقع محلي · خط دقيق · منظور هندسي · لون الموضوع · كتابة هوية المدينة |
+| [xxd-panel-005](https://github.com/nevertoday/xxd-panel-005) | كتل غليظة · حقل بنيوي داكن · كشف جزئي · ترتيب لوني ثلاثي · طباعة حريرية × باستيل |
+| [xxd-panel-006](https://github.com/nevertoday/xxd-panel-006) | موضوع 10–20% · ورق 80–90% · خط يدوي رفيع · أربعة ألوان كحد أقصى · أكريليك مسطح |
+| [xxd-panel-007](https://github.com/nevertoday/xxd-panel-007) | رسوم مادية صغيرة · تقريب／مقطع／تكرار · فراغ متدرج · ملاحظات سوداء رفيعة · ملمس ورق ممسوح |
+| [xxd-panel-008](https://github.com/nevertoday/xxd-panel-008) | إسقاط متساوي القياس · منصات／سلالم／أبواب · مفارقة مكانية · باستيل ديناميكي · ثلاثي أبعاد مطفأ |
+| [xxd-panel-009](https://github.com/nevertoday/xxd-panel-009) | مرساة صغيرة · فراغ واسع · علاقة مكانية واحدة · ألوان موضعية · طباعة حريرية بنقاط نصفية |
+| [xxd-panel-010](https://github.com/nevertoday/xxd-panel-010) | ظل أسود خشن · سمة بيضاء داخلية · وسيط جاف وملمس ورق · إشارات بيئية قليلة · نص صغير لكتاب أطفال |
+| [xxd-panel-011](https://github.com/nevertoday/xxd-panel-011) | صورة جوهرية واحدة · علاقة واحدة · خط أسود متصل · صمت فاعل · لون ذاكرة واحد |
+| [xxd-panel-012](https://github.com/nevertoday/xxd-panel-012) | تكاثف كثيف · تشتت خفيف نحو الخارج · ضبط هندسي · لون حيوي واحد · حروف مجهرية سوداء رمادية |
+| [xxd-panel-013](https://github.com/nevertoday/xxd-panel-013) | تذكرة أفقية واحدة · تقسيم 74/26 · ألوان مائية مريحة · فراغ عاجي · قسيمة معلومات محلية اللغة |
+| [xxd-panel-014](https://github.com/nevertoday/xxd-panel-014) | طي وقطع · طبقات وتعشيق · ثقل يقوده المصدر · ألياف ورق حقيقية · حروف ورقية مقروءة |
+| [xxd-panel-015](https://github.com/nevertoday/xxd-panel-015) | تفكيك—اختيار—تقطير—إعادة بناء · أشكال قليلة · أدوار لونية صارمة · فراغ عاجي · نص مجهري لكتاب فني |
+| [xxd-panel-016](https://github.com/nevertoday/xxd-panel-016) | موضوع واحد · حركة واحدة · مساحة واسعة من الهواء |
+| [xxd-panel-017](https://github.com/nevertoday/xxd-panel-017) | أشكال مستديرة · خط خشن متقطع · تعبئة مسطحة صافية · مساحات مشرقة · لا تماثل حيوي |
+| [xxd-panel-018](https://github.com/nevertoday/xxd-panel-018) | مرساة بصرية واحدة · طبقات أمامية ووسطى وخلفية قليلة · فراغ عاجي · ورق مطفأ · ميكروتايب كامل |
+| [xxd-panel-019](https://github.com/nevertoday/xxd-panel-019) | تعرّف أولاً · اختزل بقصد · كوّن بالكتابة |
+| [xxd-panel-020](https://github.com/nevertoday/xxd-panel-020) | تفكيك—اختيار—تقطير—إعادة بناء · أشكال قليلة · أدوار لونية صارمة · فراغ عاجي · نص مجهري لكتاب فني |
+| [xxd-panel-021](https://github.com/nevertoday/xxd-panel-021) | مستطيل أسود خالص · معظم الموضوع في الداخل · سمة واحدة تخترق الحد · خط نسخ مهتز · شكل سلبي أبيض ومساحات رمادية ضئيلة |
+| [xxd-panel-022](https://github.com/nevertoday/xxd-panel-022) | مستطيل أسود خالص · معظم الموضوع في الداخل · سمة واحدة تخترق الحد · خط سلس ثابت · إشارة لونية واحدة |
+| [xxd-panel-023](https://github.com/nevertoday/xxd-panel-023) | نافذة يختارها المصدر · خلفية شاحبة تتنفس · ضوء ملوّن ناعم · حبيبات رش · إسقاط منتشر ونص دقيق |
+| [xxd-panel-024](https://github.com/nevertoday/xxd-panel-024) | موضوع فوتوغرافي · نافذة شاحبة ضيقة · اتجاه أفقي／عمودي／مائل من المصدر · فراغ شرقي · تحرير فاخر |
+| [xxd-panel-025](https://github.com/nevertoday/xxd-panel-025) | موضوع أولاً · صورة خفية ثانياً · انقلاب الشكل والخلفية · 2–4 ألوان موراندي · طباعة حريرية مادية |
+| [xxd-panel-026](https://github.com/nevertoday/xxd-panel-026) | تعرّف بهدوء · اختزل بلطف · دع الورق يتنفس |
+| [xxd-panel-027](https://github.com/nevertoday/xxd-panel-027) | ورق عاجي ثقيل · بروز وغور خفيفان · حفر خطي دقيق · بؤرة ذهبية مطفأة · نظام متحفي |
+| **[xxd-panel-028](https://github.com/nevertoday/xxd-panel-028)** | إسقاط متساوي القياس · قاعدة ورقية صغيرة · ألوان من المصدر · حبر دقيق · نموذج تحريري |
+| [xxd-panel-029](https://github.com/nevertoday/xxd-panel-029) | حقل أفقي · باستيل شمعي فاتح · ورق يدوي خشن · حبيبات ريسوغراف · كتابة يدوية مسترخية |
+| [xxd-panel-030](https://github.com/nevertoday/xxd-panel-030) | مواد طبيعية حقيقية · حقل مستطيل · عبور طبيعي · أقل قدر من الخط الأسود · فراغ تحريري |
+| [xxd-panel-031](https://github.com/nevertoday/xxd-panel-031) | رمز مركزي واحد · هندسة مشتقة من المصدر · فهرس شعبي · أثر حبر خشن في الداخل · نظام دقيق في الخارج |
+| [xxd-panel-032](https://github.com/nevertoday/xxd-panel-032) | وحدة النص والصورة · حروف أصيلة للخط · دمج سمة المصدر · تباعد بصري · فراغ واسع |
+| [xxd-panel-033](https://github.com/nevertoday/xxd-panel-033) | عنصر مميز · كولاج مسطح · تباين المقاييس · لون حي من المصدر · طباعة غلافية |
+| [xxd-panel-034](https://github.com/nevertoday/xxd-panel-034) | ختم صغير · لونان إلى أربعة ألوان موضعية · حفر يدوي · ورق دافئ · ملاحظة ميدانية |
+| [xxd-panel-035](https://github.com/nevertoday/xxd-panel-035) | موضوع مكعّب واحد · لون حي من المصدر · بلاستيك ABS مطفأ · خلفية هادئة · كتابة معيارية |
+| [xxd-panel-036](https://github.com/nevertoday/xxd-panel-036) | علاقة واحدة · خط رفيع متصل · ٢–٤ حقول لونية · حافة مائية · فراغ يتنفس |
+| [xxd-panel-037](https://github.com/nevertoday/xxd-panel-037) | شارة واحدة · مينا من المصدر · إطار معدني أبيض · تفصيل مذهّب · ظل حقيقي قصير |
+| [xxd-panel-038](https://github.com/nevertoday/xxd-panel-038) | قماش من المصدر · حافة مهدّبة · خياطة يدوية · فراغ فعّال · شعور خفي |
+| [xxd-panel-039](https://github.com/nevertoday/xxd-panel-039) | صورة واحدة · جوهر واحد · اتجاه حرير · أرضية نقية · صمت شرقي |
+| [xxd-panel-040](https://github.com/nevertoday/xxd-panel-040) | موضوع واقعي · شخصيات بخط أسود · سرد مصغّر · فراغ واسع |
+| [xxd-panel-041](https://github.com/nevertoday/xxd-panel-041) | استعارة موضوعية · نظام إيزومتري · مخطوط باهت · لون ياباني صافٍ · فراغ شرقي |
+| [xxd-panel-042](https://github.com/nevertoday/xxd-panel-042) | المنظور الأصلي · ٢–٥ طبقات حقيقية · مرساة ثابتة · ألوان مائية شفافة · ملاحظة تحريرية |
+| [xxd-panel-043](https://github.com/nevertoday/xxd-panel-043) | رغوة حقيقية · تصوير مسطح أمامي · أرضية داكنة من المصدر · حافة فقاعات دقيقة · فراغ هادئ |
+| [xxd-panel-044](https://github.com/nevertoday/xxd-panel-044) | ذهب رقيق · سطح أمامي · أرضية داكنة من المصدر · أثر مطروق · نظام هادئ |
+| [xxd-panel-045](https://github.com/nevertoday/xxd-panel-045) | وحدات مدوّرة · لون من المصدر · عمق إيزومتري · ملمس مطفأ · كتابة تحريرية دقيقة |
+| [xxd-panel-046](https://github.com/nevertoday/xxd-panel-046) | أرضية بيضاء مشرقة · طلاء كثيف نابض · حجم مصغّر مجسّم · حقل قطري · ضوء دافئ |
+| [xxd-panel-047](https://github.com/nevertoday/xxd-panel-047) | مجسّم إيزومتري · طلاء موضوعي كثيف · تماس حقيقي · ورق أبيض دافئ · لون مضيء |
+| [xxd-panel-048](https://github.com/nevertoday/xxd-panel-048) | بنية شفافة · رسم علمي · لون أحادي صافٍ · تعليقات دقيقة · فراغ تحريري |
+| [xxd-panel-049](https://github.com/nevertoday/xxd-panel-049) | نقش خشبي محدود الألوان · آثار حفر يدوية · حبر مطفأ · ورق دافئ · حواف غير مكتملة |
+| [xxd-panel-050](https://github.com/nevertoday/xxd-panel-050) | مشهد سفر مخصّص · أزرق هوائي · متجهات مسطّحة بسيطة · فراغ تحريري · هوية مستقلة لكل صورة |
+| [xxd-panel-051](https://github.com/nevertoday/xxd-panel-051) | حرفة ورقية مصغّرة · شريط أفقي عائم · أثر يدوي حقيقي · أزرق هوائي · فراغ واسع |
+| [xxd-panel-052](https://github.com/nevertoday/xxd-panel-052) | مجسّم ورقي · شريط أفقي عائم · مادة يدوية أصيلة · أزرق بارد هوائي · فراغ واسع |
+| [xxd-panel-053](https://github.com/nevertoday/xxd-panel-053) | خط قلم ملاحظ · تلوين شفاف · إيقاع موسيقي · ورق شبه أبيض · فراغ فعّال |
+| [xxd-panel-054](https://github.com/nevertoday/xxd-panel-054) | ذاكرة انتقائية · مشهد رئيس · ست ملصقات · طباعة مطفأة · أزرق هوائي |
+<!-- xxd-panel-catalog:end -->
+
 ## عن XXD
 
 XXD هو الاختصار التجاري لاسم Xiaoxiaodong. أنشأ المشروع ويديره [@xiaoxiaodong01](https://x.com/xiaoxiaodong01).

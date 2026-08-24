@@ -175,6 +175,69 @@ xxd-panel-028/
 └── references/xxd-panel-028-prompt.zh-CN.md + xxd-panel-028-prompt.en.md + 028-source.md
 ```
 
+<!-- xxd-panel-catalog:start -->
+## XXD Panel 全プロジェクト一覧
+
+54 個の Panel は、それぞれ独立した原文プロンプトと美的ロジックを保持しています。全プロジェクトの URL と主要なスタイル特性を一覧にし、現在のプロジェクトを太字で示します。
+
+| プロジェクト | スタイル特性 |
+|---|---|
+| [xxd-panel-001](https://github.com/nevertoday/xxd-panel-001) | 素朴な線 · レトロな紙肌 · 混合画材 · 気の利いた比喩 · 温かな余白 |
+| [xxd-panel-002](https://github.com/nevertoday/xxd-panel-002) | 物語る輪郭 · ためらう線 · 類似色 · 部分拡大 · 版ずれ文字 |
+| [xxd-panel-003](https://github.com/nevertoday/xxd-panel-003) | 連続する黒線 · 公共的主題 · 力点 · 沈黙の余白 · 解放 |
+| [xxd-panel-004](https://github.com/nevertoday/xxd-panel-004) | 土地の現実 · 精密な単線 · 幾何学的遠近 · 主題色 · 都市ブランド文字 |
+| [xxd-panel-005](https://github.com/nevertoday/xxd-panel-005) | 鈍い大形 · 暗い構造場 · 部分的な露出 · 三層の色秩序 · シルクスクリーン × パステル |
+| [xxd-panel-006](https://github.com/nevertoday/xxd-panel-006) | 主体 10〜20% · 紙の余白 80〜90% · 細い手描き線 · 4色以内 · アクリル平塗り |
+| [xxd-panel-007](https://github.com/nevertoday/xxd-panel-007) | 実物小図 · 接写／断面／反復 · ずれた余白 · 細い黒手書き · スキャン紙感 |
+| [xxd-panel-008](https://github.com/nevertoday/xxd-panel-008) | 正投影アイソメトリック · 足場／階段／門 · 空間パラドックス · 動的パステル · マット 3D |
+| [xxd-panel-009](https://github.com/nevertoday/xxd-panel-009) | 小さな主役 · 大きな余白 · 一つの空間関係 · 特色印刷 · ハーフトーン・シルクスクリーン |
+| [xxd-panel-010](https://github.com/nevertoday/xxd-panel-010) | 粗い黒シルエット · 内側の白い特徴 · 乾式画材と紙目 · 最小限の環境記号 · 絵本の小文字 |
+| [xxd-panel-011](https://github.com/nevertoday/xxd-panel-011) | 一つの核となる像 · 一組の関係 · 連続する黒線 · 能動的な余白 · 一点の記憶色 |
+| [xxd-panel-012](https://github.com/nevertoday/xxd-panel-012) | 高密度の集積 · 外周への希薄化 · 幾何学的な制御 · 一つの生命色 · 黒灰のマイクロタイプ |
+| [xxd-panel-013](https://github.com/nevertoday/xxd-panel-013) | 横長チケット一枚 · 74/26 分割 · 癒やし系水彩 · 象牙色の余白 · 現地語の情報スタブ |
+| [xxd-panel-014](https://github.com/nevertoday/xxd-panel-014) | 折りと切面 · 重層と入れ子 · 元写真の重心 · 本物の紙繊維 · 読める紙文字 |
+| [xxd-panel-015](https://github.com/nevertoday/xxd-panel-015) | 分解—選択—凝縮—再構成 · 少数の形 · 厳密な色役割 · 象牙色の余白 · アートブックの小文字 |
+| [xxd-panel-016](https://github.com/nevertoday/xxd-panel-016) | ONE SUBJECT · ONE MOTION · A LARGE FIELD OF AIR |
+| [xxd-panel-017](https://github.com/nevertoday/xxd-panel-017) | 丸い形 · 粗く途切れる線 · 純色の平塗り · 明るい色面 · 軽快な非対称 |
+| [xxd-panel-018](https://github.com/nevertoday/xxd-panel-018) | 一つの視覚アンカー · 少数の前中後層 · 象牙色の余白 · マット紙 · 完全なマイクロタイプ |
+| [xxd-panel-019](https://github.com/nevertoday/xxd-panel-019) | RECOGNISE FIRST · REDUCE WITH INTENT · COMPOSE WITH TYPE |
+| [xxd-panel-020](https://github.com/nevertoday/xxd-panel-020) | 分解—選択—凝縮—再構成 · 少数の形 · 厳密な色役割 · 象牙色の余白 · アートブックの小文字 |
+| [xxd-panel-021](https://github.com/nevertoday/xxd-panel-021) | 純黒矩形 · 主体の大半は内部 · 一つだけ越境 · 揺れるコピー線 · 白いネガ形と微小な灰色面 |
+| [xxd-panel-022](https://github.com/nevertoday/xxd-panel-022) | 純黒矩形 · 主体の大半は内部 · 一つだけ越境 · 滑らかで安定した線 · 一点だけの色 |
+| [xxd-panel-023](https://github.com/nevertoday/xxd-panel-023) | 元写真が選ぶ窓 · 淡く呼吸する背景 · 柔らかな色光 · スプレー粒子 · 虚実の投影と小文字 |
+| [xxd-panel-024](https://github.com/nevertoday/xxd-panel-024) | 写真的な主体 · 細長い淡色窓 · 横／縦／斜めを元写真から選択 · 東洋の余白 · 高級編集 |
+| [xxd-panel-025](https://github.com/nevertoday/xxd-panel-025) | 一目で主体 · 二目で隠れた像 · 図地反転 · 2〜4色のモランディ · 物理的なシルクスクリーン |
+| [xxd-panel-026](https://github.com/nevertoday/xxd-panel-026) | RECOGNISE QUIETLY · REDUCE GENTLY · LET THE PAPER BREATHE |
+| [xxd-panel-027](https://github.com/nevertoday/xxd-panel-027) | 厚い乳白紙 · 浅い凸凹 · 細い線刻 · 艶消し金の焦点 · 博物館の秩序 |
+| **[xxd-panel-028](https://github.com/nevertoday/xxd-panel-028)** | 正投影アイソメトリック · 小さな紙の基台 · 元写真由来の色 · 細い墨線 · 編集的模型 |
+| [xxd-panel-029](https://github.com/nevertoday/xxd-panel-029) | 横長の色面 · 淡いワックスパステル · 粗い手漉き紙 · リソグラフの粒子 · 力の抜けた手書き文字 |
+| [xxd-panel-030](https://github.com/nevertoday/xxd-panel-030) | 本物の自然素材 · 矩形色面 · 自然な越境 · 最小限の黒線 · エディトリアルな余白 |
+| [xxd-panel-031](https://github.com/nevertoday/xxd-panel-031) | 一つの核心モチーフ · 元写真由来の幾何母体 · 民俗図録 · 内部の粗い印痕 · 外部の精密な秩序 |
+| [xxd-panel-032](https://github.com/nevertoday/xxd-panel-032) | 図文一体 · 文字体系に忠実な字形 · 元写真の特徴を埋め込む · 光学的字間 · 上質な余白 |
+| [xxd-panel-033](https://github.com/nevertoday/xxd-panel-033) | 識別できるモチーフ · 平面コラージュ · 尺度対比 · 元写真由来の鮮色 · カバー組版 |
+| [xxd-panel-034](https://github.com/nevertoday/xxd-panel-034) | 小さな印影 · 2〜4色の特色 · 手彫り線 · 温かな紙 · フィールド注記 |
+| [xxd-panel-035](https://github.com/nevertoday/xxd-panel-035) | 一つのブロック主体 · 元写真由来の鮮色 · マットABS · 静かな背景 · モジュラー文字 |
+| [xxd-panel-036](https://github.com/nevertoday/xxd-panel-036) | 一つの関係 · 細い連続線 · 2〜4色域 · 水彩の縁 · 呼吸する余白 |
+| [xxd-panel-037](https://github.com/nevertoday/xxd-panel-037) | 一枚の徽章 · 元写真のエナメル色 · 白金属縁 · 流金の細部 · 実在する短い影 |
+| [xxd-panel-038](https://github.com/nevertoday/xxd-panel-038) | 元写真の布色 · ほつれた縁 · 手縫い · 能動的余白 · 隠れた感情 |
+| [xxd-panel-039](https://github.com/nevertoday/xxd-panel-039) | 一図一核 · 中国の絹糸 · 針方向の層 · 清潔な地 · 東洋の余白 |
+| [xxd-panel-040](https://github.com/nevertoday/xxd-panel-040) | 実在する主役 · 黒い線画の小人 · ミクロな物語 · 大きな余白 |
+| [xxd-panel-041](https://github.com/nevertoday/xxd-panel-041) | テーマ比喩 · 等距秩序 · 淡い手稿 · 和色の透明感 · 東洋の余白 |
+| [xxd-panel-042](https://github.com/nevertoday/xxd-panel-042) | 元の視点 · 2〜5の真の層 · 安定した基点 · 透明水彩 · 編集注記 |
+| [xxd-panel-043](https://github.com/nevertoday/xxd-panel-043) | 本物の泡 · 正面フラットレイ · 元写真由来の暗色地 · 微細気泡の縁 · 静かな空間 |
+| [xxd-panel-044](https://github.com/nevertoday/xxd-panel-044) | 薄層の純金 · 正面平面 · 元写真由来の暗色地 · 鎚目 · 静かな秩序 |
+| [xxd-panel-045](https://github.com/nevertoday/xxd-panel-045) | 丸いモジュール · 元写真の色 · 等距奥行 · マットな触感 · 編集ミクロ組版 |
+| [xxd-panel-046](https://github.com/nevertoday/xxd-panel-046) | 明るい白地 · 鮮やかな厚塗り · 微縮の実体感 · 斜めの色面 · 温かな光 |
+| [xxd-panel-047](https://github.com/nevertoday/xxd-panel-047) | 等距ミニチュア · 主題的厚塗り · 実在接触 · 暖白紙 · 明るい色 |
+| [xxd-panel-048](https://github.com/nevertoday/xxd-panel-048) | 透明構造 · 科学図解 · 明澄な単色 · 精密注釈 · 編集的余白 |
+| [xxd-panel-049](https://github.com/nevertoday/xxd-panel-049) | 限定色木版 · 手彫りの跡 · マットな重ね刷り · 暖かな紙 · 不完全な縁 |
+| [xxd-panel-050](https://github.com/nevertoday/xxd-panel-050) | 専用トラベルシーン · エアリーブルー · ミニマルなフラットベクター · 編集的余白 · 一枚ごとの固有性 |
+| [xxd-panel-051](https://github.com/nevertoday/xxd-panel-051) | ミニチュア紙工芸 · 横長の浮遊景観帯 · 手仕事の証拠 · エアリーブルー · 大きな余白 |
+| [xxd-panel-052](https://github.com/nevertoday/xxd-panel-052) | ペーパークラフト · 横長の浮島 · 本物の手仕事 · 空気感のある寒色ブルー · 広い余白 |
+| [xxd-panel-053](https://github.com/nevertoday/xxd-panel-053) | 観察ペン線 · 透明な淡彩 · 音楽的リズム · ほぼ白い紙 · 能動的な余白 |
+| [xxd-panel-054](https://github.com/nevertoday/xxd-panel-054) | 選択的記憶 · 主役 · 六枚のステッカー · マット印刷 · 空気感のある青 |
+<!-- xxd-panel-catalog:end -->
+
 ## XXD について
 
 XXD は小小東（Xiaoxiaodong）のブランド名の略称です。このプロジェクトは [@xiaoxiaodong01](https://x.com/xiaoxiaodong01) が制作・管理しています。
