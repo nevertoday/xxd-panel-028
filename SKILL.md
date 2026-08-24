@@ -90,7 +90,15 @@ Localise by transcreation using native wording, rhetoric, punctuation, spacing, 
 
 ## Raster generation and privacy
 
-Use the host's built-in bitmap image-generation capability by default and follow the available `imagegen` skill when exposed. View each local source before generation. Use one generation call per distinct asset; a wallpaper pack requires four calls. “Isometric”, “paper miniature”, “architectural maquette”, and “editorial illustration” describe appearance only and never authorise SVG, HTML, CSS, Canvas, diagrams, or programmatic drawing as the artwork.
+### Model priority and credentials
+
+- **Prefer GPT Image 2.** When GPT Image 2 is exposed through the host's built-in image tool or an already configured compatible route, use it before any other model. Preserve the current XXD execution contract: resolve the whole final canvas before generation, use the source as a high-fidelity reference, generate paired modes as one complete canvas, and keep deterministic composition as fallback only.
+- Also support **Seedance 5.0 Pro**, **Nano Banana Pro (Gemini Image Pro)**, **Nano Banana 2 (Gemini Image Flash)**, or another compatible bitmap model when it is actually available through a tool or configured route and can satisfy the selected mode. Required capabilities include reference-image generation/editing, source fidelity, the resolved whole-canvas ratio, native target-language text, and multi-image reference input when a linked wallpaper pack needs it.
+- Alternative models are secondary routes, not a different workflow. Do not let a model switch silently change the selected modes, final canvas, source-visibility rules, copy, locale, wallpaper relationship, fresh-task boundary, raster-only delivery, or the full-canvas-first strategy. If an alternative cannot satisfy a hard requirement, do not silently degrade that requirement.
+- If no suitable route is available, ask the user to enable an image-generation tool or provide an API key. A user may voluntarily provide credentials for the current task. Accept them without echoing, displaying, logging, or reporting their value. Do not persist credentials or modify provider, account, billing, or global route configuration unless the user explicitly asks for that configuration change.
+- Determine availability from an actual image-capability check. Do not declare GPT Image 2 or every other route unavailable merely because one tool is absent, one call failed, or one expected environment variable is unset.
+
+Prefer GPT Image 2 through the host's built-in bitmap image-generation capability when exposed, and follow the available `imagegen` skill for the built-in execution details. View each local source before generation. Use one generation call per distinct asset; a wallpaper pack requires four calls. “Isometric”, “paper miniature”, “architectural maquette”, and “editorial illustration” describe appearance only and never authorise SVG, HTML, CSS, Canvas, diagrams, or programmatic drawing as the artwork.
 
 If built-in bitmap generation is unavailable, use `scripts/configured_imagegen.py`, which reuses an already configured compatible bitmap route and emits sanitised status only:
 
@@ -101,11 +109,11 @@ python3 scripts/configured_imagegen.py edit --image source.png \
   --out /private/job-temp/design.png --size 1536x1024 --quality high
 ```
 
-Judge readiness by actual bitmap capability, not a provider name or one environment variable. Never display, log, persist, or report providers, endpoints, headers, credentials, account identifiers, route configuration, prompts, or response bodies. Do not manually inspect credential files. The bridge's sanitised JSON is the complete allowed diagnostic surface.
+Judge readiness by actual bitmap capability, not a provider name or one environment variable. Never display, echo, log, or report the user's actual provider, endpoint, headers, credential values, account identifiers, route configuration, prompts, or response bodies. Do not manually inspect unrelated credential files. Do not persist user-provided credentials or modify global route configuration unless explicitly requested. The bridge's sanitised JSON is the complete allowed diagnostic surface.
 
 An explicit invocation of `/xxd-panel-028` or `$xxd-panel-028` with a source image and requested output authorises generation through any already configured authenticated bitmap route available to the session. Do not ask for a second confirmation solely because the route changes. This does not authorise changing credentials, providers, billing, accounts, or global settings.
 
-Only report generation as unavailable after both built-in capability and the bundled probe fail to establish a usable bitmap route. State the limitation narrowly and never guess the cause or identify the provider. Never substitute code-rendered art.
+Only report generation as unavailable after checking preferred GPT Image 2, every eligible exposed alternative, the bundled probe, and any suitable route or API key the user elects to provide. State the limitation narrowly and never guess the cause or expose the user's actual provider. Never substitute code-rendered art.
 
 ## Fresh-task and source boundary
 
