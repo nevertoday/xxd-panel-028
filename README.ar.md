@@ -249,6 +249,8 @@ xxd-panel-028/
 | [xxd-panel-052](https://github.com/nevertoday/xxd-panel-052) | مجسّم ورقي · شريط أفقي عائم · مادة يدوية أصيلة · أزرق بارد هوائي · فراغ واسع |
 | [xxd-panel-053](https://github.com/nevertoday/xxd-panel-053) | خط قلم ملاحظ · تلوين شفاف · إيقاع موسيقي · ورق شبه أبيض · فراغ فعّال |
 | [xxd-panel-054](https://github.com/nevertoday/xxd-panel-054) | ذاكرة انتقائية · مشهد رئيس · ست ملصقات · طباعة مطفأة · أزرق هوائي |
+| [xxd-panel-055](https://github.com/nevertoday/xxd-panel-055) | سرد الموضوع · ألوان باستيل مريحة · ملمس زيتي خفيف · أزرق هوائي · فراغ تحريري |
+| [xxd-panel-056](https://github.com/nevertoday/xxd-panel-056) | صورة جوهرية · فراغ واسع · قفزات دافئة وباردة · يد فطرية · استعارة بصرية |
 <!-- xxd-panel-catalog:end -->
 
 ## عن XXD

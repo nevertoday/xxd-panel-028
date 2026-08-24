@@ -189,7 +189,7 @@ xxd-panel-028/
 <!-- xxd-panel-catalog:start -->
 ## XXD Panel 전체 프로젝트 목록
 
-54개 Panel은 각각 독립된 원본 프롬프트와 미적 논리를 유지합니다. 아래 표에서 모든 프로젝트 주소와 핵심 스타일 특징을 확인할 수 있으며 현재 프로젝트는 굵게 표시됩니다.
+56개 Panel은 각각 독립된 원본 프롬프트와 미적 논리를 유지합니다. 아래 표에서 모든 프로젝트 주소와 핵심 스타일 특징을 확인할 수 있으며 현재 프로젝트는 굵게 표시됩니다.
 
 | 프로젝트 | 스타일 특징 |
 |---|---|
@@ -247,6 +247,8 @@ xxd-panel-028/
 | [xxd-panel-052](https://github.com/nevertoday/xxd-panel-052) | 종이 미니어처 · 가로 부유섬 · 진짜 손맛 · 공기감 있는 차가운 파랑 · 넓은 여백 |
 | [xxd-panel-053](https://github.com/nevertoday/xxd-panel-053) | 관찰 펜선 · 투명 담채 · 음악적 리듬 · 거의 흰 종이 · 능동적 여백 |
 | [xxd-panel-054](https://github.com/nevertoday/xxd-panel-054) | 선택적 기억 · 주인공 · 여섯 스티커 · 무광 인쇄 · 공기감 있는 파랑 |
+| [xxd-panel-055](https://github.com/nevertoday/xxd-panel-055) | 주체 서사 · 치유 파스텔 · 옅은 유화 붓결 · 공기감 있는 파랑 · 편집 여백 |
+| [xxd-panel-056](https://github.com/nevertoday/xxd-panel-056) | 핵심 이미지 · 거대한 여백 · 온냉 색 점프 · 서툰 손그림 · 시각적 은유 |
 <!-- xxd-panel-catalog:end -->
 
 ## XXD 소개

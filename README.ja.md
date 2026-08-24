@@ -189,7 +189,7 @@ xxd-panel-028/
 <!-- xxd-panel-catalog:start -->
 ## XXD Panel 全プロジェクト一覧
 
-54 個の Panel は、それぞれ独立した原文プロンプトと美的ロジックを保持しています。全プロジェクトの URL と主要なスタイル特性を一覧にし、現在のプロジェクトを太字で示します。
+56 個の Panel は、それぞれ独立した原文プロンプトと美的ロジックを保持しています。全プロジェクトの URL と主要なスタイル特性を一覧にし、現在のプロジェクトを太字で示します。
 
 | プロジェクト | スタイル特性 |
 |---|---|
@@ -247,6 +247,8 @@ xxd-panel-028/
 | [xxd-panel-052](https://github.com/nevertoday/xxd-panel-052) | ペーパークラフト · 横長の浮島 · 本物の手仕事 · 空気感のある寒色ブルー · 広い余白 |
 | [xxd-panel-053](https://github.com/nevertoday/xxd-panel-053) | 観察ペン線 · 透明な淡彩 · 音楽的リズム · ほぼ白い紙 · 能動的な余白 |
 | [xxd-panel-054](https://github.com/nevertoday/xxd-panel-054) | 選択的記憶 · 主役 · 六枚のステッカー · マット印刷 · 空気感のある青 |
+| [xxd-panel-055](https://github.com/nevertoday/xxd-panel-055) | 主体の物語 · 癒やしのパステル · 淡い油彩筆触 · 空気感のある青 · 編集的余白 |
+| [xxd-panel-056](https://github.com/nevertoday/xxd-panel-056) | 核心イメージ · 巨大な余白 · 暖冷の跳色 · 稚拙な手描き · 視覚的比喩 |
 <!-- xxd-panel-catalog:end -->
 
 ## XXD について
