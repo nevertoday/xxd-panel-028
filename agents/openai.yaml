@@ -1,4 +1,4 @@
 interface:
   display_name: "/xxd-panel-028"
-  short_description: "Create source-colour isometric paper miniatures."
-  default_prompt: "Use $xxd-panel-028 to rebuild my photograph as one quiet source-bound orthographic isometric miniature on a small paper base, using simplified recognisable masses, very few scale details, generous open paper, a limited palette extracted and softened from the source, fine ink edges, flat colour planes, light shadow, subtle paper grain, and thin native-script editorial type; ask first for modes and copy or locale preferences."
+  short_description: "Create Panel 028 from its original style brief."
+  default_prompt: "Use $xxd-panel-028; treat its bundled original style brief as the sole aesthetic authority, and ask only for unresolved mode, size, text mode, locale, or wallpaper settings."
