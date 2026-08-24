@@ -12,25 +12,20 @@ Create fresh PNG artwork with `references/028-source.md` as the **sole creative 
 1. Read `references/028-source.md` completely immediately before building every generation request.
 2. Its first Markdown heading is an administrative document label, not creative content. Omit that heading from the image-generation request, then copy the entire remaining source-brief body verbatim. Do not summarize, translate, polish, expand, reinterpret, or replace that body with this file, a README, a sample, or either runtime-adapter reference.
 3. The source brief owns subject transformation, composition inside the design region, colour, palette derivation or fixed colour choices, materials, texture, whitespace, text amount, wording logic, typographic character, and prohibitions.
-4. Runtime instructions may change only: selected output mode, final canvas ratio or pixels, placement or visibility of the source photograph, device profile, wallpaper relationship, target text language, and user-exact text.
+4. Runtime instructions may change only: selected output mode, final canvas ratio or pixels, placement or visibility of the reality source, device profile, wallpaper relationship, target text language, and user-exact text.
 5. Append all runtime instructions **after** the complete source-brief body. Never insert them into, or rewrite, its aesthetic paragraphs.
-6. When a source brief describes an old 3:4 top-bottom container, treat that as the original presentation container, not a mandatory default. A current explicit mode or size overrides only that container. The remaining style logic stays active.
+6. When a source brief describes an old 3:4 top-bottom container, treat that as the original presentation container. The selected mode-specific block replaces that container completely and decisively; every remaining aesthetic and transformation instruction stays active.
 7. Never create a generic palette, extract extra colours, lock a swatch set, invent an “aesthetic motive,” pre-compose a title, generate a copy package, or run an external semantic-reading framework. If the source brief itself asks for any of those things, let the image model perform them exactly there.
 8. Samples show outcomes only. Do not copy their subject matter, colours, text, layout accidents, or aspect ratio.
 
-Use these semantic mappings when the container changes:
+Use these roles when the container changes:
 
 ```text
-SOURCE REFERENCE = the source brief's “upper photo” or factual source
-DESIGN REGION = the source brief's “lower half” transformation
+REALITY SOURCE = the uploaded photograph, or Panel 004's factual scene generated from its theme
+TRANSFORMED DESIGN = the source brief's “lower half” aesthetic transformation
 ```
 
-- `top-bottom`: SOURCE REFERENCE and DESIGN REGION form an above-below visual relationship inside one complete composition.
-- `left-right`: SOURCE REFERENCE and DESIGN REGION form a left-right visual relationship inside one complete composition. This names the relationship, not two fixed half-canvas boxes.
-- `design-only`: SOURCE REFERENCE remains an input reference but is not visible; DESIGN REGION expands to the whole canvas.
-- `wallpaper-pack`: SOURCE REFERENCE remains an input reference but is not visible; DESIGN REGION is independently recomposed across each device canvas.
-
-For every mode, let the image model use the source brief, source image and requested canvas to decide the composition. Relative proportions, scale, crop or environmental extension, whitespace, overlap and boundaries are generative decisions unless the user explicitly requests exact panel geometry.
+The mode name is not a loose hint. For every requested asset, append exactly one of the four mode-specific delivery blocks below. Never send unused mode alternatives to the image model. Within the selected contract, let the image model decide proportions, scale, crop or environmental extension, whitespace, overlap and internal layout unless the user explicitly requests exact geometry.
 
 ## Resolve only runtime variables
 
@@ -147,44 +142,92 @@ For each distinct asset, concatenate exactly:
 [VERBATIM SOURCE-BRIEF BODY FROM references/028-source.md,
 EXCLUDING ONLY ITS ADMINISTRATIVE FIRST MARKDOWN HEADING]
 
-[RUNTIME OVERRIDE BLOCK]
+[COMMON DELIVERY PREAMBLE]
+[EXACTLY ONE SELECTED MODE BLOCK]
+[EXACTLY ONE TEXT BLOCK]
+[USER'S OTHER EXPLICIT REQUIREMENTS, IF ANY]
 ```
 
-Use this runtime block, removing irrelevant fields but adding no aesthetic prose:
+Use this common preamble:
 
 ```text
-RUNTIME OVERRIDE — CURRENT DELIVERY ONLY
+MODE-SPECIFIC DELIVERY OVERRIDE — CURRENT ASSET
 
-The original brief's initial 3:4 top-bottom arrangement is its legacy presentation container.
-For this output, override only:
-- final canvas
-- source/design-region placement
-- source visibility
-- device dimensions
+This block is the final authority only for the current presentation mode,
+reality-source visibility, final canvas and device delivery. It completely
+replaces the source brief's legacy statements about 3:4, upper/lower placement,
+equal sections and the old top-bottom container.
 
-Except for those container variables, every design-transformation, composition,
-colour, material, whitespace, text-character and typography instruction in the
-original brief remains authoritative.
+Every source-brief instruction about the transformation's visual language,
+subject identity, colour, material, texture, internal composition, whitespace,
+text character and typography remains authoritative.
 
-Interpret “upper photo” as SOURCE REFERENCE.
-Interpret “lower half” as DESIGN REGION.
+REALITY VIEW means the faithful photograph or factual scene defined by the source brief.
+TRANSFORMED DESIGN means the source brief's designed reinterpretation of that reality view.
 
-OUTPUT MODE: TOP_BOTTOM | LEFT_RIGHT | DESIGN_ONLY | WALLPAPER_PACK
 FINAL CANVAS: <resolved ratio and/or exact WIDTHxHEIGHT>
-DEVICE PROFILE: NONE | PHONE | IPAD | DESKTOP | WATCH
-SOURCE ROLE: VISIBLE IN AN ABOVE-BELOW RELATIONSHIP | VISIBLE IN A LEFT-RIGHT RELATIONSHIP | REFERENCE ONLY — NOT VISIBLE
-DESIGN ROLE: THE OTHER PART OF THAT VISUAL RELATIONSHIP | FULL-CANVAS TRANSFORMATION
 COMPOSITION METHOD: ONE COHERENT COMPLETE-CANVAS GENERATION
-COMPOSITION JUDGMENT: THE IMAGE MODEL DECIDES PROPORTIONS, SCALE, CROP OR EXTENSION, WHITESPACE, OVERLAP AND BOUNDARIES
 EXACT PANEL GEOMETRY: ONLY WHEN THE USER EXPLICITLY REQUESTS IT
-WALLPAPER RELATIONSHIP: NONE | INDEPENDENT | LINKED
 
 Colour follows the original brief's existing colour instructions exactly.
 Unless the user explicitly requests a colour change, do not add, replace,
 summarize, or re-plan any palette.
 ```
 
-Append exactly one text block after the runtime block. If the user has other explicit requirements, append those verbatim after the text block at the very end.
+Append exactly one of these mode blocks; do not include the other three.
+
+Top-bottom:
+
+```text
+OUTPUT MODE: TOP_BOTTOM
+
+Create one complete canvas whose dominant structure is two primary horizontal
+parts: the REALITY VIEW above and the TRANSFORMED DESIGN below. Together they
+organize the composition across its full width. Let the image model determine
+their visual proportion and each part's internal crop, extension, whitespace
+and typography from the source, source brief and final canvas.
+```
+
+Left-right:
+
+```text
+OUTPUT MODE: LEFT_RIGHT
+
+Create one complete canvas whose dominant structure is two primary vertical
+parts: the REALITY VIEW on the left and the TRANSFORMED DESIGN on the right.
+Together they organize the composition from the top edge to the bottom edge;
+all visible material, including typography, belongs within this left-right
+structure. Let the image model determine asymmetric widths and each part's
+internal crop, extension, whitespace and typography from the source, source
+brief and final canvas.
+```
+
+Design-only:
+
+```text
+OUTPUT MODE: DESIGN_ONLY
+
+Create one full-canvas artwork entirely in the TRANSFORMED DESIGN language.
+Use the REALITY VIEW only as the non-visible source of identity, structure,
+relationships, colour logic and facts. Every visible visual element must be
+part of the source brief's designed reinterpretation rather than an
+untransformed presentation of the source photograph.
+```
+
+Wallpaper pack — one block per device asset:
+
+```text
+OUTPUT MODE: WALLPAPER_PACK
+DEVICE PROFILE: <resolved PHONE, IPAD, DESKTOP or WATCH>
+WALLPAPER RELATIONSHIP: <resolved INDEPENDENT or LINKED>
+
+Create one full-canvas wallpaper for this device entirely in the TRANSFORMED
+DESIGN language. Use the REALITY VIEW only as a non-visible reference. Recompose
+the artwork for this device's canvas and usable screen space; every visible
+element belongs to the designed result.
+```
+
+Append exactly one text block after the selected mode block. If the user has other explicit requirements, append those verbatim after the text block at the very end.
 
 Prompt-generated text:
 
@@ -195,7 +238,10 @@ TEXT LANGUAGE: <resolved language or locale>
 The image model must generate any wording by following the original brief's
 existing text-generation logic. Every visible word must arise naturally from
 the current source image's content, atmosphere or implied meaning as interpreted
-through that logic; the runtime shell is never a source of visible copy.
+through that logic. Anything presented as factual or documentary information
+must come from user-supplied, visibly readable or otherwise verified source
+facts; when those facts are unavailable, use poetic non-factual wording. The
+runtime shell is never a source of visible copy.
 ```
 
 User-exact text:
@@ -218,6 +264,8 @@ Render no letters, characters, numbers, logos, captions, labels, or pseudo-text 
 
 If the user explicitly changes colour or another style variable, append that exact request at the very end, after the text block, and identify it as a user override. Do not elaborate it.
 
+Immediately before generation, verify that the constructed prompt contains exactly one `OUTPUT MODE:` line and no instructions from an unselected mode.
+
 ## Bitmap execution
 
 - Prefer GPT Image 2 whenever the host's built-in image capability or an already configured compatible route exposes it.
@@ -229,7 +277,7 @@ If the user explicitly changes colour or another style variable, append that exa
 - If no compatible route is verified, ask the user to enable a suitable image tool or voluntarily provide an API key for the task. Never ask them to expose an existing secret, and never assert that a key is missing without a trusted sanitized result.
 - Generate finished raster imagery. SVG, HTML, CSS, Canvas, diagrams, and programmatic vector drawing are not substitutes.
 
-Use **one complete-canvas generation per output**. For paired modes, give the image model the source, complete source-brief body, selected relationship and final canvas in one request; do not pre-crop the source or generate separate panels. The model decides how to preserve the important subject and context while composing the requested relationship. Retry a failed complete canvas once by restating only a meaningful failed content or delivery constraint. Use `scripts/compose_panel.py` only when the user explicitly requests pixel-exact panel geometry or pixel-identical source preservation. The script may crop/paste/size/audit raster files; it must never invent the artwork or judge style.
+Use **one complete-canvas generation per output**. Give the image model the source, complete source-brief body, common preamble, one selected mode block, one text block and final canvas in one request; do not pre-crop the source or generate separate panels. The model decides how to preserve the important subject and context inside the selected mode contract. Retry a failed complete canvas once by restating only a meaningful failed content or delivery constraint. Use `scripts/compose_panel.py` only when the user explicitly requests pixel-exact panel geometry or pixel-identical source preservation. The script may crop/paste/size/audit raster files; it must never invent the artwork or judge style.
 
 For a linked wallpaper pack, generate one device image first as the visual anchor, then supply both the original source and that approved anchor to each remaining device generation. Recompose each canvas; never crop an earlier wallpaper or chain derivatives. For an independent pack, every device sees only the original source.
 
@@ -257,9 +305,12 @@ Inspect every final PNG at full size and thumbnail size. Accept only when:
 - it is a fresh result from the correct current source or theme;
 - mode, source visibility, whole-canvas ratio or exact pixels, count, and PNG format match the resolved runtime variables;
 - the source remains recognisable and its important subject and context are not needlessly truncated, stretched or replaced;
-- paired modes read clearly as the selected visual relationship and feel intentionally composed, without requiring equal panels, a measured seam or a fixed crop unless the user explicitly requested exact geometry;
+- `top-bottom` reads as two primary horizontal parts, with the reality view above and transformed design below, while leaving their exact proportions to the image model;
+- `left-right` reads as two primary vertical parts that organize the canvas from top to bottom, with the reality view left and transformed design right; typography is integrated into that structure rather than becoming a shared third band;
+- `design-only` and every wallpaper contain a full-canvas transformed design: the reality source remains reference material, and no visible area presents it as an untransformed source photograph;
+- no seam detection, midpoint percentage, coordinate measurement, or fixed-crop audit is used unless the user explicitly requested exact geometry;
 - the result follows `references/028-source.md`, especially its own colour, material, composition, whitespace, and typography requirements, without an outer Skill palette or added art direction;
-- prompt-generated text uses the requested language, follows the source brief's own text logic and is meaningfully rooted in the current source image; user-exact text is verbatim with no additions; text-free output contains no text or pseudo-text;
+- prompt-generated text uses the requested language, follows the source brief's own text logic and is meaningfully rooted in the current source image; anything that reads as factual or documentary information is traceable to supplied, visible or verified facts; user-exact text is verbatim with no additions; text-free output contains no text or pseudo-text;
 - linked and independent wallpaper rules are respected;
 - no SVG/code-rendered substitute, watermark, UI, route information, or secret appears.
 

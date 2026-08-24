@@ -68,13 +68,18 @@ These samples demonstrate the 028 aesthetic motive. Their subjects, composition,
 
 `references/028-source.md` is this project's sole creative and aesthetic authority. The Skill no longer summarizes or expands it, and it does not impose a shared palette, colour plan, aesthetic motive, title, or microcopy package. GPT Image 2 follows that brief's own rules for colour, material, composition, whitespace, wording, and typography.
 
-Mode and size change only the legacy 3:4 top-bottom container. Left-right mode expresses a visual relationship between the source and its designed transformation; it does not prescribe two half-canvas boxes or crop frames. In design-only and wallpaper modes, the lower design language expands across the whole canvas. Every other source-brief instruction remains active.
+Mode and size completely replace the legacy 3:4 top-bottom delivery container without rewriting the transformation aesthetic. Each asset sends GPT Image 2 one selected mode's final contract instead of asking it to interpret four alternatives inside a generic template.
 
 ## Four combinable output modes
 
-Select one or more of `top-bottom`, `left-right`, `design-only`, and `wallpaper-pack`. By default, paired work gives the image model the source, source brief, visual relationship, and final canvas in one request so it can compose the complete result. Deterministic assembly is used only when the user explicitly requests exact panel geometry or pixel-identical source preservation.
+Select one or more of `top-bottom`, `left-right`, `design-only`, and `wallpaper-pack`. When several are selected, each is generated independently with its own prompt.
 
-Top-bottom and left-right are visual relationships, not fixed equal containers. The image model decides relative proportions, scale, whitespace, overlap, crop or environmental extension from the source and final canvas; there is no seam, midpoint-percentage, or pixel-coordinate test.
+- `top-bottom`: one complete canvas with the reality view above and transformed design below.
+- `left-right`: one complete canvas whose left-right structure runs from top edge to bottom edge, source left and design right. Typography stays inside that structure rather than creating a shared third footer; widths may be asymmetric.
+- `design-only`: the source is a non-visible reference for identity, structure, colour logic, and facts; every visible element follows this Panel's transformation language.
+- `wallpaper-pack`: each device receives an independently composed full-canvas transformed wallpaper, with no source-photo region.
+
+There is no seam, midpoint-percentage, or pixel-coordinate test. Deterministic assembly is used only when the user explicitly requests exact panel geometry or pixel-identical source preservation.
 
 Ordinary sizes are also multi-select: auto-fit, source aspect, 1:1, 3:4, 4:3, 4:5, 5:4, 2:3, 3:2, 9:16, 16:9, 21:9, 5:7, 7:5, or custom ratios/exact pixels. There is no silent default. Every distinct aspect is independently recomposed from the same verbatim source brief.
 
@@ -84,7 +89,7 @@ Wallpaper packs may be linked or independent. A linked pack creates one anchor i
 
 Before generation, resolve one of three choices:
 
-1. **Model generates text from the original prompt**: the user supplies only the language or locale; GPT Image 2 follows the source brief's own wording, amount, tone, and typography logic, with every visible word arising naturally from the current image's content, atmosphere, or implied meaning.
+1. **Model generates text from the original prompt**: the user supplies only the language or locale; GPT Image 2 follows the source brief's wording, amount, tone, and typography logic. Every word arises from the current image's content, atmosphere, or implied meaning, and anything presented as factual or documentary information must be grounded in supplied, visible, or verified facts.
 2. **Use my exact text**: pass it verbatim, without rewriting, translating, or adding a title; typography still follows the source brief.
 3. **No text**: prohibit visible text and pseudo-text.
 
