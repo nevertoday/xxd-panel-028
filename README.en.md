@@ -255,9 +255,9 @@ XXD is the abbreviated brand name of Xiaoxiaodong. This project is created and m
 
 One-to-one consultation for using the Skills is billed at CNY 299 per hour. Contact Xiaoxiaodong through the WeChat QR code below to book.
 
-### Xiaoxiaodong Skills User Community · CNY 99 to join
+### Xiaoxiaodong Skills User Community · CNY 168 to join
 
-A one-time CNY 99 fee joins the community for workflow sharing, work discussion, and peer support. It does not include hourly one-to-one consultation. Include “Skills User Community” in your WeChat message.
+A one-time CNY 168 fee joins the community for workflow sharing, work discussion, and peer support. It does not include hourly one-to-one consultation. Include “Skills User Community” in your WeChat message.
 
 ### Knowledge Planet + Member Prompt Library · CNY 699/year
 
