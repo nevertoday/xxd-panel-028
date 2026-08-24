@@ -1,4 +1,4 @@
 interface:
   display_name: "/xxd-panel-028"
   short_description: "Create Panel 028 from its original style brief."
-  default_prompt: "Use $xxd-panel-028; treat its bundled original style brief as the sole aesthetic authority, and ask only for unresolved mode, size, text mode, locale, or wallpaper settings."
+  default_prompt: "Use $xxd-panel-028; keep its bundled original style brief as the sole aesthetic authority, use real multi-select only when the host exposes it, use single-choice tools only for single-choice fields, otherwise use two-round combination input, and ask only for unresolved settings."

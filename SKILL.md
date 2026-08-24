@@ -55,11 +55,22 @@ Parse parameters anywhere after the invocation and input:
 
 Explicit parameters override ambiguous prose. Multi-value parameters accumulate and deduplicate in user order; single-value parameters use the last explicit value. If every required variable is resolved, skip preflight and generate. If values are partial, ask only for unresolved variables. Ask about a direct contradiction such as `--text none` with `--copy`.
 
-### Interactive preflight
+### Capability-adaptive preflight
 
-Prefer genuine host controls when available: multi-select for modes and ordinary sizes, single-select for text mode and wallpaper relationship, and free input for custom values. If the host lacks those controls, use the following short multiline questions; never show fake clickable checkboxes.
+Do not switch the user's session into Plan mode merely to obtain a question UI. A Skill describes behaviour but cannot create UI capabilities that the host has not exposed. Detect the actual question-tool schema and follow this order:
 
-First round — modes, multi-select:
+1. **Real multi-select tool available — for example Claude Code `AskUserQuestion` with `multiSelect: true`:** use genuine checkbox questions for modes and sizes. Use single-select questions for text mode and wallpaper relationship. Do not print a redundant numbered menu after showing the form.
+   - First form: modes (`top-bottom`, `left-right`, `design-only`, `wallpaper-pack`) with `multiSelect: true`; size route (`自动适配`, `跟随原图`, `常用比例`, `自定义`) with multi-select enabled when the host permits combined size sources; text mode as single-select.
+   - When `常用比例` is selected, show real checkbox groups for all concrete ratios, split only as required by host option limits: square `1:1`; portrait `3:4`, `4:5`, `2:3`, `9:16`, `5:7`; landscape `4:3`, `5:4`, `3:2`, `16:9`, `21:9`, `7:5`. Accumulate selections across groups. When `自定义` is selected, collect one or more ratios or exact pixel targets through the host's free-input/Other path.
+   - If wallpaper is selected, ask `linked` versus `independent` as a genuine single-select. Ask only unresolved questions and respect answers already present in prose or parameters.
+2. **Only a mutually exclusive question tool is available — for example Codex `request_user_input`:** use it only for genuinely single-choice fields such as text mode, wallpaper relationship, or the size-entry route. Never represent modes or concrete sizes as a single-select when the user may choose several. Collect those multi-value fields with the two-round combination input below. Do not claim that a single-choice card is a checkbox.
+3. **No interactive question tool is available:** use the same two-round combination input below. It is typed multi-value input, not a clickable form. Never draw Markdown `- [ ]` boxes or other fake controls.
+
+Inline parameters and clear natural language always take priority. Skip every field already resolved. When all required values are present, skip every question and generate immediately.
+
+#### Two-round combination-input fallback
+
+First round — modes. This is a typed combination question, so label it honestly instead of calling it a checkbox:
 
 ```text
 请选择一个或多个成品类型：
@@ -72,41 +83,36 @@ First round — modes, multi-select:
 可回复：1｜1+3｜2、4｜全部
 ```
 
-Second round — when at least one ordinary mode is selected, show ordinary sizes and text mode together when the interface allows it. Sizes are multi-select. If the selection contains only `wallpaper-pack`, skip this ordinary-size question and resolve text plus device sizes in the wallpaper step.
+Second round — when at least one ordinary mode is selected, ask size route and text mode together. If the selection contains only `wallpaper-pack`, skip the ordinary-size part and resolve text plus device sizes and wallpaper relationship.
 
 ```text
-请选择一个或多个成品尺寸：
+请选择尺寸，可多选：
 
-1. 自动适配（显示本次计算出的推荐比例与像素）
-2. 跟随原图比例
-3. 1:1｜2048×2048
-4. 3:4｜1536×2048
-5. 4:3｜2048×1536
-6. 4:5｜1600×2000
-7. 5:4｜2000×1600
-8. 2:3｜1600×2400
-9. 3:2｜2400×1600
-10. 9:16｜1440×2560
-11. 16:9｜2560×1440
-12. 21:9｜2520×1080
-13. 5:7｜1600×2240
-14. 7:5｜2240×1600
-15. 自定义比例或准确像素
+1. 智能推荐（显示本次计算出的比例与像素）
+2. 跟随原图
+3. 常用比例（可直接写 3:4、9:16 等一个或多个比例）
+4. 自定义（输入一个或多个比例／准确像素）
 
-可回复：1｜4+10｜3、6、11｜15：5:8、2160×3840
-```
-
-Text mode is single-select:
-
-```text
 请选择文字方式：
 
-1. 模型根据原始提示词生成文字（请注明语言或地区）
-2. 使用我的准确文字（请发送原文，并注明语言或地区）
-3. 不要文字
+A. 模型根据原始提示词生成文字（注明语言或地区）
+B. 使用我的准确文字（发送原文并注明语言或地区）
+C. 不要文字
+
+可回复：尺寸 1＋9:16；文字 A，日语
+可回复：尺寸 3:4、16:9；文字 B，准确文字「……」，简体中文
 ```
 
-Do not decide wording outside the source brief. For option 1, provide only the target language to the image model; the image model follows the source brief's existing text logic. For option 2, pass the user's characters verbatim and add no other copy. For option 3, prohibit all visible text and pseudo-text.
+If the user answers only `常用比例`, show the grouped library once and accept any combination:
+
+```text
+方形：1:1
+竖版：3:4、4:5、2:3、9:16、5:7
+横版：4:3、5:4、3:2、16:9、21:9、7:5
+也可以直接输入准确像素。
+```
+
+Do not decide wording outside the source brief. For option A, provide only the target language to the image model; the image model follows the source brief's existing text logic. For option B, pass the user's characters verbatim and add no other copy. For option C, prohibit all visible text and pseudo-text.
 
 Do not infer language or market from a person's appearance, name, clothing, scene, filename, metadata, signage, or the language used to operate the Skill. Resolve it explicitly whenever text is requested. Use natural target-language shaping, direction, punctuation, spacing, and line breaking. For Arabic, preserve connected forms and right-to-left text flow without indiscriminately mirroring the artwork.
 
