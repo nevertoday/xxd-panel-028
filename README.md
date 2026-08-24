@@ -22,6 +22,26 @@ XXD Panel 028 是一个面向 Codex 与兼容 Agent 的图像生成 Skill。它�
 
 清晰体块、边缘裁切、轻微投影和极少量微型细节建立尺度感、孤独感与收藏感，周围保留大面积开放纸面。色彩完全从源图提取、归纳、提纯、柔化；精细墨线、扁平色面、轻影与极浅纸粒形成安静、克制的编辑插画质感。
 
+## 样张 · 来自 X
+
+> [小小东（@xiaoxiaodong01）](https://x.com/xiaoxiaodong01/status/2090447110168822128) · 2026-08-20<br>
+> GPT2 x 立体 x 模型 x 微缩 x 美学提示词 x VOL.028
+
+<table>
+  <tr>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-01.jpg" alt="XXD Panel 028 样张 1"></a></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-02.jpg" alt="XXD Panel 028 样张 2"></a></td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-03.jpg" alt="XXD Panel 028 样张 3"></a></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-04.jpg" alt="XXD Panel 028 样张 4"></a></td>
+  </tr>
+</table>
+
+<p align="center"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128">查看原推文与完整提示词 →</a></p>
+
+这些样张用于展示 028 的美学动机，不会把样张中的主体、构图、配色、文案或旧画幅变成生成参考或当前默认值。
+
 ## 为什么需要 028
 
 普通“等距微缩”很容易退化成繁忙玩具小镇、现成游戏资产或一套与照片无关的薄荷绿和珊瑚红。
@@ -43,26 +63,6 @@ XXD Panel 028 是一个面向 Codex 与兼容 Agent 的图像生成 Skill。它�
 - **源图限定色盘：** 从照片中提取最有识别度的颜色，归纳、提纯、柔化并保留原有冷暖性格，绝不套固定粉彩。
 - **纸上材质：** 精细墨线、扁平哑光色面、同色阶、邻近色、轻微投影和极浅纸粒共同建立结构。
 - **纤细编辑文字：** 一个短标题和极少微字沿留白边缘、主体基座、水平轴线或等距结构排列。
-
-## 样张 · 来自 X
-
-> [小小东（@xiaoxiaodong01）](https://x.com/xiaoxiaodong01/status/2090447110168822128) · 2026-08-20<br>
-> GPT2 x 立体 x 模型 x 微缩 x 美学提示词 x VOL.028
-
-<table>
-  <tr>
-    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-01.jpg" alt="XXD Panel 028 样张 1"></a></td>
-    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-02.jpg" alt="XXD Panel 028 样张 2"></a></td>
-  </tr>
-  <tr>
-    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-03.jpg" alt="XXD Panel 028 样张 3"></a></td>
-    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-04.jpg" alt="XXD Panel 028 样张 4"></a></td>
-  </tr>
-</table>
-
-<p align="center"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128">查看原推文与完整提示词 →</a></p>
-
-这些样张用于展示 028 的美学动机，不会把样张中的主体、构图、配色、文案或旧画幅变成生成参考或当前默认值。
 
 ## 原始提示词优先，而不是二次导演
 
