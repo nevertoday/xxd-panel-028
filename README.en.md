@@ -42,7 +42,18 @@ Clear masses, edge crop, slight projection, and very few tiny details establish 
 
 These samples demonstrate the 028 aesthetic motive. Their subjects, composition, palette, copy, and earlier canvas ratio never become generation references or current defaults.
 
-## Why it exists
+<!-- xxd-panel-benefit:start -->
+## Quick fit check: is XXD Panel 028 right for you?
+
+| What you need to know | What this style gives you |
+|---|---|
+| **What you will get** | Place the photograph into a source-colour isometric miniature on paper |
+| **Recognizable signature** | ORTHOGRAPHIC ISOMETRIC · SMALL PAPER BASE · SOURCE-DERIVED PALETTE · FINE INK · EDITORIAL MODEL |
+| **How it respects your source** | Recognizable identity, relationships, structure, and supplied facts stay anchored. Styling reorganizes the visual language instead of replacing your content with an unrelated template. |
+| **Where you can use it** | Create top-bottom, left-right, design-only, and four-device wallpaper outputs in multiple ratios or exact sizes. Delivery changes; the Panel's style identity does not get diluted. |
+<!-- xxd-panel-benefit:end -->
+
+## How it turns your source into a distinctive result
 
 “Isometric miniature” easily collapses into a busy toy town, stock game assets, or a mint-and-coral palette unrelated to the photograph.
 
@@ -54,7 +65,7 @@ lock identity / silhouette / pose / relation → simplify into orthographic mass
 
 If an unrelated photograph could replace the source without materially changing the miniature silhouette, mass hierarchy, base shape, scale cues, composite palette, or type relation, the result is not 028.
 
-## The 028 visual contract
+## What makes the finished style recognizable
 
 - **Source-bound miniature:** at least three identity, silhouette, pose, action, function, opening, scale, or relation cues enter one model.
 - **One paper base:** the subject sits on one source-earned slab, low plinth, or land cut-out surrounded by generous open paper.
