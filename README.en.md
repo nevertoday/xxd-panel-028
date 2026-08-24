@@ -64,29 +64,20 @@ If an unrelated photograph could replace the source without materially changing 
 
 These samples demonstrate the 028 aesthetic motive. Their subjects, composition, palette, copy, and earlier canvas ratio never become generation references or current defaults.
 
-## Four outputs, one paper-miniature logic
+## Four combinable output modes
 
-The four modes support single or multiple selection. Reply with `1`, `1+3`, `1,2,4`, or `all`; the Skill deduplicates and runs them in menu order 1→4. Every mode is delivered independently in its own task directory—never as an overview—and `all` yields seven PNGs per source (one for each ordinary mode plus four wallpapers). Sizes may be labelled by mode in the same reply; unlabeled ordinary modes remain source-adaptive. Copy is shared across selected modes by default and may be overridden per mode.
+Choose one or several modes with `1`, `1+3`, `1,2,4`, or `all`; `all` produces seven separate PNGs per source. After mode selection and before generation, the Skill explicitly asks for the whole finished canvas: the original-prompt `3:4`, an explicit source-aspect choice, a common ratio, or custom ratio/exact pixels. Source dimensions are never applied silently.
 
-| Mode | Sizing logic | Deliverable |
+| Mode | Canvas rule | Result |
 | --- | --- | --- |
-| `top-bottom` | source-adaptive | complete source above, 028 isometric paper miniature below; both panels retain the source size and split exactly 50/50 |
-| `left-right` | source-adaptive | complete source left, 028 isometric paper miniature right; both panels retain the source size and split exactly 50/50 |
-| `design-only` | source-adaptive | transformed design only, with no visible source photo; retains source ratio and dimensions |
-| `wallpaper-pack` | four device sizes | separate phone, iPad, desktop, and children's-watch PNGs |
+| `top-bottom` | user-confirmed whole canvas | one complete generation: high-fidelity source above, 028 design below, approximately 50/50 |
+| `left-right` | user-confirmed whole canvas | one complete generation: high-fidelity source left, 028 design right, approximately 50/50 |
+| `design-only` | user-confirmed whole canvas | 028 design fills the canvas; source remains invisible |
+| `wallpaper-pack` | confirmed per device | separate phone, iPad, desktop, and children's-watch PNGs |
 
-Exact user pixels > explicit ratio or destination > source adaptation for ordinary modes. The original `028.md` used a 3:4 creative canvas, but that historical example is not a silent default in the current Skill.
+Paired modes use the source as a high-fidelity edit/reference input and one complete style prompt to generate the finished composition directly, so photography, design, colour, light, typography, and meaning can cohere. Deterministic composition is fallback-only: after one targeted complete-canvas retry fails, when pixel-identical source preservation is explicitly required, when the active route cannot realise the canvas, or for lossless final pixel calibration.
 
-Photography in paired modes stays truthful, with only restrained grading and necessary environmental extension. Design-only and wallpapers still use the photograph as evidence but do not show it.
-
-### Wallpaper packs: linked or independent
-
-Wallpaper mode has no silent size default. Choose the common preset—phone `1440×3200`, iPad `2048×2732`, desktop `3840×2160`, watch `1024×1024`—or give labelled custom sizes.
-
-- **Linked pack (recommended):** generate and approve the iPad anchor first; every other device references the original photo plus that same anchor and is recomposed for its canvas.
-- **Independent set:** every device references only the source photograph and may explore a different miniature scale, base shape, mass hierarchy, source-derived palette, and type relation.
-
-Linked never means cropped. All four files are separately generated, composed, and reviewed, with no iPad→phone→desktop→watch reference chain.
+Wallpapers may be linked or independent. A linked pack approves one iPad anchor, then recomposes every other device from the original plus that same anchor. An independent pack gives each device only the original. Neither crops another device output nor chains derivatives.
 
 ## Copy becomes a measure line for the miniature
 
@@ -106,17 +97,11 @@ target market or audience > requested output language > direction language; if n
 
 A Japanese edition uses natural Japanese, a Korean-audience edition uses natural Korean and correct spacing, a UK edition uses British English, and Arabic defaults to natural Modern Standard Arabic with genuine right-to-left composition. The Skill never guesses nationality from appearance, clothing, scenery, or signs and never uses pseudo-foreign text.
 
-## Code guarantees geometry; image generation creates the artwork
+## Complete-canvas first, raster-only delivery
 
-The image model creates the source-bound isometric masses, paper base, scale cues, source-derived limited palette, fine ink, flat colour, light shadow, subtle paper grain, and thin editorial type. `scripts/compose_panel.py` only plans canvases, performs exact 50/50 raster composition, finalises dimensions, and audits results. It never fakes artwork with programmatic drawing.
+The image model owns the aesthetics of the entire finished composition; paired layouts also default to one complete-canvas generation. `scripts/compose_panel.py` remains only for condition-based recovery, lossless pixel calibration, and read-only audit. It is not run pre-emptively and does not judge aesthetic success.
 
-```bash
-python3 scripts/compose_panel.py --plan --layout top-bottom --source photo.png
-python3 scripts/compose_panel.py --plan --layout left-right --size 2560x1440
-python3 scripts/compose_panel.py --audit result.png --layout design-only --size 2048x2048
-```
-
-Exact top-bottom canvases need an even total height; left-right canvases need an even total width. Requested pixels are never silently changed.
+Every deliverable is a raster PNG and every invocation creates a fresh task under `~/Desktop/xxd/`. The configured image route exposes sanitised status only—never providers, endpoints, credentials, headers, prompts, responses, or account details. SVG, HTML, Canvas, diagrams, and programmatic drawing are not substitutes for the final artwork.
 
 ## Get started
 
