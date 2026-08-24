@@ -5,15 +5,15 @@ description: "Create XXD Panel 028 raster artwork while treating the bundled ori
 
 # XXD Panel 028
 
-Create fresh PNG artwork with `references/028-source.md` as the **sole creative and aesthetic authority**. This Skill is a runtime shell: it resolves delivery variables, appends them to the untouched source brief, executes bitmap generation, and verifies the result. It must not write a second art direction.
+Create fresh PNG artwork with `references/028-source.md` as the **sole creative and aesthetic authority**. This Skill is a runtime shell: it resolves delivery variables, appends them to the untouched source-brief body, executes bitmap generation, and verifies the result. It must not write a second art direction.
 
 ## Authority boundary
 
 1. Read `references/028-source.md` completely immediately before building every generation request.
-2. Copy that brief verbatim into the generation prompt. Do not summarize, translate, polish, expand, reinterpret, or replace it with this file, a README, a sample, or either runtime-adapter reference.
+2. Its first Markdown heading is an administrative document label, not creative content. Omit that heading from the image-generation request, then copy the entire remaining source-brief body verbatim. Do not summarize, translate, polish, expand, reinterpret, or replace that body with this file, a README, a sample, or either runtime-adapter reference.
 3. The source brief owns subject transformation, composition inside the design region, colour, palette derivation or fixed colour choices, materials, texture, whitespace, text amount, wording logic, typographic character, and prohibitions.
 4. Runtime instructions may change only: selected output mode, final canvas ratio or pixels, placement or visibility of the source photograph, device profile, wallpaper relationship, target text language, and user-exact text.
-5. Append all runtime instructions **after** the complete source brief. Never insert them into, or rewrite, its aesthetic paragraphs.
+5. Append all runtime instructions **after** the complete source-brief body. Never insert them into, or rewrite, its aesthetic paragraphs.
 6. When a source brief describes an old 3:4 top-bottom container, treat that as the original presentation container, not a mandatory default. A current explicit mode or size overrides only that container. The remaining style logic stays active.
 7. Never create a generic palette, extract extra colours, lock a swatch set, invent an “aesthetic motive,” pre-compose a title, generate a copy package, or run an external semantic-reading framework. If the source brief itself asks for any of those things, let the image model perform them exactly there.
 8. Samples show outcomes only. Do not copy their subject matter, colours, text, layout accidents, or aspect ratio.
@@ -25,10 +25,12 @@ SOURCE REFERENCE = the source brief's “upper photo” or factual source
 DESIGN REGION = the source brief's “lower half” transformation
 ```
 
-- `top-bottom`: SOURCE REFERENCE is visible above; DESIGN REGION is below.
-- `left-right`: SOURCE REFERENCE is visible on the left; DESIGN REGION is on the right.
+- `top-bottom`: SOURCE REFERENCE and DESIGN REGION form an above-below visual relationship inside one complete composition.
+- `left-right`: SOURCE REFERENCE and DESIGN REGION form a left-right visual relationship inside one complete composition. This names the relationship, not two fixed half-canvas boxes.
 - `design-only`: SOURCE REFERENCE remains an input reference but is not visible; DESIGN REGION expands to the whole canvas.
 - `wallpaper-pack`: SOURCE REFERENCE remains an input reference but is not visible; DESIGN REGION is independently recomposed across each device canvas.
+
+For every mode, let the image model use the source brief, source image and requested canvas to decide the composition. Relative proportions, scale, crop or environmental extension, whitespace, overlap and boundaries are generative decisions unless the user explicitly requests exact panel geometry.
 
 ## Resolve only runtime variables
 
@@ -130,7 +132,7 @@ Neither option crops or mechanically resizes one wallpaper into the other device
 ### Size resolution
 
 - No silent default ratio exists.
-- For `auto`, calculate a source- and mode-aware whole canvas before generation. Preserve the photograph without forced crop and use the source brief's paired relationship as a visual planning target: when it calls for equal halves, top-bottom may resolve near source `W:2H` and left-right near `2W:H`; when it suggests a different relationship, calculate from that relationship instead. Design-only starts from the source aspect unless the source brief or intended use clearly supports a better recommendation. Show the resolved ratio and pixels. This planning ratio does not authorize a pixel-level seam or midline audit after generation.
+- For `auto`, recommend a whole-canvas ratio from the source orientation, selected mode, source brief and intended use, then show the resolved ratio and pixels. Do not derive panel boxes or crop coordinates; the image model composes the selected relationship inside that canvas.
 - `source` means the source photograph's aspect for the whole requested ordinary output.
 - Exact pixels override a ratio.
 - Every distinct aspect ratio is a separate complete-canvas composition from the same source and the same verbatim style brief. Never crop one ratio from another. Multiple resolutions sharing one aspect may be exported from the highest-quality approved composition.
@@ -142,7 +144,8 @@ Neither option crops or mechanically resizes one wallpaper into the other device
 For each distinct asset, concatenate exactly:
 
 ```text
-[VERBATIM CONTENT OF references/028-source.md]
+[VERBATIM SOURCE-BRIEF BODY FROM references/028-source.md,
+EXCLUDING ONLY ITS ADMINISTRATIVE FIRST MARKDOWN HEADING]
 
 [RUNTIME OVERRIDE BLOCK]
 ```
@@ -169,10 +172,11 @@ Interpret “lower half” as DESIGN REGION.
 OUTPUT MODE: TOP_BOTTOM | LEFT_RIGHT | DESIGN_ONLY | WALLPAPER_PACK
 FINAL CANVAS: <resolved ratio and/or exact WIDTHxHEIGHT>
 DEVICE PROFILE: NONE | PHONE | IPAD | DESKTOP | WATCH
-SOURCE VISIBILITY: UPPER HALF | LEFT HALF | REFERENCE ONLY — NOT VISIBLE
-DESIGN REGION: LOWER HALF | RIGHT HALF | FULL CANVAS
-PAIRED BALANCE: USE THE ORIGINAL BRIEF AS A VISUAL COMPOSITION TARGET | NOT APPLICABLE
-MIDLINE AUDIT: NONE — MINOR GENERATIVE SPLIT OFFSETS ARE ACCEPTABLE
+SOURCE ROLE: VISIBLE IN AN ABOVE-BELOW RELATIONSHIP | VISIBLE IN A LEFT-RIGHT RELATIONSHIP | REFERENCE ONLY — NOT VISIBLE
+DESIGN ROLE: THE OTHER PART OF THAT VISUAL RELATIONSHIP | FULL-CANVAS TRANSFORMATION
+COMPOSITION METHOD: ONE COHERENT COMPLETE-CANVAS GENERATION
+COMPOSITION JUDGMENT: THE IMAGE MODEL DECIDES PROPORTIONS, SCALE, CROP OR EXTENSION, WHITESPACE, OVERLAP AND BOUNDARIES
+EXACT PANEL GEOMETRY: ONLY WHEN THE USER EXPLICITLY REQUESTS IT
 WALLPAPER RELATIONSHIP: NONE | INDEPENDENT | LINKED
 
 Colour follows the original brief's existing colour instructions exactly.
@@ -189,8 +193,9 @@ TEXT MODE: ORIGINAL_PROMPT_GENERATED
 TEXT LANGUAGE: <resolved language or locale>
 
 The image model must generate any wording by following the original brief's
-existing text-generation logic. The outer Skill supplies no title, microcopy,
-copy package, or additional semantic framework.
+existing text-generation logic. Every visible word must arise naturally from
+the current source image's content, atmosphere or implied meaning as interpreted
+through that logic; the runtime shell is never a source of visible copy.
 ```
 
 User-exact text:
@@ -224,7 +229,7 @@ If the user explicitly changes colour or another style variable, append that exa
 - If no compatible route is verified, ask the user to enable a suitable image tool or voluntarily provide an API key for the task. Never ask them to expose an existing secret, and never assert that a key is missing without a trusted sanitized result.
 - Generate finished raster imagery. SVG, HTML, CSS, Canvas, diagrams, and programmatic vector drawing are not substitutes.
 
-Use **one complete-canvas generation per output**. For paired modes, generate the faithful photo region and transformed design region together in the requested whole canvas. Retry a failed complete canvas once by restating only a meaningful failed content or delivery constraint. Never retry, reject, or invoke `compose_panel.py` merely because the generated boundary is a little above or below the mathematical midpoint. Use `scripts/compose_panel.py` only when the user explicitly requires pixel-exact panel geometry, the user requires pixel-identical source preservation, the route cannot realize the requested canvas, or lossless pixel calibration is necessary. The script may crop/paste/size/audit raster files; it must never invent the artwork or judge style.
+Use **one complete-canvas generation per output**. For paired modes, give the image model the source, complete source-brief body, selected relationship and final canvas in one request; do not pre-crop the source or generate separate panels. The model decides how to preserve the important subject and context while composing the requested relationship. Retry a failed complete canvas once by restating only a meaningful failed content or delivery constraint. Use `scripts/compose_panel.py` only when the user explicitly requests pixel-exact panel geometry or pixel-identical source preservation. The script may crop/paste/size/audit raster files; it must never invent the artwork or judge style.
 
 For a linked wallpaper pack, generate one device image first as the visual anchor, then supply both the original source and that approved anchor to each remaining device generation. Recompose each canvas; never crop an earlier wallpaper or chain derivatives. For an independent pack, every device sees only the original source.
 
@@ -251,10 +256,10 @@ Inspect every final PNG at full size and thumbnail size. Accept only when:
 
 - it is a fresh result from the correct current source or theme;
 - mode, source visibility, whole-canvas ratio or exact pixels, count, and PNG format match the resolved runtime variables;
-- paired source regions preserve identity and structure without stretching or replacement;
-- paired regions feel intentionally balanced, but no seam detection, coordinate measurement, midpoint percentage, or pixel-level split audit is performed; a minor generative offset is not a failure unless the user explicitly requested exact geometry;
+- the source remains recognisable and its important subject and context are not needlessly truncated, stretched or replaced;
+- paired modes read clearly as the selected visual relationship and feel intentionally composed, without requiring equal panels, a measured seam or a fixed crop unless the user explicitly requested exact geometry;
 - the result follows `references/028-source.md`, especially its own colour, material, composition, whitespace, and typography requirements, without an outer Skill palette or added art direction;
-- prompt-generated text uses the requested language and the source brief's own text logic; user-exact text is verbatim with no additions; text-free output contains no text or pseudo-text;
+- prompt-generated text uses the requested language, follows the source brief's own text logic and is meaningfully rooted in the current source image; user-exact text is verbatim with no additions; text-free output contains no text or pseudo-text;
 - linked and independent wallpaper rules are respected;
 - no SVG/code-rendered substitute, watermark, UI, route information, or secret appears.
 

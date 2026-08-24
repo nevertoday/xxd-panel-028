@@ -1,4 +1,4 @@
 interface:
   display_name: "/xxd-panel-028"
   short_description: "Create Panel 028 from its original style brief."
-  default_prompt: "Use $xxd-panel-028; keep its bundled original style brief as the sole aesthetic authority, adapt questions to real host controls, ask only for unresolved settings, and never reject a paired result solely because its generated boundary is slightly off the mathematical midpoint."
+  default_prompt: "Use $xxd-panel-028; keep the body of its bundled original style brief as the sole aesthetic authority, let the image model compose each complete canvas without fixed panel boxes unless I request exact geometry, and keep prompt-generated wording rooted in the current source image."
