@@ -285,16 +285,20 @@ For a linked wallpaper pack, generate one device image first as the visual ancho
 
 Use only sources attached to the current invocation, explicit paths, or a prior source explicitly identified by the user as “the same image.” Never scan Desktop, workspace roots, output folders, or unrelated directories for a substitute. Historical outputs and sample assets are not inputs unless explicitly named.
 
-Write selected outputs only:
+Write every selected final PNG directly inside the fresh task directory. The task directory is the only grouping layer:
 
 ```text
 ~/Desktop/xxd/xxd-panel-028/<fresh-task>/
-└── source-01/
-    ├── top-bottom/<size-label>.png
-    ├── left-right/<size-label>.png
-    ├── design-only/<size-label>.png
-    └── wallpaper-pack/phone.png · ipad.png · desktop.png · watch.png
+├── source-01-top-bottom-3x4-1536x2048.png
+├── source-01-left-right-3x2-2160x1440.png
+├── source-01-design-only-3x4-1536x2048.png
+├── source-01-wallpaper-linked-phone-1440x3200.png
+├── source-01-wallpaper-linked-ipad-2048x2732.png
+├── source-01-wallpaper-linked-desktop-3840x2160.png
+└── source-01-wallpaper-linked-watch-1024x1024.png
 ```
+
+Use `source-01`, `source-02`, and so on as filename prefixes for multiple inputs. Follow with the mode, then a collision-safe size label; include wallpaper relationship and device for wallpaper files. Normalize ratio separators to `x` in filenames and include exact output pixels whenever they help distinguish requested variants. Do not create source, mode, size, or device subdirectories, and do not create empty directories for unselected modes.
 
 `--out` replaces the root but not fresh-task isolation. Reserve a collision-safe task name before generation. Do not create an automatic collage, overview, mockup, or combined preview. Return absolute PNG paths in source order, then mode order 1→4; wallpaper order is phone, iPad, desktop, watch.
 

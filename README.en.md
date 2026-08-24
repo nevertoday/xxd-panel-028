@@ -85,6 +85,8 @@ Ordinary sizes are also multi-select: auto-fit, source aspect, 1:1, 3:4, 4:3, 4:
 
 Wallpaper packs may be linked or independent. A linked pack creates one anchor image, then recomposes each remaining device from the original source plus that anchor; it never crops one image into four sizes.
 
+Each invocation creates one task directory and writes every final PNG directly into it, with no source, mode, size, or device subfolders. Filenames carry those dimensions instead, for example `source-01-left-right-3x2-2160x1440.png` and `source-01-wallpaper-linked-phone-1440x3200.png`.
+
 ## Text modes
 
 Before generation, resolve one of three choices:
