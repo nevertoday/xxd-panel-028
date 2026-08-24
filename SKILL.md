@@ -7,15 +7,17 @@ description: "Create XXD Panel 028 artwork from supplied photos in four combinab
 
 Turn each supplied photograph into one finished poetic isometric paper miniature. Preserve the real photograph only in paired modes; every transformed frame must keep the same source's recognisable identity, silhouette, pose, and relationship while simplifying it into clear masses, crisp edges, restrained depth tiers, and a few tiny scale cues on one small paper base or cut-out ground. Colour is always extracted, reduced, softened, and unified from the source itself. Fine ink lines, flat colour planes, light shadow, paper grain, and vast open paper create a quiet collectible editorial illustration—not a game level, impossible staircase, or glossy 3D render.
 
-Operational rules follow the shared XXD Panel workflow contract: four combinable modes; an explicitly confirmed whole-canvas ratio or exact resolution before generation; single complete-canvas raster generation by default; high-fidelity source reference in paired modes; linked or independent four-device wallpapers; copy and locale preflight; fresh generation jobs; privacy-preserving raster generation; deterministic composition as fallback only; and one fresh task directory per source and mode. Style-specific sections refine aesthetics and copy but never override this contract.
+Operational rules follow the shared XXD Panel workflow contract: four combinable modes; one or more explicitly confirmed whole-canvas ratios or exact resolutions before generation; single complete-canvas raster generation by default; high-fidelity source reference in paired modes; linked or independent four-device wallpapers; copy and locale preflight; fresh generation jobs; privacy-preserving raster generation; deterministic composition as fallback only; and one fresh task directory per source and mode. Style-specific sections refine aesthetics and copy but never override this contract.
 
 ## Non-negotiable contract
 
-- One source photo may be processed in one or more selected modes. Each selected ordinary mode (`top-bottom`, `left-right`, `design-only`) produces one PNG; selected `wallpaper-pack` produces exactly four separate PNGs. Selecting all four modes therefore produces seven final files per source. Keep every mode in its own task directory and never combine modes, sources, or wallpapers into a grid, contact sheet, or overview.
+- One input may use one or more selected modes and one or more ordinary-output sizes. Each selected ordinary mode (`top-bottom`, `left-right`, `design-only`) produces one PNG for every deduplicated selected size. `wallpaper-pack` is a separate device-specific branch: it produces four PNGs by default, one per device, and is not multiplied by the ordinary size set. Multiple resolutions for a named device are allowed only when explicitly requested. With one ordinary size, selecting all four modes still produces seven files; otherwise calculate and state the total before generation. Keep modes, inputs, and wallpaper files isolated and never combine them into a grid, contact sheet, overview, collage, or mockup.
 - Resolve a non-empty ordered set of modes before generation: `top-bottom`, `left-right`, `design-only`, and/or `wallpaper-pack`. Accept one choice, multiple choices separated by `+`, Chinese/English commas or whitespace, natural-language names, or `全部` / `all`. Deduplicate repeated choices and execute in menu order 1→4. If none is specified, ask with the multiline multi-select menu in the workflow. Do not ask again when the set is already clear.
 - When the selected set contains `wallpaper-pack`, require a second choice: `linked` or `independent`. A linked pack approves one anchor wallpaper, iPad by default, and makes every other device reference both the original photo and that same anchor. An independent pack gives every device only the original photo. Neither permits resizing or cropping one wallpaper into the others. Do not ask this follow-up when wallpaper mode is not selected.
 - Paired modes target a visually equal 50/50 relationship within one coherent generated canvas. Minor generative deviation is acceptable unless the user explicitly requires pixel-exact halves; exact deterministic geometry belongs to the documented fallback. `design-only` and every wallpaper contain no visible source photograph, no seam, and no reserved photographic panel.
-- The whole final canvas ratio or exact pixels must be explicitly resolved before generation. Offer the archived/original-prompt 3:4, source aspect as an explicit choice, common ratios, or custom ratio/pixels; never infer explicitly selected final-canvas dimensions silently. Exact pixels take precedence over an explicitly chosen ratio.
+- Before ordinary-mode generation, resolve a non-empty ordered set of one or more whole final-canvas targets. Offer a source- and mode-aware recommendation with its explicit ratio and common pixels, source aspect as an explicit choice, a finite set of common aspect-ratio cards, and custom ratios or exact pixels. Never silently infer or force a final canvas; exact pixels take precedence over a ratio.
+- Different aspect ratios are separate complete-canvas compositions and must be independently recomposed from the same source and full local aesthetic prompt. Multiple pixel sizes with the same aspect may share the highest-quality approved composition and be exported to each exact target. Resolve `auto` and `source`, deduplicate identical targets, preserve the user's order, and state the resulting output count before generation.
+- For user-facing preflight, prefer genuine native interactive controls when exposed: multi-select for modes and ordinary sizes, single-select for copy mode and wallpaper relationship, and free input for custom values. If unavailable, use a clear multiline numbered fallback and accept numbers, natural language, or inline parameters. Never present non-interactive symbols as clickable checkboxes, and never ask again for a variable already resolved.
 - Visible photography remains faithful. Allow only restrained editorial grading and environmental extension needed for an explicitly overridden canvas. Never stretch, distort, repaint, replace, or structurally alter the subject.
 - The transformed frame must preserve identity, action, function, emotion, and relation through at least three source-specific cues translated into one coherent orthographic isometric miniature. One small paper base, simplified masses, edge crop, scale contrast, light shadow, and only a few source-related micro-elements create the model; auxiliaries never form a second centre. It is not tracing, a game screenshot, a stock impossible staircase, colourful toy diorama, glossy plastic rendering, photorealism, or unrelated pastel scenery.
 - Copy has no silent default. Resolve automatic copy, exact custom copy, or text-free output before image generation. Automatic and custom modes also require a target language or locale. By default, one source-specific copy package is shared verbatim across all selected modes; explicit per-mode copy instructions override it.
@@ -123,55 +125,111 @@ Use only images attached to the current invocation, explicit user paths, or a pr
 
 ## Workflow
 
-1. Resolve one or more modes. If missing, ask exactly this as normal multiline chat text and wait:
+### Inline-parameter fast path
+
+Parse explicit `--parameters` anywhere after the invocation and source/input. Every user-facing setting is a variable:
+
+```text
+/xxd-panel-028 <source> \
+  --mode top-bottom,design-only \
+  --size auto,3:4,9:16,2160x3840 \
+  --text auto --locale ja-JP
+```
+
+- `--mode`: `top-bottom`, `left-right`, `design-only`, `wallpaper-pack`; comma-separated values and repeated flags accumulate.
+- `--size`: `auto`, `source`, any listed ratio, or exact `WIDTHxHEIGHT`; comma-separated values and repeated flags accumulate and deduplicate. Accept `×` as well as `x`.
+- `--text`: `auto`, `custom`, or `none`. `--copy "..."` supplies exact custom copy and implies `--text custom`; `--locale` accepts a language, market, or locale tag.
+- `--wallpaper`: `linked` or `independent`. `--wallpaper-size` accepts labelled device targets such as `phone=1440x3200,ipad=2048x2732,desktop=3840x2160,watch=1024x1024` and may repeat a device for explicit variants.
+- `--out` overrides the default output destination.
+- Explicit parameters override ambiguous prose. Repeated multi-value parameters accumulate; repeated single-value parameters use the last explicit value. If explicit parameters contradict each other—for example `--text none` with `--copy`—ask only about that conflict instead of silently discarding information.
+- When all required variables are supplied, skip the entire preflight and start the fresh generation job. When parameters are partial, ask only for unresolved variables. Never repeat a question already answered by parameters or clear natural language.
+
+### Interactive preflight
+
+Prefer the host's real interactive controls when exposed. Use multi-select controls for modes and ordinary sizes, single-select controls for copy mode and wallpaper relationship, and free input for custom copy, locale, ratios, or pixels. If the host cannot provide a genuinely interactive control with the required choices, use the multiline numbered fallback below. Never show fake checkboxes that look clickable but are not.
+
+1. Resolve one or more modes. In a native multi-select use these human-facing labels: `上下对照`, `左右对照`, `只要设计图`, and `四端壁纸`. If no real multi-select exists, ask and wait:
 
    ```text
-   请选择一个或多个模式（回复序号；多选可用 +、顿号或逗号）：
+   请选择一个或多个成品类型：
 
-   1. 上下双联（原图在上＋028 设计在下）
-   2. 左右双联（原图在左＋028 设计在右）
-   3. 纯设计版（只显示 028 设计画面）
-   4. 四端壁纸套装
-      手机＋iPad＋电脑＋儿童手表
+   1. 上下对照（原图在上，028 设计在下）
+   2. 左右对照（原图在左，028 设计在右）
+   3. 只要设计图（成品中不显示原图）
+   4. 四端壁纸
+      手机、iPad、电脑、儿童手表各一张
 
-   示例：1｜1+3｜1、2、4｜全部
+   回复示例：1｜1+3｜1、2、4｜全部
    ```
 
-2. Before any ordinary-mode generation, explicitly resolve the **final finished canvas**, not the size of one panel. If the user did not already supply a ratio or exact pixels, ask and wait:
+2. For every selected ordinary mode, resolve one or more whole-finished-canvas targets. First inspect the input and privately calculate a source- and mode-aware recommendation. A recommendation must display its actual ratio, common pixel target, and a short reason; never present an unexplained `自动` choice. `top-bottom` will often recommend `3:4 | 1536x2048`; `left-right` will often recommend `3:2 | 2400x1600`; `design-only` must respond to the source orientation, subject, negative space, and intended use.
+
+   When a native selector can expose the full set, show visual aspect-ratio cards similar to the host's image-size picker and allow multiple cards to be selected. Use these finite choices:
+
+   - `自动适配` — display the resolved recommendation per selected mode
+   - `跟随原图比例`
+   - `1:1 | 2048x2048`
+   - `3:4 | 1536x2048`
+   - `4:3 | 2048x1536`
+   - `4:5 | 1600x2000`
+   - `5:4 | 2000x1600`
+   - `2:3 | 1600x2400`
+   - `3:2 | 2400x1600`
+   - `9:16 | 1440x2560`
+   - `16:9 | 2560x1440`
+   - `21:9 | 2520x1080`
+   - `5:7 | 1600x2240`
+   - `7:5 | 2240x1600`
+   - `自定义` — accept one or more ratios and/or exact pixel targets
+
+   If a real multi-select is unavailable, include the exact recommendation in option 1 and ask with this multiline fallback:
 
    ```text
-   请选择最终成品画幅（回复序号即可；多选模式可共用，也可分别指定）：
+   请选择一个或多个成品尺寸：
+   这里选择的是整张最终成品，可以多选。
 
-   1. 原提示词画幅 3:4
+   1. 自动适配
+      本次推荐：<逐个写出所选模式的比例、像素和简短原因>
    2. 跟随原图比例
-   3. 常用比例
-      1:1｜4:5｜2:3｜3:2｜16:9｜9:16
-   4. 自定义比例或准确像素
+   3. 1:1｜2048×2048
+   4. 3:4｜1536×2048
+   5. 4:3｜2048×1536
+   6. 4:5｜1600×2000
+   7. 5:4｜2000×1600
+   8. 2:3｜1600×2400
+   9. 3:2｜2400×1600
+   10. 9:16｜1440×2560
+   11. 16:9｜2560×1440
+   12. 21:9｜2520×1080
+   13. 5:7｜1600×2240
+   14. 7:5｜2240×1600
+   15. 自定义比例或准确像素
 
-   这里指整张最终成品的比例，不是单个区域。
-   示例：1｜3：9:16｜4：2160×3840
+   回复示例：1｜4+10｜3、6、11｜15：5:8、2160×3840
    ```
 
-   “跟随原图比例” is valid only when the user explicitly selects it. Never infer a silent canvas from the source dimensions, orientation, archived 3:4 brief, mode, or previous output. In multi-select, ask which mode an ambiguous ratio belongs to. Exact pixels take priority over a chosen ratio. For paired modes, odd split axes are allowed for direct generation; require an even split axis only if deterministic fallback composition is actually triggered.
+   A selected size set applies to every selected ordinary mode unless the user maps targets per mode. Accept mappings such as `上下对照：3:4、9:16；只要设计图：1:1`. Resolve `auto` and `source` to concrete targets, then deduplicate. Every different aspect ratio requires an independently recomposed complete canvas; never crop one ratio into another. Multiple pixel resolutions with the same aspect may share the highest-quality approved composition and be exported at each exact size.
 
-3. Before generation, resolve copy mode and locale. If missing, ask and wait:
+3. In the same second-round preflight when the interface permits it, resolve copy mode and locale. Copy mode is single-select:
 
    ```text
-   正式做图前，请确认文字设置（回复序号即可）：
+   请选择文字方式：
 
    1. 自动文案
-      我根据原图与 028 气质创作文案；请同时注明语言或地区
-   2. 自定义文案
-      请直接输入要呈现的准确文字，并注明语言或地区
-   3. 无文字
+      我根据原图和 028 的气质创作；请注明语言或地区
+   2. 使用你的文案
+      请发送需要出现的准确文字，并注明语言或地区
+   3. 不要文字
 
-   示例：1｜日语
-   示例：2｜英式英语｜STILL IN BLOOM
+   回复示例：尺寸 4+10，文字 1，日语
+   回复示例：尺寸 6，文字 2，英式英语，STILL IN BLOOM
    ```
 
-   Automatic copy must be source-specific and native to the resolved locale. Preserve exact custom copy verbatim. Do not infer locale from appearance, clothing, scenery, filenames, metadata, or visible signs.
+   If a native form supports multiple controls, show size multi-select and copy-mode single-select together. Collect locale in the same form or ask one short conditional follow-up. Automatic copy must be source-specific and native to the resolved locale. Preserve exact custom copy verbatim. Never infer locale from appearance, clothing, scenery, filenames, metadata, or visible signs.
 
-4. Only when `wallpaper-pack` is selected, resolve its relationship and device sizes. Ask for `1. 连贯套装` or `2. 四张独立` when missing. A linked set approves one iPad anchor by default; the other three outputs each reference the original plus that same anchor and are independently recomposed. An independent set gives every device only the original. Then ask for either the common preset—phone `1440×3200`, iPad `2048×2732`, desktop `3840×2160`, watch `1024×1024`—or labelled custom pixels. Never crop one wallpaper into another or chain derivatives.
+4. Only when `wallpaper-pack` is selected, resolve its single-choice relationship: `连贯套装` or `四张独立`. Explain `连贯套装` as one approved visual direction independently recomposed for four devices—not one image cropped four ways. Then resolve either the common device preset—phone `1440x3200`, iPad `2048x2732`, desktop `3840x2160`, watch `1024x1024`—or labelled custom pixels. Ordinary size selections do not multiply wallpaper outputs. By default the pack has one target per device; accept multiple labelled resolutions for a device only when the user explicitly requests variants. Never crop one wallpaper into another or chain derivatives.
+
+   Before generation, state a concise execution summary: selected modes, concrete size targets, copy mode and locale, wallpaper relationship, and total output count. Do not require another confirmation when the information is complete and consistent; begin immediately. The default count is `ordinary mode-size assignments + four wallpaper files`, adjusted only for explicitly requested wallpaper resolution variants.
 
 5. Start a fresh job and reserve collision-safe output directories before generation. Use only the current invocation's explicit source or theme. Read `references/xxd-panel-028-prompt.en.md` or `references/xxd-panel-028-prompt.zh-CN.md` immediately before building the generation request.
 6. Privately lock the principal subject or inseparable relationship, at least three source-specific recognition cues, the style's complete aesthetic motive, composition logic, materials, palette, typography, exact copy, and locale. The source photograph is the factual and identity anchor; do not borrow content from samples or old outputs.
@@ -239,9 +297,9 @@ Save finished work under `~/Desktop/xxd/xxd-panel-028/` unless the user supplies
 
 - Wrap every source-and-mode result in a fresh task directory: `<source-stem>-top-bottom/`, `<source-stem>-left-right/`, `<source-stem>-design-only/`, or `<source-stem>-wallpaper-pack/`.
 - A batch or multi-select creates one sibling task directory per source and selected mode. Never mix sources or modes.
-- Ordinary task directories contain only one finished PNG: `<source-stem>.png`, `<source-stem>-lr.png`, or `<source-stem>-design.png`.
-- The final count per source equals one file for each selected ordinary mode plus four files when `wallpaper-pack` is selected. `all` / `全部` therefore means seven final PNGs across four sibling task directories.
-- A wallpaper task directory contains exactly four finished PNGs named `<source-stem>-wallpaper-phone.png`, `-ipad.png`, `-desktop.png`, and `-watch.png`; do not create device subdirectories.
+- An ordinary-mode task directory contains one final PNG per selected size. Keep the existing base name for a single target; for multiple targets append a stable label such as `-3x4-1536x2048`, `-9x16-1440x2560`, or `-custom-2160x3840` so every deliverable is unambiguous.
+- The final count per source equals the sum of ordinary mode-size assignments plus four wallpaper files by default, adjusted only for explicitly requested per-device wallpaper variants. State this count before generation.
+- A wallpaper task directory contains four finished PNGs by default, named `<source-stem>-wallpaper-phone.png`, `-ipad.png`, `-desktop.png`, and `-watch.png`; explicitly requested resolution variants add their size label to the filename. Do not create device subdirectories.
 - Never overwrite. Append `-2`, `-3`, and so on to a colliding task-directory name while keeping filenames unchanged.
 - Keep prompts, intermediate generations, plans, audits, and source copies outside the finished task directory.
 
