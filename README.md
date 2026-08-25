@@ -258,7 +258,7 @@ xxd-panel-028/
 <!-- xxd-panel-catalog:start -->
 ## XXD Panel 全系列项目
 
-59 个 Panel 各自保留独立的原始提示词与审美逻辑。下面列出全部项目地址和核心风格特点；当前项目以粗体标出。
+60 个 Panel 各自保留独立的原始提示词与审美逻辑。下面列出全部项目地址和核心风格特点；当前项目以粗体标出。
 
 | 项目地址 | 风格特点 |
 |---|---|
@@ -321,6 +321,7 @@ xxd-panel-028/
 | [xxd-panel-057](https://github.com/nevertoday/xxd-panel-057) | 几何构成 · 智能马赛克 · 建筑图解 · 艺术地图 · 暖冷色块 |
 | [xxd-panel-058](https://github.com/nevertoday/xxd-panel-058) | 潜台词解读 · 几何极简 · 观念景观 · 柔和手工质感 · 淡色留白 |
 | [xxd-panel-059](https://github.com/nevertoday/xxd-panel-059) | 手绘叙事 · 童真隐喻 · 温暖纸感 · 轻微诙谐 · 诗性旁白 |
+| [xxd-panel-060](https://github.com/nevertoday/xxd-panel-060) | 黑色主形 · 极大留白 · 网点消散 · 禅意思考 · 哲思碎片 |
 <!-- xxd-panel-catalog:end -->
 
 ## 关于 XXD
@@ -343,7 +344,7 @@ Skills 使用的一对一深度咨询按 299 元/小时收费。请通过下方�
 | 层级 | Skill | 负责什么 |
 |---|---|---|
 | **将军级** | [`xxd-panel-all`](https://github.com/nevertoday/xxd-panel-all) | 识别当前可用的编号 Skills；按图片、主题和用途推荐；按编号点将；组织同图多风格试稿；为图片文件夹批量分配并逐项派发。 |
-| **士兵级** | `xxd-panel-NNN`（当前 001–059） | 每个编号只执行自己独立的原始提示词与审美，把将军派发的单个任务完成为成品。 |
+| **士兵级** | `xxd-panel-NNN`（当前 001–060） | 每个编号只执行自己独立的原始提示词与审美，把将军派发的单个任务完成为成品。 |
 
 将军 Skill 是整个编号 Skills 队伍的总控入口。交流群成员可以使用它，并获得安装、版本更新、队伍配置和调度方式的答疑。将军只负责组织与派发，不会改写、混合或覆盖士兵的原始美学；每张成品仍由被选中的士兵 Skill 独立完成。
 <!-- xxd-panel-command-system:end -->
