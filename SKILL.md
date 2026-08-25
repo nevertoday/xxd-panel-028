@@ -1,6 +1,6 @@
 ---
 name: xxd-panel-028
-description: "Create XXD Panel 028 raster artwork while treating the bundled original style brief as the sole aesthetic authority. Supports one or more top-bottom, left-right, design-only, and four-device wallpaper outputs; multiple ratios or exact sizes; prompt-generated, user-exact, or text-free typography; and inline parameters. Use when the user invokes xxd-panel-028 or requests the exact Panel 028 style."
+description: "Create XXD Panel 028 raster artwork from one image or a directory batch while treating the bundled original style brief as the sole aesthetic authority. Supports one or more top-bottom, left-right, design-only, and four-device wallpaper outputs; multiple ratios or exact sizes; prompt-generated, user-exact, or text-free typography; and inline parameters. Use when the user invokes xxd-panel-028 or requests the exact Panel 028 style."
 ---
 
 # XXD Panel 028
@@ -36,7 +36,7 @@ Every invocation is a new job unless the user explicitly asks to inspect, edit, 
 Parse parameters anywhere after the invocation and input:
 
 ```text
-/xxd-panel-028 <source> --mode top-bottom,design-only \
+/xxd-panel-028 <source-or-directory> --mode top-bottom,design-only \
   --size auto,3:4,9:16,2160x3840 \
   --text prompt --locale ja-JP
 ```
@@ -51,6 +51,21 @@ Parse parameters anywhere after the invocation and input:
 - `--out`: explicit output root.
 
 Explicit parameters override ambiguous prose. Multi-value parameters accumulate and deduplicate in user order; single-value parameters use the last explicit value. If every required variable is resolved, skip preflight and generate. If values are partial, ask only for unresolved variables. Ask about a direct contradiction such as `--text none` with `--copy`.
+
+### Directory batch intake
+
+A readable directory supplied as the source is explicit batch intent. Enter batch processing immediately; do not ask whether the user wants a batch and do not show an unrelated mode menu before inventory.
+
+1. Recursively inventory supported raster files (`.png`, `.jpg`, `.jpeg`, `.webp`, `.heic`, `.heif`, `.avif`, `.tif`, `.tiff`, `.bmp`) case-insensitively. Respect an explicit top-level-only request or user exclusions.
+2. Ignore hidden files and hidden directories, non-images, this Skill's generated task folders, and output roots inside the supplied tree. Do not follow a symbolic link whose resolved target escapes the supplied directory.
+3. Use stable natural ordering by relative path. Report the discovered count and recursive scope before generation. Identify unreadable or undecodable candidates; never silently skip them. If no supported images exist, stop without creating an empty task directory.
+4. Build one queue item per discovered source. All queue items use this same numbered Panel and its unchanged source brief; a Soldier never selects, blends, or switches to another Panel during a batch.
+5. Resolve shared mode, size, text, locale, wallpaper, and output settings once for the whole batch. Parameters and clear prose still skip questions. Resolve `auto` and `source` per image because orientations may differ. Before execution, state the input count, shared settings, per-image exceptions, and total expected output count.
+6. Treat every source as a logically isolated generation job: read the source brief afresh, construct its prompt independently, and never carry another image's content, inferred meaning, wording, prompt, anchor, or result into it. Wallpaper anchors belong only to their own source.
+7. `--text prompt` generates source-grounded wording independently for each image. `--text none` applies to all images. A single `--copy` deliberately applies the same exact text to every image; when exact text differs, accept an explicit relative-path-or-filename → exact-text mapping and verify every intended source before generation. Never reuse one mapped caption for another source.
+8. A failed source or asset must be named and reported without silently dropping later queue items. Apply the normal single-asset retry rule only to the failed output, continue with the remaining queue, and finish with succeeded/failed counts and paths.
+
+One batch invocation is one physical task directory even though its queue items are logically isolated. Do not create a task directory per source.
 
 ### Capability-adaptive preflight
 
@@ -283,22 +298,22 @@ For a linked wallpaper pack, generate one device image first as the visual ancho
 
 ## Source and output isolation
 
-Use only sources attached to the current invocation, explicit paths, or a prior source explicitly identified by the user as “the same image.” Never scan Desktop, workspace roots, output folders, or unrelated directories for a substitute. Historical outputs and sample assets are not inputs unless explicitly named.
+Use only sources attached to the current invocation, explicit image paths, an explicitly supplied input directory, or a prior source explicitly identified by the user as “the same image.” Scan a directory only under the directory-batch rules above; never scan Desktop, workspace roots, output folders, or unrelated directories for a substitute. Historical outputs and sample assets are not inputs unless explicitly named.
 
 Write every selected final PNG directly inside the fresh task directory. The task directory is the only grouping layer:
 
 ```text
 ~/Desktop/xxd/xxd-panel-028/<fresh-task>/
-├── source-01-top-bottom-3x4-1536x2048.png
-├── source-01-left-right-3x2-2160x1440.png
-├── source-01-design-only-3x4-1536x2048.png
-├── source-01-wallpaper-linked-phone-1440x3200.png
-├── source-01-wallpaper-linked-ipad-2048x2732.png
-├── source-01-wallpaper-linked-desktop-3840x2160.png
-└── source-01-wallpaper-linked-watch-1024x1024.png
+├── source-001-photo-name-top-bottom-3x4-1536x2048.png
+├── source-001-photo-name-left-right-3x2-2160x1440.png
+├── source-001-photo-name-design-only-3x4-1536x2048.png
+├── source-001-photo-name-wallpaper-linked-phone-1440x3200.png
+├── source-001-photo-name-wallpaper-linked-ipad-2048x2732.png
+├── source-001-photo-name-wallpaper-linked-desktop-3840x2160.png
+└── source-001-photo-name-wallpaper-linked-watch-1024x1024.png
 ```
 
-Use `source-01`, `source-02`, and so on as filename prefixes for multiple inputs. Follow with the mode, then a collision-safe size label; include wallpaper relationship and device for wallpaper files. Normalize ratio separators to `x` in filenames and include exact output pixels whenever they help distinguish requested variants. Do not create source, mode, size, or device subdirectories, and do not create empty directories for unselected modes.
+Use zero-padded source-order prefixes plus a sanitized source stem for multiple inputs, for example `source-001-street` and `source-002-flower`. Follow with the mode, then a collision-safe size label; include wallpaper relationship and device for wallpaper files. If different relative paths share a stem, retain enough path context or a short collision suffix to keep names unique. Normalize ratio separators to `x` in filenames and include exact output pixels whenever they help distinguish requested variants. Do not create source, mode, size, or device subdirectories, and do not create empty directories for unselected modes.
 
 `--out` replaces the root but not fresh-task isolation. Reserve a collision-safe task name before generation. Do not create an automatic collage, overview, mockup, or combined preview. Return absolute PNG paths in source order, then mode order 1→4; wallpaper order is phone, iPad, desktop, watch.
 
@@ -316,6 +331,7 @@ Inspect every final PNG at full size and thumbnail size. Accept only when:
 - the result follows `references/028-source.md`, especially its own colour, material, composition, whitespace, and typography requirements, without an outer Skill palette or added art direction;
 - prompt-generated text uses the requested language, follows the source brief's own text logic and is meaningfully rooted in the current source image; anything that reads as factual or documentary information is traceable to supplied, visible or verified facts; user-exact text is verbatim with no additions; text-free output contains no text or pseudo-text;
 - linked and independent wallpaper rules are respected;
+- for a directory batch, every discovered source appears exactly once in the queue, all requested outputs stay inside the one batch task directory, and the final report accounts for every success and failure;
 - no SVG/code-rendered substitute, watermark, UI, route information, or secret appears.
 
 When a result fails, retry only the failed source-brief or runtime requirement. Do not “improve” it by introducing a new aesthetic theory.

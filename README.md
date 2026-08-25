@@ -96,7 +96,9 @@ XXD Panel 028 是一个面向 Codex 与兼容 Agent 的图像生成 Skill。它�
 
 壁纸套装可选“连贯”或“四张独立”。连贯模式先生成一张定调图，其余设备同时参考原图与定调图重新构图；不会把一张图机械裁成四种尺寸。
 
-每次调用只建立一个任务目录，所有最终 PNG 直接放在该目录中，不再按来源、模式、尺寸或设备创建子文件夹。文件名使用 `source-序号-模式-比例-像素.png`；壁纸额外包含连贯关系与设备，例如 `source-01-left-right-3x2-2160x1440.png`、`source-01-wallpaper-linked-phone-1440x3200.png`。
+每次调用只建立一个任务目录，所有最终 PNG 直接放在该目录中，不再按来源、模式、尺寸或设备创建子文件夹。文件名使用 `source-序号-原文件名-模式-比例-像素.png`；壁纸额外包含连贯关系与设备，例如 `source-001-street-left-right-3x2-2160x1440.png`、`source-001-street-wallpaper-linked-phone-1440x3200.png`。
+
+直接传入一个图片目录时，这个士兵 Skill 会自动批量处理目录中的图片，并让每张图片都使用 Panel 028 的同一套原始审美。默认递归扫描常见位图，先报告数量，再统一确认一次模式、尺寸、文字和语言；每张图片独立生成，互不借用内容或文案。整批仍然只创建一个扁平任务目录，单张失败会被记录，但不会静默跳过后续图片。
 
 ## 文字方式
 
@@ -132,6 +134,8 @@ XXD Panel 028 是一个面向 Codex 与兼容 Agent 的图像生成 Skill。它�
 
 支持 `--mode`、可重复或逗号分隔的 `--size`、`--text prompt|exact|none`、`--locale`、`--copy`、`--wallpaper linked|independent`、`--wallpaper-size` 和 `--out`。参数齐全时跳过全部问询；参数不完整时只询问缺失项。
 
+`photo.jpg` 也可以直接替换为图片目录路径；目录输入会自动进入批量，不需要额外的 `--batch` 开关。
+
 ### 参数速查
 
 | 参数 | 用途 | 常用值或格式 |
@@ -145,7 +149,7 @@ XXD Panel 028 是一个面向 Codex 与兼容 Agent 的图像生成 Skill。它�
 | `--wallpaper-size` | 按设备覆盖壁纸分辨率 | `phone=...`、`ipad=...`、`desktop=...`、`watch=...` |
 | `--out` | 指定输出根目录，仍会新建本次任务目录 | 文件夹路径 |
 
-`photo.jpg` 可以替换为本地图片路径、已上传图片或用户明确给出的其他来源。
+`photo.jpg` 可以替换为本地图片路径、已上传图片、图片目录或用户明确给出的其他来源。目录会自动进入批量处理。
 
 ### 按用途复制命令
 
@@ -182,6 +186,9 @@ XXD Panel 028 是一个面向 Codex 与兼容 Agent 的图像生成 Skill。它�
 
 # 两种模式 × 三种尺寸，共生成六张独立完整构图
 /xxd-panel-028 photo.jpg --mode top-bottom,design-only --size 1:1,3:4,9:16 --text prompt --locale zh-CN
+
+# 整个目录统一使用 Panel 028；公共设置只解析一次
+/xxd-panel-028 "/path/to/photos" --mode design-only --size auto,9:16 --text prompt --locale zh-CN
 
 # 重复参数也会累积，并把本次任务放到指定根目录
 /xxd-panel-028 photo.jpg --mode top-bottom --mode left-right --size 3:4 --size 16:9 --text none --out ./deliveries

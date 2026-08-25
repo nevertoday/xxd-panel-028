@@ -96,7 +96,9 @@ Ordinary sizes are also multi-select: auto-fit, source aspect, 1:1, 3:4, 4:3, 4:
 
 Wallpaper packs may be linked or independent. A linked pack creates one anchor image, then recomposes each remaining device from the original source plus that anchor; it never crops one image into four sizes.
 
-Each invocation creates one task directory and writes every final PNG directly into it, with no source, mode, size, or device subfolders. Filenames carry those dimensions instead, for example `source-01-left-right-3x2-2160x1440.png` and `source-01-wallpaper-linked-phone-1440x3200.png`.
+Each invocation creates one task directory and writes every final PNG directly into it, with no source, mode, size, or device subfolders. Filenames include source order and a sanitized source name, for example `source-001-street-left-right-3x2-2160x1440.png` and `source-001-street-wallpaper-linked-phone-1440x3200.png`.
+
+Pass an image directory directly to batch-process it with this same Soldier. Every discovered image keeps Panel 028's one original aesthetic. The Skill recursively inventories common raster formats, reports the count, resolves shared mode/size/text/locale settings once, and then generates each source independently without content or copy leaking between items. The whole batch still uses one flat task directory; an individual failure is recorded without silently dropping later images.
 
 ## Text modes
 
@@ -132,6 +134,8 @@ All settings can also be passed inline:
 
 Supported parameters are `--mode`, repeatable or comma-separated `--size`, `--text prompt|exact|none`, `--locale`, `--copy`, `--wallpaper linked|independent`, `--wallpaper-size`, and `--out`. Complete parameters skip preflight; partial parameters trigger only missing questions.
 
+Replace `photo.jpg` with an image-directory path to enter batch processing automatically; no separate `--batch` switch is required.
+
 ### Parameter quick reference
 
 | Parameter | Purpose | Common values or format |
@@ -145,7 +149,7 @@ Supported parameters are `--mode`, repeatable or comma-separated `--size`, `--te
 | `--wallpaper-size` | Override pixel sizes by device | `phone=...`, `ipad=...`, `desktop=...`, `watch=...` |
 | `--out` | Set an output root; a fresh task folder is still created | folder path |
 
-Replace `photo.jpg` with a local path, uploaded image, or another source explicitly supplied by the user.
+Replace `photo.jpg` with a local path, uploaded image, image directory, or another source explicitly supplied by the user. A directory enters batch processing automatically.
 
 ### Copyable commands by use case
 
@@ -182,6 +186,9 @@ Replace `photo.jpg` with a local path, uploaded image, or another source explici
 
 # Two modes × three sizes produce six independently composed assets
 /xxd-panel-028 photo.jpg --mode top-bottom,design-only --size 1:1,3:4,9:16 --text prompt --locale en-GB
+
+# Apply Panel 028 to a whole directory; shared settings resolve once
+/xxd-panel-028 "/path/to/photos" --mode design-only --size auto,9:16 --text prompt --locale en-GB
 
 # Repeated parameters accumulate; place the task under a chosen root
 /xxd-panel-028 photo.jpg --mode top-bottom --mode left-right --size 3:4 --size 16:9 --text none --out ./deliveries

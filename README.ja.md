@@ -96,7 +96,9 @@ XXD Panel 028 は、Codex と互換 Agent のための画像生成 Skill です�
 
 壁紙セットは連動型または独立型。連動型は最初の一枚を基準画像とし、残りを元写真＋基準画像から各端末向けに再構成します。一枚を四サイズへ機械的に切り抜くことはありません。
 
-各呼び出しではタスクディレクトリを一つだけ作り、最終 PNG をすべてその直下へ保存します。元画像、モード、サイズ、端末ごとのサブフォルダーは作らず、`source-01-left-right-3x2-2160x1440.png` や `source-01-wallpaper-linked-phone-1440x3200.png` のようにファイル名で識別します。
+各呼び出しではタスクディレクトリを一つだけ作り、最終 PNG をすべてその直下へ保存します。元画像、モード、サイズ、端末ごとのサブフォルダーは作らず、元画像の順序と安全化した名前を含む `source-001-street-left-right-3x2-2160x1440.png` や `source-001-street-wallpaper-linked-phone-1440x3200.png` のようなファイル名で識別します。
+
+画像フォルダーを直接渡すと、この兵士 Skill が同じ Panel 028 の原文美学で一括処理します。一般的なラスター形式を既定で再帰検索し、件数を報告してから、モード・サイズ・文字・言語を一度だけ確認します。各画像は内容や文言を混ぜず独立生成し、バッチ全体は一つのフラットなタスクフォルダーへ保存します。個別の失敗は記録し、後続画像を黙って省略しません。
 
 ## 文字モード
 
@@ -132,6 +134,8 @@ XXD Panel 028 は、Codex と互換 Agent のための画像生成 Skill です�
 
 `--mode`、複数指定可能な `--size`、`--text prompt|exact|none`、`--locale`、`--copy`、`--wallpaper linked|independent`、`--wallpaper-size`、`--out` に対応します。必要な値が揃っていれば質問を省略し、不足分だけを尋ねます。
 
+`photo.jpg` を画像フォルダーのパスへ置き換えると自動で一括処理に入り、別の `--batch` 指定は不要です。
+
 ### パラメータ早見表
 
 | パラメータ | 用途 | 主な値・形式 |
@@ -145,7 +149,7 @@ XXD Panel 028 は、Codex と互換 Agent のための画像生成 Skill です�
 | `--wallpaper-size` | 端末別に壁紙ピクセルを上書き | `phone=...`、`ipad=...`、`desktop=...`、`watch=...` |
 | `--out` | 出力ルートを指定し、新規タスクフォルダーを作る | フォルダーパス |
 
-`photo.jpg` はローカルパス、アップロード画像、またはユーザーが明示した別の入力へ置き換えられます。
+`photo.jpg` はローカルパス、アップロード画像、画像フォルダー、またはユーザーが明示した別の入力へ置き換えられます。フォルダーは自動で一括処理になります。
 
 ### 用途別コピー用コマンド
 
@@ -182,6 +186,9 @@ XXD Panel 028 は、Codex と互換 Agent のための画像生成 Skill です�
 
 # 2モード × 3サイズで独立した完成構図を6枚生成
 /xxd-panel-028 photo.jpg --mode top-bottom,design-only --size 1:1,3:4,9:16 --text prompt --locale ja-JP
+
+# フォルダー全体へ Panel 028 を適用し、共通設定は一度だけ解決
+/xxd-panel-028 "/path/to/photos" --mode design-only --size auto,9:16 --text prompt --locale ja-JP
 
 # 繰り返しパラメータも累積し、指定ルート下へ出力
 /xxd-panel-028 photo.jpg --mode top-bottom --mode left-right --size 3:4 --size 16:9 --text none --out ./deliveries

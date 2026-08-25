@@ -96,7 +96,9 @@ XXD Panel 028는 Codex와 호환 에이전트를 위한 이미지 생성 Skill�
 
 배경화면 세트는 연속형 또는 독립형입니다. 연속형은 먼저 기준 이미지 한 장을 만들고, 나머지는 원본 사진＋기준 이미지를 함께 참고해 각 기기에 맞게 재구성합니다. 한 이미지를 네 크기로 기계적으로 자르지 않습니다.
 
-호출마다 작업 디렉터리는 하나만 만들고 모든 최종 PNG를 그 안에 바로 저장합니다. 원본, 모드, 크기, 기기별 하위 폴더를 만들지 않으며 `source-01-left-right-3x2-2160x1440.png`, `source-01-wallpaper-linked-phone-1440x3200.png`처럼 파일명으로 구분합니다.
+호출마다 작업 디렉터리는 하나만 만들고 모든 최종 PNG를 그 안에 바로 저장합니다. 원본, 모드, 크기, 기기별 하위 폴더를 만들지 않으며 원본 순서와 정리된 원본 이름을 포함한 `source-001-street-left-right-3x2-2160x1440.png`, `source-001-street-wallpaper-linked-phone-1440x3200.png` 같은 파일명으로 구분합니다.
+
+이미지 폴더를 직접 전달하면 이 병사 Skill이 같은 Panel 028의 원본 미학으로 일괄 처리합니다. 일반 래스터 형식을 기본적으로 재귀 탐색하고 수량을 먼저 알린 뒤 모드·크기·텍스트·언어를 한 번만 확인합니다. 각 이미지는 내용이나 문구가 섞이지 않도록 독립 생성하며 전체 배치는 하나의 평면 작업 디렉터리만 사용합니다. 개별 실패는 기록하고 이후 이미지를 조용히 누락하지 않습니다.
 
 ## 텍스트 모드
 
@@ -132,6 +134,8 @@ XXD Panel 028는 Codex와 호환 에이전트를 위한 이미지 생성 Skill�
 
 `--mode`, 반복 가능한 `--size`, `--text prompt|exact|none`, `--locale`, `--copy`, `--wallpaper linked|independent`, `--wallpaper-size`, `--out`을 지원합니다. 값이 모두 있으면 질문을 건너뛰고, 일부만 있으면 누락된 항목만 묻습니다.
 
+`photo.jpg` 대신 이미지 폴더 경로를 전달하면 별도의 `--batch` 옵션 없이 자동으로 일괄 처리합니다.
+
 ### 매개변수 빠른 참조
 
 | 매개변수 | 용도 | 일반 값·형식 |
@@ -145,7 +149,7 @@ XXD Panel 028는 Codex와 호환 에이전트를 위한 이미지 생성 Skill�
 | `--wallpaper-size` | 기기별 배경화면 픽셀 덮어쓰기 | `phone=...`, `ipad=...`, `desktop=...`, `watch=...` |
 | `--out` | 출력 루트를 지정하고 새 작업 폴더 생성 | 폴더 경로 |
 
-`photo.jpg`는 로컬 경로, 업로드 이미지 또는 사용자가 명시한 다른 입력으로 바꿀 수 있습니다.
+`photo.jpg`는 로컬 경로, 업로드 이미지, 이미지 폴더 또는 사용자가 명시한 다른 입력으로 바꿀 수 있습니다. 폴더는 자동으로 일괄 처리됩니다.
 
 ### 용도별 복사 명령
 
@@ -182,6 +186,9 @@ XXD Panel 028는 Codex와 호환 에이전트를 위한 이미지 생성 Skill�
 
 # 2개 모드 × 3개 크기로 독립적인 완성 구도 6개 생성
 /xxd-panel-028 photo.jpg --mode top-bottom,design-only --size 1:1,3:4,9:16 --text prompt --locale ko-KR
+
+# 폴더 전체에 Panel 028 적용, 공통 설정은 한 번만 확정
+/xxd-panel-028 "/path/to/photos" --mode design-only --size auto,9:16 --text prompt --locale ko-KR
 
 # 반복 매개변수도 누적하며 지정 루트 아래로 출력
 /xxd-panel-028 photo.jpg --mode top-bottom --mode left-right --size 3:4 --size 16:9 --text none --out ./deliveries
