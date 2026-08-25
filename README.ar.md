@@ -134,6 +134,61 @@ XXD Panel 028 مهارة لتوليد الصور مخصّصة لـ Codex وال�
 
 تدعم المهارة `--mode` و`--size` المتكرر، و`--text prompt|exact|none`، و`--locale`، و`--copy`، و`--wallpaper linked|independent`، و`--wallpaper-size`، و`--out`. تتجاوز القيم المكتملة جميع الأسئلة، ولا تُسأل إلا القيم الناقصة.
 
+### مرجع سريع للمعاملات
+
+| المعامل | الغرض | القيم أو الصيغة الشائعة |
+|---|---|---|
+| `--mode` | اختيار نوع واحد أو أكثر من النتائج | `top-bottom`، `left-right`، `design-only`، `wallpaper-pack` |
+| `--size` | نسب أو أبعاد بكسل دقيقة متعددة للمخرجات العادية | `auto`، `source`، `3:4`، `9:16`، `2160x3840` |
+| `--text` | تحديد مصدر النص الظاهر | `prompt`، `exact`، `none` |
+| `--locale` | تحديد لغة النص الظاهر أو منطقته | `zh-CN`، `en-GB`، `ja-JP`، `ko-KR`، `ar-SA` |
+| `--copy` | تمرير النص حرفياً وتفعيل `--text exact` | `--copy "النص الدقيق"` |
+| `--wallpaper` | تحديد العلاقة بين الخلفيات الأربع | `linked`، `independent` |
+| `--wallpaper-size` | تجاوز دقة الخلفية لكل جهاز | `phone=...`، `ipad=...`، `desktop=...`، `watch=...` |
+| `--out` | تحديد جذر الإخراج وإنشاء مجلد جديد للمهمة | مسار مجلد |
+
+يمكن استبدال `photo.jpg` بمسار محلي أو صورة مرفوعة أو أي مصدر آخر يحدده المستخدم صراحة.
+
+### أوامر قابلة للنسخ بحسب الاستخدام
+
+```text
+# مقارنة علوية وسفلية: اقتراح تلقائي للوحة ونص عربي
+/xxd-panel-028 photo.jpg --mode top-bottom --size auto --text prompt --locale ar-SA
+
+# مقارنة يسار ويمين: أفقي 3:2، بلا نص
+/xxd-panel-028 photo.jpg --mode left-right --size 3:2 --text none
+
+# تصميم فقط: عمودي للهاتف 9:16، بنص عربي
+/xxd-panel-028 photo.jpg --mode design-only --size 9:16 --text prompt --locale ar-SA
+
+# حزمة خلفيات مترابطة: صورة مرجعية ثم إعادة تكوين لكل جهاز
+/xxd-panel-028 photo.jpg --mode wallpaper-pack --wallpaper linked --text none
+
+# خلفيات مستقلة مع دقة دقيقة لكل جهاز
+/xxd-panel-028 photo.jpg --mode wallpaper-pack --wallpaper independent --wallpaper-size phone=1440x3200,ipad=2048x2732,desktop=3840x2160,watch=1024x1024 --text none
+
+# اتباع نسبة الصورة الأصلية
+/xxd-panel-028 photo.jpg --mode design-only --size source --text none
+
+# إنشاء تكوينات كاملة مربعة وعمودية وأفقية
+/xxd-panel-028 photo.jpg --mode design-only --size 1:1,3:4,16:9 --text none
+
+# جمع نسبة مخصصة مع أهداف بكسل دقيقة
+/xxd-panel-028 photo.jpg --mode design-only --size 11:14,2160x3840,3840x2160 --text none
+
+# يكتب الموجّه الأصلي النص، مع تقييد اللغة فقط
+/xxd-panel-028 photo.jpg --mode design-only --size 3:4 --text prompt --locale ar-SA
+
+# استخدام النص الحرفي بلا إعادة صياغة أو ترجمة أو عنوان إضافي
+/xxd-panel-028 photo.jpg --mode design-only --size 3:4 --copy "دع الضوء يبقى هنا" --locale ar-SA
+
+# نمطان × ثلاثة أحجام ينتجان ستة تكوينات كاملة مستقلة
+/xxd-panel-028 photo.jpg --mode top-bottom,design-only --size 1:1,3:4,9:16 --text prompt --locale ar-SA
+
+# تتراكم المعاملات المتكررة ويُستخدم جذر الإخراج المحدد
+/xxd-panel-028 photo.jpg --mode top-bottom --mode left-right --size 3:4 --size 16:9 --text none --out ./deliveries
+```
+
 ## أولوية نموذج الصور
 
 يظل GPT Image 2 الخيار الأول افتراضياً، مع الحفاظ على سير العمل الحالي: مرجع المصدر عالي الوفاء، وحسم اللوحة النهائية قبل التوليد، وتوليد اللوحة الثنائية كاملة في عملية واحدة، وعدم استخدام التركيب البرمجي إلا كحل احتياطي مشروط.

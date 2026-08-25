@@ -132,6 +132,61 @@ XXD Panel 028 是一个面向 Codex 与兼容 Agent 的图像生成 Skill。它�
 
 支持 `--mode`、可重复或逗号分隔的 `--size`、`--text prompt|exact|none`、`--locale`、`--copy`、`--wallpaper linked|independent`、`--wallpaper-size` 和 `--out`。参数齐全时跳过全部问询；参数不完整时只询问缺失项。
 
+### 参数速查
+
+| 参数 | 用途 | 常用值或格式 |
+|---|---|---|
+| `--mode` | 选择一种或多种成品用途 | `top-bottom`、`left-right`、`design-only`、`wallpaper-pack` |
+| `--size` | 普通模式的比例或准确像素，可多选 | `auto`、`source`、`3:4`、`9:16`、`2160x3840` |
+| `--text` | 文字来源 | `prompt`、`exact`、`none` |
+| `--locale` | 画面中文字的语言或地区 | `zh-CN`、`en-GB`、`ja-JP`、`ko-KR`、`ar-SA` |
+| `--copy` | 逐字使用用户文案，并启用 `--text exact` | `--copy "准确文案"` |
+| `--wallpaper` | 四端壁纸之间的关系 | `linked`、`independent` |
+| `--wallpaper-size` | 按设备覆盖壁纸分辨率 | `phone=...`、`ipad=...`、`desktop=...`、`watch=...` |
+| `--out` | 指定输出根目录，仍会新建本次任务目录 | 文件夹路径 |
+
+`photo.jpg` 可以替换为本地图片路径、已上传图片或用户明确给出的其他来源。
+
+### 按用途复制命令
+
+```text
+# 上下对照：智能推荐画幅，模型按原始提示词生成简体中文文字
+/xxd-panel-028 photo.jpg --mode top-bottom --size auto --text prompt --locale zh-CN
+
+# 左右对照：3:2 横版，无文字
+/xxd-panel-028 photo.jpg --mode left-right --size 3:2 --text none
+
+# 只要设计图：9:16 手机竖版，日语文字
+/xxd-panel-028 photo.jpg --mode design-only --size 9:16 --text prompt --locale ja-JP
+
+# 四端连贯壁纸：先建立一张定调图，再按设备分别重构
+/xxd-panel-028 photo.jpg --mode wallpaper-pack --wallpaper linked --text none
+
+# 四张独立壁纸：同时指定四台设备的准确分辨率
+/xxd-panel-028 photo.jpg --mode wallpaper-pack --wallpaper independent --wallpaper-size phone=1440x3200,ipad=2048x2732,desktop=3840x2160,watch=1024x1024 --text none
+
+# 跟随原图比例
+/xxd-panel-028 photo.jpg --mode design-only --size source --text none
+
+# 同一用途生成方形、竖版和横版三种完整构图
+/xxd-panel-028 photo.jpg --mode design-only --size 1:1,3:4,16:9 --text none
+
+# 自定义比例与准确像素可以一起多选
+/xxd-panel-028 photo.jpg --mode design-only --size 11:14,2160x3840,3840x2160 --text none
+
+# 模型依照原始提示词决定文字，只限定语言
+/xxd-panel-028 photo.jpg --mode design-only --size 3:4 --text prompt --locale en-GB
+
+# 使用准确文案，不改写、不翻译、不补标题
+/xxd-panel-028 photo.jpg --mode design-only --size 3:4 --copy "让风经过这里" --locale zh-CN
+
+# 两种模式 × 三种尺寸，共生成六张独立完整构图
+/xxd-panel-028 photo.jpg --mode top-bottom,design-only --size 1:1,3:4,9:16 --text prompt --locale zh-CN
+
+# 重复参数也会累积，并把本次任务放到指定根目录
+/xxd-panel-028 photo.jpg --mode top-bottom --mode left-right --size 3:4 --size 16:9 --text none --out ./deliveries
+```
+
 ## 生图模型优先级
 
 GPT Image 2 是默认首选，并继续执行本项目现有的高保真垫图、生成前确认整张画幅、双联一次生成完整画布、脚本仅作条件式兜底等逻辑。

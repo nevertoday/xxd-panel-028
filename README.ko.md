@@ -132,6 +132,61 @@ XXD Panel 028는 Codex와 호환 에이전트를 위한 이미지 생성 Skill�
 
 `--mode`, 반복 가능한 `--size`, `--text prompt|exact|none`, `--locale`, `--copy`, `--wallpaper linked|independent`, `--wallpaper-size`, `--out`을 지원합니다. 값이 모두 있으면 질문을 건너뛰고, 일부만 있으면 누락된 항목만 묻습니다.
 
+### 매개변수 빠른 참조
+
+| 매개변수 | 용도 | 일반 값·형식 |
+|---|---|---|
+| `--mode` | 하나 이상의 결과물 유형 선택 | `top-bottom`, `left-right`, `design-only`, `wallpaper-pack` |
+| `--size` | 일반 모드의 비율·정확한 픽셀을 여러 개 지정 | `auto`, `source`, `3:4`, `9:16`, `2160x3840` |
+| `--text` | 화면 글자의 생성 방식 | `prompt`, `exact`, `none` |
+| `--locale` | 화면 글자의 언어·지역 | `zh-CN`, `en-GB`, `ja-JP`, `ko-KR`, `ar-SA` |
+| `--copy` | 문구를 그대로 전달하고 `--text exact` 활성화 | `--copy "정확한 문구"` |
+| `--wallpaper` | 4종 배경화면의 관계 | `linked`, `independent` |
+| `--wallpaper-size` | 기기별 배경화면 픽셀 덮어쓰기 | `phone=...`, `ipad=...`, `desktop=...`, `watch=...` |
+| `--out` | 출력 루트를 지정하고 새 작업 폴더 생성 | 폴더 경로 |
+
+`photo.jpg`는 로컬 경로, 업로드 이미지 또는 사용자가 명시한 다른 입력으로 바꿀 수 있습니다.
+
+### 용도별 복사 명령
+
+```text
+# 상하 비교: 캔버스 자동 추천, 한국어 문구 생성
+/xxd-panel-028 photo.jpg --mode top-bottom --size auto --text prompt --locale ko-KR
+
+# 좌우 비교: 3:2 가로형, 글자 없음
+/xxd-panel-028 photo.jpg --mode left-right --size 3:2 --text none
+
+# 디자인 전용: 9:16 휴대폰 세로형, 한국어 문구
+/xxd-panel-028 photo.jpg --mode design-only --size 9:16 --text prompt --locale ko-KR
+
+# 연결형 4종 배경화면: 기준 이미지 후 기기별 재구성
+/xxd-panel-028 photo.jpg --mode wallpaper-pack --wallpaper linked --text none
+
+# 독립형 배경화면: 기기별 정확한 해상도 지정
+/xxd-panel-028 photo.jpg --mode wallpaper-pack --wallpaper independent --wallpaper-size phone=1440x3200,ipad=2048x2732,desktop=3840x2160,watch=1024x1024 --text none
+
+# 원본 이미지 비율 따르기
+/xxd-panel-028 photo.jpg --mode design-only --size source --text none
+
+# 정사각형·세로·가로 완성 구도를 각각 생성
+/xxd-panel-028 photo.jpg --mode design-only --size 1:1,3:4,16:9 --text none
+
+# 사용자 비율과 정확한 픽셀을 함께 지정
+/xxd-panel-028 photo.jpg --mode design-only --size 11:14,2160x3840,3840x2160 --text none
+
+# 원본 프롬프트가 문구를 만들고 언어만 제한
+/xxd-panel-028 photo.jpg --mode design-only --size 3:4 --text prompt --locale ko-KR
+
+# 정확한 문구를 재작성·번역·제목 추가 없이 사용
+/xxd-panel-028 photo.jpg --mode design-only --size 3:4 --copy "빛을 이곳에 남겨 두기" --locale ko-KR
+
+# 2개 모드 × 3개 크기로 독립적인 완성 구도 6개 생성
+/xxd-panel-028 photo.jpg --mode top-bottom,design-only --size 1:1,3:4,9:16 --text prompt --locale ko-KR
+
+# 반복 매개변수도 누적하며 지정 루트 아래로 출력
+/xxd-panel-028 photo.jpg --mode top-bottom --mode left-right --size 3:4 --size 16:9 --text none --out ./deliveries
+```
+
 ## 이미지 모델 우선순위
 
 GPT Image 2를 기본 최우선 모델로 사용합니다. 고충실도 원본 참조, 생성 전 완성 캔버스 확인, 이중 패널의 완성 화면 일괄 생성, 조건이 충족될 때만 사용하는 스크립트 합성이라는 기존 흐름은 그대로 유지합니다.

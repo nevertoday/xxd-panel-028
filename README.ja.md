@@ -132,6 +132,61 @@ XXD Panel 028 は、Codex と互換 Agent のための画像生成 Skill です�
 
 `--mode`、複数指定可能な `--size`、`--text prompt|exact|none`、`--locale`、`--copy`、`--wallpaper linked|independent`、`--wallpaper-size`、`--out` に対応します。必要な値が揃っていれば質問を省略し、不足分だけを尋ねます。
 
+### パラメータ早見表
+
+| パラメータ | 用途 | 主な値・形式 |
+|---|---|---|
+| `--mode` | 一つ以上の完成形式を選ぶ | `top-bottom`、`left-right`、`design-only`、`wallpaper-pack` |
+| `--size` | 通常モードの比率・正確なピクセルを複数指定 | `auto`、`source`、`3:4`、`9:16`、`2160x3840` |
+| `--text` | 表示文字の生成方法 | `prompt`、`exact`、`none` |
+| `--locale` | 表示文字の言語・地域 | `zh-CN`、`en-GB`、`ja-JP`、`ko-KR`、`ar-SA` |
+| `--copy` | 文言をそのまま渡し、`--text exact` を有効化 | `--copy "正確な文言"` |
+| `--wallpaper` | 4端末壁紙の関係 | `linked`、`independent` |
+| `--wallpaper-size` | 端末別に壁紙ピクセルを上書き | `phone=...`、`ipad=...`、`desktop=...`、`watch=...` |
+| `--out` | 出力ルートを指定し、新規タスクフォルダーを作る | フォルダーパス |
+
+`photo.jpg` はローカルパス、アップロード画像、またはユーザーが明示した別の入力へ置き換えられます。
+
+### 用途別コピー用コマンド
+
+```text
+# 上下比較：キャンバスは自動推薦、文字は日本語
+/xxd-panel-028 photo.jpg --mode top-bottom --size auto --text prompt --locale ja-JP
+
+# 左右比較：3:2 横長、文字なし
+/xxd-panel-028 photo.jpg --mode left-right --size 3:2 --text none
+
+# デザインのみ：9:16 スマートフォン縦長、日本語文字
+/xxd-panel-028 photo.jpg --mode design-only --size 9:16 --text prompt --locale ja-JP
+
+# 連続性のある4端末壁紙：基準画像から各端末へ再構成
+/xxd-panel-028 photo.jpg --mode wallpaper-pack --wallpaper linked --text none
+
+# 独立壁紙：端末ごとの正確な解像度を指定
+/xxd-panel-028 photo.jpg --mode wallpaper-pack --wallpaper independent --wallpaper-size phone=1440x3200,ipad=2048x2732,desktop=3840x2160,watch=1024x1024 --text none
+
+# 元画像の比率に合わせる
+/xxd-panel-028 photo.jpg --mode design-only --size source --text none
+
+# 正方形・縦・横を個別生成
+/xxd-panel-028 photo.jpg --mode design-only --size 1:1,3:4,16:9 --text none
+
+# カスタム比率と正確なピクセルを同時指定
+/xxd-panel-028 photo.jpg --mode design-only --size 11:14,2160x3840,3840x2160 --text none
+
+# 原文プロンプトに文言を生成させ、言語だけを指定
+/xxd-panel-028 photo.jpg --mode design-only --size 3:4 --text prompt --locale ja-JP
+
+# 正確な文言を、書き換え・翻訳・タイトル追加なしで使用
+/xxd-panel-028 photo.jpg --mode design-only --size 3:4 --copy "光をここに残す" --locale ja-JP
+
+# 2モード × 3サイズで独立した完成構図を6枚生成
+/xxd-panel-028 photo.jpg --mode top-bottom,design-only --size 1:1,3:4,9:16 --text prompt --locale ja-JP
+
+# 繰り返しパラメータも累積し、指定ルート下へ出力
+/xxd-panel-028 photo.jpg --mode top-bottom --mode left-right --size 3:4 --size 16:9 --text none --out ./deliveries
+```
+
 ## 画像モデルの優先順位
 
 GPT Image 2 を既定の第一候補とします。高忠実度の参照画像、生成前の完成キャンバス確認、二連モードの完成画面一括生成、条件を満たした場合だけのスクリプト合成という既存の流れは変わりません。

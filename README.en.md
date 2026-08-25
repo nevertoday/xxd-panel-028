@@ -132,6 +132,61 @@ All settings can also be passed inline:
 
 Supported parameters are `--mode`, repeatable or comma-separated `--size`, `--text prompt|exact|none`, `--locale`, `--copy`, `--wallpaper linked|independent`, `--wallpaper-size`, and `--out`. Complete parameters skip preflight; partial parameters trigger only missing questions.
 
+### Parameter quick reference
+
+| Parameter | Purpose | Common values or format |
+|---|---|---|
+| `--mode` | Select one or more deliverable types | `top-bottom`, `left-right`, `design-only`, `wallpaper-pack` |
+| `--size` | Select ordinary-output ratios or exact pixels; accepts several | `auto`, `source`, `3:4`, `9:16`, `2160x3840` |
+| `--text` | Choose the source of visible text | `prompt`, `exact`, `none` |
+| `--locale` | Set the language or locale of visible text | `zh-CN`, `en-GB`, `ja-JP`, `ko-KR`, `ar-SA` |
+| `--copy` | Pass user wording verbatim and imply `--text exact` | `--copy "Exact wording"` |
+| `--wallpaper` | Set the relationship among four wallpapers | `linked`, `independent` |
+| `--wallpaper-size` | Override pixel sizes by device | `phone=...`, `ipad=...`, `desktop=...`, `watch=...` |
+| `--out` | Set an output root; a fresh task folder is still created | folder path |
+
+Replace `photo.jpg` with a local path, uploaded image, or another source explicitly supplied by the user.
+
+### Copyable commands by use case
+
+```text
+# Top-bottom comparison, auto canvas, prompt-generated British English
+/xxd-panel-028 photo.jpg --mode top-bottom --size auto --text prompt --locale en-GB
+
+# Left-right comparison, 3:2 landscape, no text
+/xxd-panel-028 photo.jpg --mode left-right --size 3:2 --text none
+
+# Design-only, 9:16 phone portrait, Japanese text
+/xxd-panel-028 photo.jpg --mode design-only --size 9:16 --text prompt --locale ja-JP
+
+# Linked wallpaper pack: establish one anchor, then recompose every device
+/xxd-panel-028 photo.jpg --mode wallpaper-pack --wallpaper linked --text none
+
+# Independent wallpapers with exact device resolutions
+/xxd-panel-028 photo.jpg --mode wallpaper-pack --wallpaper independent --wallpaper-size phone=1440x3200,ipad=2048x2732,desktop=3840x2160,watch=1024x1024 --text none
+
+# Follow the source image's aspect ratio
+/xxd-panel-028 photo.jpg --mode design-only --size source --text none
+
+# Create square, portrait, and landscape compositions
+/xxd-panel-028 photo.jpg --mode design-only --size 1:1,3:4,16:9 --text none
+
+# Combine a custom ratio with exact pixel targets
+/xxd-panel-028 photo.jpg --mode design-only --size 11:14,2160x3840,3840x2160 --text none
+
+# Let the original prompt generate wording; constrain only the locale
+/xxd-panel-028 photo.jpg --mode design-only --size 3:4 --text prompt --locale en-GB
+
+# Use exact copy without rewriting, translating, or adding a title
+/xxd-panel-028 photo.jpg --mode design-only --size 3:4 --copy "Let the light stay" --locale en-GB
+
+# Two modes × three sizes produce six independently composed assets
+/xxd-panel-028 photo.jpg --mode top-bottom,design-only --size 1:1,3:4,9:16 --text prompt --locale en-GB
+
+# Repeated parameters accumulate; place the task under a chosen root
+/xxd-panel-028 photo.jpg --mode top-bottom --mode left-right --size 3:4 --size 16:9 --text none --out ./deliveries
+```
+
 ## Image-model priority
 
 GPT Image 2 is the default first choice. It keeps this project's established workflow: high-fidelity source reference, explicit whole-canvas selection before generation, one complete-canvas generation for paired modes, and scripted composition only as a conditional fallback.
