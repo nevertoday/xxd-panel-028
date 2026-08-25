@@ -251,7 +251,7 @@ xxd-panel-028/
 <!-- xxd-panel-catalog:start -->
 ## XXD Panel 전체 프로젝트 목록
 
-57개 Panel은 각각 독립된 원본 프롬프트와 미적 논리를 유지합니다. 아래 표에서 모든 프로젝트 주소와 핵심 스타일 특징을 확인할 수 있으며 현재 프로젝트는 굵게 표시됩니다.
+59개 Panel은 각각 독립된 원본 프롬프트와 미적 논리를 유지합니다. 아래 표에서 모든 프로젝트 주소와 핵심 스타일 특징을 확인할 수 있으며 현재 프로젝트는 굵게 표시됩니다.
 
 | 프로젝트 | 스타일 특징 |
 |---|---|
@@ -312,6 +312,8 @@ xxd-panel-028/
 | [xxd-panel-055](https://github.com/nevertoday/xxd-panel-055) | 주체 서사 · 치유 파스텔 · 옅은 유화 붓결 · 공기감 있는 파랑 · 편집 여백 |
 | [xxd-panel-056](https://github.com/nevertoday/xxd-panel-056) | 핵심 이미지 · 거대한 여백 · 온냉 색 점프 · 서툰 손그림 · 시각적 은유 |
 | [xxd-panel-057](https://github.com/nevertoday/xxd-panel-057) | 기하 구성 · 지능형 모자이크 · 건축 도해 · 아트 맵 · 온냉 색면 |
+| [xxd-panel-058](https://github.com/nevertoday/xxd-panel-058) | 숨은 뜻 읽기 · 기하 미니멀리즘 · 개념 풍경 · 부드러운 수공 질감 · 옅은 여백 |
+| [xxd-panel-059](https://github.com/nevertoday/xxd-panel-059) | 손그림 서사 · 동심의 은유 · 따뜻한 종이 질감 · 가벼운 유머 · 시적인 방백 |
 <!-- xxd-panel-catalog:end -->
 
 ## XXD 소개
@@ -334,7 +336,7 @@ Skills 사용에 관한 일대일 상담은 시간당 CNY 299입니다. 아래 W
 | 등급 | Skill | 역할 |
 |---|---|---|
 | **장군급** | [`xxd-panel-all`](https://github.com/nevertoday/xxd-panel-all) | 사용 가능한 번호형 Skills 탐지, 이미지·주제·용도별 추천, 번호 지정 파견, 동일 입력의 여러 스타일 시안, 이미지 폴더의 일괄 배정과 개별 작업 파견. |
-| **병사급** | `xxd-panel-NNN` (현재 001–057) | 각 번호가 고유한 원본 프롬프트와 미학만 실행해 장군이 배정한 하나의 작업을 완성합니다. |
+| **병사급** | `xxd-panel-NNN` (현재 001–059) | 각 번호가 고유한 원본 프롬프트와 미학만 실행해 장군이 배정한 하나의 작업을 완성합니다. |
 
 장군 Skill은 번호형 Skills 전체 부대의 지휘 본부입니다. 사용자 교류 그룹 멤버는 이를 사용할 수 있으며 설치, 버전 업데이트, 병력 구성, 파견 흐름에 대한 도움을 받을 수 있습니다. 장군은 조직과 파견만 담당하며 병사의 원본 미학을 다시 쓰거나 섞거나 덮어쓰지 않습니다. 각 결과물은 선택된 병사 Skill이 독립적으로 완성합니다.
 <!-- xxd-panel-command-system:end -->

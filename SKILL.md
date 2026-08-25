@@ -21,7 +21,7 @@ Create fresh PNG artwork with `references/028-source.md` as the **sole creative 
 Use these roles when the container changes:
 
 ```text
-REALITY SOURCE = the uploaded photograph, or Panel 004's factual scene generated from its theme
+REALITY SOURCE = the uploaded photograph or other user-supplied source image
 TRANSFORMED DESIGN = the source brief's “lower half” aesthetic transformation
 ```
 
