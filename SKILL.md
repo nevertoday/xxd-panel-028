@@ -5,12 +5,12 @@ description: "Create XXD Panel 028 raster artwork from one image or a directory 
 
 # XXD Panel 028
 
-Create fresh PNG artwork with `references/028-source.md` as the **sole creative and aesthetic authority**. This Skill is a runtime shell: it resolves delivery variables, appends them to the untouched source-brief body, executes bitmap generation, and verifies the result. It must not write a second art direction.
+Create fresh PNG artwork with `references/original-prompt/zh-CN.md` as the **sole creative and aesthetic authority**. This Skill is a runtime shell: it resolves delivery variables, appends them to the untouched source-brief body, executes bitmap generation, and verifies the result. It must not write a second art direction.
 
 ## Authority boundary
 
-1. Read `references/028-source.md` completely immediately before building every generation request.
-2. Its first Markdown heading is an administrative document label, not creative content. Omit that heading from the image-generation request, then copy the entire remaining source-brief body verbatim. Do not summarize, translate, polish, expand, reinterpret, or replace that body with this file, a README, a sample, or either runtime-adapter reference.
+1. Read `references/original-prompt/zh-CN.md` completely immediately before building every generation request.
+2. Its first Markdown heading is an administrative document label, not creative content. Omit that heading from the image-generation request, then copy the entire remaining source-brief body verbatim. Do not summarize, translate, polish, expand, reinterpret, or replace that body with this file, a README, a sample, either runtime-adapter reference, or one of the reading translations in `references/original-prompt/`. Those translations exist for international readers and sharing; they are never runtime prompt alternatives.
 3. The source brief owns subject transformation, composition inside the design region, colour, palette derivation or fixed colour choices, materials, texture, whitespace, text amount, wording logic, typographic character, and prohibitions.
 4. Runtime instructions may change only: selected output mode, final canvas ratio or pixels, placement or visibility of the reality source, device profile, wallpaper relationship, target text language, and user-exact text.
 5. Append all runtime instructions **after** the complete source-brief body. Never insert them into, or rewrite, its aesthetic paragraphs.
@@ -154,7 +154,7 @@ Neither option crops or mechanically resizes one wallpaper into the other device
 For each distinct asset, concatenate exactly:
 
 ```text
-[VERBATIM SOURCE-BRIEF BODY FROM references/028-source.md,
+[VERBATIM SOURCE-BRIEF BODY FROM references/original-prompt/zh-CN.md,
 EXCLUDING ONLY ITS ADMINISTRATIVE FIRST MARKDOWN HEADING]
 
 [COMMON DELIVERY PREAMBLE]
@@ -328,7 +328,7 @@ Inspect every final PNG at full size and thumbnail size. Accept only when:
 - `left-right` reads as two primary vertical parts that organize the canvas from top to bottom, with the reality view left and transformed design right; typography is integrated into that structure rather than becoming a shared third band;
 - `design-only` and every wallpaper contain a full-canvas transformed design: the reality source remains reference material, and no visible area presents it as an untransformed source photograph;
 - no seam detection, midpoint percentage, coordinate measurement, or fixed-crop audit is used unless the user explicitly requested exact geometry;
-- the result follows `references/028-source.md`, especially its own colour, material, composition, whitespace, and typography requirements, without an outer Skill palette or added art direction;
+- the result follows `references/original-prompt/zh-CN.md`, especially its own colour, material, composition, whitespace, and typography requirements, without an outer Skill palette or added art direction;
 - prompt-generated text uses the requested language, follows the source brief's own text logic and is meaningfully rooted in the current source image; anything that reads as factual or documentary information is traceable to supplied, visible or verified facts; user-exact text is verbatim with no additions; text-free output contains no text or pseudo-text;
 - linked and independent wallpaper rules are respected;
 - for a directory batch, every discovered source appears exactly once in the queue, all requested outputs stay inside the one batch task directory, and the final report accounts for every success and failure;
@@ -338,7 +338,8 @@ When a result fails, retry only the failed source-brief or runtime requirement. 
 
 ## Runtime adapters
 
+- `references/original-prompt/README.md` — language index for the canonical original and four faithful reading translations
 - `references/xxd-panel-028-prompt.zh-CN.md`
 - `references/xxd-panel-028-prompt.en.md`
 
-These files document the same minimal adapter. They never replace `references/028-source.md`.
+These files document the same minimal adapter. They never replace `references/original-prompt/zh-CN.md`.

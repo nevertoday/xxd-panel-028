@@ -42,6 +42,12 @@ XXD Panel 028 は、Codex と互換 Agent のための画像生成 Skill です�
 
 明快な量塊、端の切り取り、軽い投影、ごく少数の小要素が尺度、孤独、収蔵品らしさを作り、周囲には広い紙面を残します。色は元写真から抽出して整理、純化、軟化し、細い墨線、平坦な色面、薄い影、わずかな紙粒で静かな編集挿絵に仕上げます。
 
+## 原始プロンプト · 5言語
+
+[統一された多言語ディレクトリを開く](references/original-prompt/): [簡体字中国語原文](references/original-prompt/zh-CN.md) · [English](references/original-prompt/en.md) · [日本語](references/original-prompt/ja.md) · [한국어](references/original-prompt/ko.md) · [العربية](references/original-prompt/ar.md)
+
+簡体字中国語ファイルは小小東の文言を逐語で保存し、実行時の唯一の美的基準です。他の4言語は海外の読者が読み、共有するための忠実な翻訳であり、画像生成プロンプトを書き換えません。
+
 <!-- xxd-panel-benefit:start -->
 ## すぐに判断：XXD Panel 028 はあなたに合う？
 
@@ -77,7 +83,7 @@ XXD Panel 028 は、Codex と互換 Agent のための画像生成 Skill です�
 
 ## 原文プロンプトを唯一の美的基準にする
 
-`references/028-source.md` が、このプロジェクト唯一の創作・美的基準です。Skill は原文を要約・拡張せず、共通の配色計画、美的動機、タイトル、マイクロコピーを追加しません。色、素材、構図、余白、言葉、タイポグラフィは、GPT Image 2 が原文プロンプトの規則どおりに実行します。
+`references/original-prompt/zh-CN.md` が、このプロジェクト唯一の創作・美的基準です。Skill は原文を要約・拡張せず、共通の配色計画、美的動機、タイトル、マイクロコピーを追加しません。色、素材、構図、余白、言葉、タイポグラフィは、GPT Image 2 が原文プロンプトの規則どおりに実行します。
 
 モードとサイズは、原文の変換美学を変えずに、旧来の 3:4 上下出力コンテナを完全に置き換えます。各成果物では選択された一つのモード契約だけを GPT Image 2 に送り、四つの候補を一つの汎用テンプレート内で解釈させません。
 
@@ -224,7 +230,7 @@ $xxd-panel-028
 - [Skill ワークフロー](SKILL.md)
 - [中国語ランタイムアダプター](references/xxd-panel-028-prompt.zh-CN.md)
 - [英語ランタイムアダプター](references/xxd-panel-028-prompt.en.md)
-- [元のスタイル指示](references/028-source.md)
+- [元のスタイル指示](references/original-prompt/zh-CN.md)
 
 ## 境界と信頼性
 

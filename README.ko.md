@@ -42,6 +42,12 @@ XXD Panel 028는 Codex와 호환 에이전트를 위한 이미지 생성 Skill�
 
 명확한 덩어리, 가장자리 크롭, 가벼운 투영, 극소수의 세부가 규모감·고독·소장 가치를 만들고 넓은 종이 여백을 남깁니다. 색은 원본에서 추출해 정리·정제·연화하며, 가는 먹선·평면색·옅은 그림자·미세 종이결로 고요한 편집 삽화를 만듭니다.
 
+## 원본 프롬프트 · 5개 언어
+
+[통일된 다국어 디렉터리 열기](references/original-prompt/): [중국어 간체 원문](references/original-prompt/zh-CN.md) · [English](references/original-prompt/en.md) · [日本語](references/original-prompt/ja.md) · [한국어](references/original-prompt/ko.md) · [العربية](references/original-prompt/ar.md)
+
+중국어 간체 파일은 샤오샤오둥이 제공한 문구를 그대로 보존하며 실행 시 유일한 미적 기준입니다. 다른 네 파일은 국제 독자의 이해와 공유를 위한 충실한 번역이며 이미지 생성 프롬프트를 역으로 바꾸지 않습니다.
+
 <!-- xxd-panel-benefit:start -->
 ## 빠른 판단: XXD Panel 028이 나에게 맞을까요?
 
@@ -77,7 +83,7 @@ XXD Panel 028는 Codex와 호환 에이전트를 위한 이미지 생성 Skill�
 
 ## 원본 프롬프트가 유일한 미적 기준입니다
 
-`references/028-source.md`는 이 프로젝트의 유일한 창작·미적 기준입니다. Skill은 원문을 요약하거나 확장하지 않으며 공통 색상 계획, 미적 동기, 제목, 마이크로카피를 추가하지 않습니다. 색, 재료, 구성, 여백, 문구, 타이포그래피는 GPT Image 2가 원본 프롬프트의 규칙대로 수행합니다.
+`references/original-prompt/zh-CN.md`는 이 프로젝트의 유일한 창작·미적 기준입니다. Skill은 원문을 요약하거나 확장하지 않으며 공통 색상 계획, 미적 동기, 제목, 마이크로카피를 추가하지 않습니다. 색, 재료, 구성, 여백, 문구, 타이포그래피는 GPT Image 2가 원본 프롬프트의 규칙대로 수행합니다.
 
 모드와 크기는 원본의 변환 미학을 바꾸지 않고 기존 3:4 상하 출력 컨테이너를 완전히 대체합니다. 각 결과물에는 선택된 하나의 모드 계약만 GPT Image 2에 전달하며, 네 가지 대안을 하나의 범용 템플릿에서 해석하게 하지 않습니다.
 
@@ -224,7 +230,7 @@ $xxd-panel-028
 - [Skill 워크플로](SKILL.md)
 - [중문 런타임 어댑터](references/xxd-panel-028-prompt.zh-CN.md)
 - [영문 런타임 어댑터](references/xxd-panel-028-prompt.en.md)
-- [원본 스타일 지시](references/028-source.md)
+- [원본 스타일 지시](references/original-prompt/zh-CN.md)
 
 ## 경계와 신뢰
 

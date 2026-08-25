@@ -1,6 +1,6 @@
 # XXD Panel 028 | Runtime Adapter (English)
 
-This is not a second aesthetic prompt. Read `references/028-source.md` in full before generation; it is the sole creative and aesthetic authority for Panel 028. Its first Markdown heading is an internal archival label and does not enter the image request; use the entire remaining source-brief body verbatim. This file only appends the current user's runtime variables.
+This is not a second aesthetic prompt. Read `references/original-prompt/zh-CN.md` in full before generation; it is the sole creative and aesthetic authority for Panel 028. Its first Markdown heading is an internal archival label and does not enter the image request; use the entire remaining source-brief body verbatim. This file only appends the current user's runtime variables.
 
 ## Non-authoring boundary
 
@@ -97,7 +97,7 @@ Render no letters, characters, numbers, titles, labels, logos, or pseudo-text an
 See `SKILL.md` for preflight, multi-size, multi-mode, wallpaper, execution, and output rules. Every final generation request has this order:
 
 ```text
-complete verbatim source-brief body from 028-source.md, excluding its archival first heading
+complete verbatim source-brief body from original-prompt/zh-CN.md, excluding its archival first heading
 + common delivery preamble
 + exactly one selected mode block
 + exactly one text-mode block
