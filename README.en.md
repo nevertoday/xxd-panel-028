@@ -138,7 +138,21 @@ All settings can also be passed inline:
 /xxd-panel-028 photo.jpg --mode top-bottom,design-only --size auto,3:4,9:16 --text prompt --locale ja-JP
 ```
 
-Supported parameters are `--mode`, repeatable or comma-separated `--size`, `--text prompt|exact|none`, `--locale`, `--copy`, `--wallpaper linked|independent`, `--wallpaper-size`, and `--out`. Complete parameters skip preflight; partial parameters trigger only missing questions.
+Supported parameters are `--mode`, repeatable or comma-separated `--size`, `--text prompt|exact|none`, `--locale`, `--copy`, `--wallpaper linked|independent`, `--wallpaper-size`, `--out`, and `--prefs`. Complete parameters skip preflight; partial parameters trigger only missing questions.
+
+### Reuse the last preference or start fresh
+
+When a valid preference exists and this invocation still has unresolved delivery settings, the Skill summarises the previous modes, sizes, text and locale, wallpaper relationship, and output location, then offers three mutually exclusive choices: **Reuse**, **Reuse and edit**, or **Fresh configuration**. Explicit current requirements always win, and complete parameters still run without redundant questions.
+
+Use `--prefs last|edit|new|off|clear` to choose the route inline:
+
+```text
+/xxd-panel-028 photo.jpg --prefs last
+/xxd-panel-028 photo.jpg --prefs edit
+/xxd-panel-028 photo.jpg --prefs new
+```
+
+The record stores delivery settings only. It never stores source images, exact copy, generated results, Panel choices, model routes, API credentials, or other sensitive information.
 
 Replace `photo.jpg` with an image-directory path to enter batch processing automatically; no separate `--batch` switch is required.
 
@@ -154,6 +168,7 @@ Replace `photo.jpg` with an image-directory path to enter batch processing autom
 | `--wallpaper` | Set the relationship among four wallpapers | `linked`, `independent` |
 | `--wallpaper-size` | Override pixel sizes by device | `phone=...`, `ipad=...`, `desktop=...`, `watch=...` |
 | `--out` | Set an output root; a fresh task folder is still created | folder path |
+| `--prefs` | Reuse, edit, replace, disable, or clear the last preference | `last`, `edit`, `new`, `off`, `clear` |
 
 Replace `photo.jpg` with a local path, uploaded image, image directory, or another source explicitly supplied by the user. A directory enters batch processing automatically.
 

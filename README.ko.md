@@ -138,7 +138,21 @@ XXD Panel 028는 Codex와 호환 에이전트를 위한 이미지 생성 Skill�
 /xxd-panel-028 photo.jpg --mode top-bottom,design-only --size auto,3:4,9:16 --text prompt --locale ja-JP
 ```
 
-`--mode`, 반복 가능한 `--size`, `--text prompt|exact|none`, `--locale`, `--copy`, `--wallpaper linked|independent`, `--wallpaper-size`, `--out`을 지원합니다. 값이 모두 있으면 질문을 건너뛰고, 일부만 있으면 누락된 항목만 묻습니다.
+`--mode`, 반복 가능한 `--size`, `--text prompt|exact|none`, `--locale`, `--copy`, `--wallpaper linked|independent`, `--wallpaper-size`, `--out`, `--prefs`를 지원합니다. 값이 모두 있으면 질문을 건너뛰고, 일부만 있으면 누락된 항목만 묻습니다.
+
+### 지난 설정을 이어 쓰거나 새로 설정하기
+
+유효한 기록이 있고 이번 전달 설정이 아직 완성되지 않았으면, Skill이 지난 모드, 크기, 텍스트와 언어, 배경화면 관계, 출력 위치를 요약한 뒤 **그대로 사용**, **불러온 뒤 수정**, **새로 설정**의 세 가지 상호 배타적 선택지를 제공합니다. 이번 호출에서 명시한 요구가 항상 우선하며, 필요한 매개변수가 모두 있으면 불필요한 질문을 하지 않습니다.
+
+`--prefs last|edit|new|off|clear`로 동작을 바로 지정할 수 있습니다.
+
+```text
+/xxd-panel-028 photo.jpg --prefs last
+/xxd-panel-028 photo.jpg --prefs edit
+/xxd-panel-028 photo.jpg --prefs new
+```
+
+기록에는 전달 설정만 저장합니다. 원본 이미지, 정확한 문구, 생성 결과, Panel 선택, 모델 경로, API 자격 증명이나 기타 민감한 정보는 저장하지 않습니다.
 
 `photo.jpg` 대신 이미지 폴더 경로를 전달하면 별도의 `--batch` 옵션 없이 자동으로 일괄 처리합니다.
 
@@ -154,6 +168,7 @@ XXD Panel 028는 Codex와 호환 에이전트를 위한 이미지 생성 Skill�
 | `--wallpaper` | 4종 배경화면의 관계 | `linked`, `independent` |
 | `--wallpaper-size` | 기기별 배경화면 픽셀 덮어쓰기 | `phone=...`, `ipad=...`, `desktop=...`, `watch=...` |
 | `--out` | 출력 루트를 지정하고 새 작업 폴더 생성 | 폴더 경로 |
+| `--prefs` | 지난 설정 재사용·수정·새 설정·비활성화·삭제 | `last`, `edit`, `new`, `off`, `clear` |
 
 `photo.jpg`는 로컬 경로, 업로드 이미지, 이미지 폴더 또는 사용자가 명시한 다른 입력으로 바꿀 수 있습니다. 폴더는 자동으로 일괄 처리됩니다.
 

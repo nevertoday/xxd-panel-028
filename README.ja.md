@@ -138,7 +138,21 @@ XXD Panel 028 は、Codex と互換 Agent のための画像生成 Skill です�
 /xxd-panel-028 photo.jpg --mode top-bottom,design-only --size auto,3:4,9:16 --text prompt --locale ja-JP
 ```
 
-`--mode`、複数指定可能な `--size`、`--text prompt|exact|none`、`--locale`、`--copy`、`--wallpaper linked|independent`、`--wallpaper-size`、`--out` に対応します。必要な値が揃っていれば質問を省略し、不足分だけを尋ねます。
+`--mode`、複数指定可能な `--size`、`--text prompt|exact|none`、`--locale`、`--copy`、`--wallpaper linked|independent`、`--wallpaper-size`、`--out`、`--prefs` に対応します。必要な値が揃っていれば質問を省略し、不足分だけを尋ねます。
+
+### 前回の設定を引き継ぐ、または新しく設定する
+
+有効な履歴があり、今回の納品設定が未解決の場合、前回のモード、サイズ、文字と言語、壁紙関係、出力先を要約し、**そのまま引き継ぐ**、**引き継いで変更する**、**新しく設定する**の3択を提示します。今回明示された要件が常に優先され、必要なパラメータが揃っている場合は余分な質問をしません。
+
+`--prefs last|edit|new|off|clear` で動作を直接指定できます。
+
+```text
+/xxd-panel-028 photo.jpg --prefs last
+/xxd-panel-028 photo.jpg --prefs edit
+/xxd-panel-028 photo.jpg --prefs new
+```
+
+保存するのは納品設定だけです。元画像、正確な文案、生成結果、Panel 選択、モデル経路、API 認証情報などの機密情報は保存しません。
 
 `photo.jpg` を画像フォルダーのパスへ置き換えると自動で一括処理に入り、別の `--batch` 指定は不要です。
 
@@ -154,6 +168,7 @@ XXD Panel 028 は、Codex と互換 Agent のための画像生成 Skill です�
 | `--wallpaper` | 4端末壁紙の関係 | `linked`、`independent` |
 | `--wallpaper-size` | 端末別に壁紙ピクセルを上書き | `phone=...`、`ipad=...`、`desktop=...`、`watch=...` |
 | `--out` | 出力ルートを指定し、新規タスクフォルダーを作る | フォルダーパス |
+| `--prefs` | 前回設定の継承・編集・新規設定・無効化・消去 | `last`、`edit`、`new`、`off`、`clear` |
 
 `photo.jpg` はローカルパス、アップロード画像、画像フォルダー、またはユーザーが明示した別の入力へ置き換えられます。フォルダーは自動で一括処理になります。
 

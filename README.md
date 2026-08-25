@@ -138,7 +138,21 @@ XXD Panel 028 是一个面向 Codex 与兼容 Agent 的图像生成 Skill。它�
 /xxd-panel-028 photo.jpg --mode top-bottom,design-only --size auto,3:4,9:16 --text prompt --locale ja-JP
 ```
 
-支持 `--mode`、可重复或逗号分隔的 `--size`、`--text prompt|exact|none`、`--locale`、`--copy`、`--wallpaper linked|independent`、`--wallpaper-size` 和 `--out`。参数齐全时跳过全部问询；参数不完整时只询问缺失项。
+支持 `--mode`、可重复或逗号分隔的 `--size`、`--text prompt|exact|none`、`--locale`、`--copy`、`--wallpaper linked|independent`、`--wallpaper-size`、`--out` 和 `--prefs`。参数齐全时跳过全部问询；参数不完整时只询问缺失项。
+
+### 继承上次偏好，或全新配置
+
+检测到历史偏好时，Skill 会先展示上次的模式、尺寸、文字与语言、壁纸关系和输出位置，再提供三个互斥选项：**直接沿用**、**沿用并修改**、**全新配置**。本次明确说出的要求始终优先；完整参数仍然直接执行。
+
+可使用 `--prefs last|edit|new|off|clear` 直接指定行为：
+
+```text
+/xxd-panel-028 photo.jpg --prefs last
+/xxd-panel-028 photo.jpg --prefs edit
+/xxd-panel-028 photo.jpg --prefs new
+```
+
+偏好只保存交付设置，不保存原图、准确文案、生成结果、Panel 选择、模型通道、API 凭据或其他敏感信息。
 
 `photo.jpg` 也可以直接替换为图片目录路径；目录输入会自动进入批量，不需要额外的 `--batch` 开关。
 
@@ -154,6 +168,7 @@ XXD Panel 028 是一个面向 Codex 与兼容 Agent 的图像生成 Skill。它�
 | `--wallpaper` | 四端壁纸之间的关系 | `linked`、`independent` |
 | `--wallpaper-size` | 按设备覆盖壁纸分辨率 | `phone=...`、`ipad=...`、`desktop=...`、`watch=...` |
 | `--out` | 指定输出根目录，仍会新建本次任务目录 | 文件夹路径 |
+| `--prefs` | 处理上次偏好或关闭本次记忆 | `last`、`edit`、`new`、`off`、`clear` |
 
 `photo.jpg` 可以替换为本地图片路径、已上传图片、图片目录或用户明确给出的其他来源。目录会自动进入批量处理。
 

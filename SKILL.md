@@ -29,7 +29,7 @@ The mode name is not a loose hint. For every requested asset, append exactly one
 
 ## Resolve only runtime variables
 
-Every invocation is a new job unless the user explicitly asks to inspect, edit, continue, or reuse a named result. Repeating the same request requires fresh generation and a new task folder; an old matching file never completes a new request.
+Every invocation is a new job unless the user explicitly asks to inspect, edit, continue, or reuse a named result. Repeating the same request requires fresh generation and a new task folder; an old matching file never completes a new request. Remembered delivery preferences may reduce repeated questions, but never authorize reuse of an old source, result, prompt, or task directory.
 
 ### Inline fast path
 
@@ -49,8 +49,15 @@ Parse parameters anywhere after the invocation and input:
 - `--wallpaper`: `linked` or `independent`.
 - `--wallpaper-size`: labelled device sizes, for example `phone=1440x3200,ipad=2048x2732,desktop=3840x2160,watch=1024x1024`.
 - `--out`: explicit output root.
+- `--prefs`: `last`, `edit`, `new`, `off`, or `clear`; controls whether this invocation reuses, edits, ignores, suppresses, or clears the family-wide remembered delivery preference.
 
 Explicit parameters override ambiguous prose. Multi-value parameters accumulate and deduplicate in user order; single-value parameters use the last explicit value. If every required variable is resolved, skip preflight and generate. If values are partial, ask only for unresolved variables. Ask about a direct contradiction such as `--text none` with `--copy`.
+
+### Remembered preference gate
+
+After parsing current prose and inline parameters, read [references/runtime-preferences.md](references/runtime-preferences.md) completely and follow it before the ordinary preflight. When unresolved settings remain and a valid previous record exists, offer exactly three clear routes: reuse, reuse and edit, or fresh configuration. A fully specified current invocation remains a true fast path and skips this question.
+
+The remembered record is shared across the XXD Panel family because these are common delivery variables, not Soldier aesthetics. Current explicit requirements always win. Never remember exact copy, source paths, Panel selection, generated content, model routes, credentials, or secrets. Once the current settings are fully resolved, save only the safe delivery fields through `scripts/panel_preferences.py`, unless the user selected `--prefs off` or asked not to remember the invocation.
 
 ### Directory batch intake
 
@@ -339,6 +346,7 @@ When a result fails, retry only the failed source-brief or runtime requirement. 
 ## Runtime adapters
 
 - `references/original-prompt/README.md` — language index for the canonical original and four faithful reading translations
+- `references/runtime-preferences.md` — safe cross-invocation reuse, edit, fresh-start, and opt-out contract
 - `references/xxd-panel-028-prompt.zh-CN.md`
 - `references/xxd-panel-028-prompt.en.md`
 
