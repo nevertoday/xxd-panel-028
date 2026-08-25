@@ -344,13 +344,9 @@ XXD は小小東（Xiaoxiaodong）のブランド名の略称です。このプ�
 
 ## サポートと会員制度
 
-### 個別深度相談 · 1時間 CNY 299
-
-Skills 利用に関する一対一相談は1時間 CNY 299です。下の WeChat QR コードから予約してください。
-
 ### Xiaoxiaodong 総控 · 将軍総指揮 Skill · CNY 100
 
-CNY 100 の一回払いで、このシリーズの将軍総指揮 Skill（`xxd-panel-all`）を利用できます。全兵士 Skills の統括、推薦、指名派遣、一括調整に対応します。時間制の個別相談は含まれません。WeChat では「将軍総指揮 Skill」と記載してください。
+CNY 100 の一回払いで、このシリーズの将軍総指揮 Skill（`xxd-panel-all`）を利用できます。全兵士 Skills の統括、推薦、指名派遣、一括調整に対応します。WeChat では「将軍総指揮 Skill」と記載してください。
 
 <!-- xxd-panel-command-system:start -->
 **購入後に利用可能：全隊を指揮する「将軍 Skill」**

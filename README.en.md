@@ -351,13 +351,9 @@ XXD is the abbreviated brand name of Xiaoxiaodong. This project is created and m
 
 ## Support and Membership
 
-### In-depth Consultation · CNY 299/hour
-
-One-to-one consultation for using the Skills is billed at CNY 299 per hour. Contact Xiaoxiaodong through the WeChat QR code below to book.
-
 ### Xiaoxiaodong Commander · General Command Skill · CNY 100
 
-A one-time CNY 100 purchase unlocks this suite's General Command Skill (`xxd-panel-all`) for roster control, recommendations, Soldier dispatch, and batch coordination. Hourly one-to-one consultation is not included. Include “General Command Skill” in your WeChat message.
+A one-time CNY 100 purchase unlocks this suite's General Command Skill (`xxd-panel-all`) for roster control, recommendations, Soldier dispatch, and batch coordination. Include “General Command Skill” in your WeChat message.
 
 <!-- xxd-panel-command-system:start -->
 **Your purchase unlocks the General Skill that commands the whole roster**

@@ -344,13 +344,9 @@ XXD는 Xiaoxiaodong의 브랜드 약칭입니다. 이 프로젝트는 [@xiaoxiao
 
 ## 지원 및 멤버십
 
-### 심층 상담 · CNY 299/시간
-
-Skills 사용에 관한 일대일 상담은 시간당 CNY 299입니다. 아래 WeChat QR 코드로 예약하세요.
-
 ### Xiaoxiaodong 총괄 · 장군 총지휘 Skill · CNY 100
 
-CNY 100을 한 번 결제하면 이 시리즈의 장군 총지휘 Skill(`xxd-panel-all`)을 사용할 수 있습니다. 전체 병사 Skills의 통합 관리, 추천, 지정 파견, 일괄 조정을 지원합니다. 시간제 일대일 상담은 포함되지 않습니다. WeChat 메시지에 “장군 총지휘 Skill”이라고 적어 주세요.
+CNY 100을 한 번 결제하면 이 시리즈의 장군 총지휘 Skill(`xxd-panel-all`)을 사용할 수 있습니다. 전체 병사 Skills의 통합 관리, 추천, 지정 파견, 일괄 조정을 지원합니다. WeChat 메시지에 “장군 총지휘 Skill”이라고 적어 주세요.
 
 <!-- xxd-panel-command-system:start -->
 **구매 후 사용 가능: 전체 부대를 지휘하는 장군 Skill**
