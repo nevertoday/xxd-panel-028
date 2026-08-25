@@ -352,10 +352,9 @@ Skills 利用に関する一対一相談は1時間 CNY 299です。下の WeChat
 
 <div align="center">
   <h2>☕ オープンソースプロジェクトを支援</h2>
-  <p>このプロジェクトが時間の節約になったなら、Star、共有、コーヒー一杯で継続を支援できます。</p>
+  <p>このプロジェクトが役に立ったら、Buy Me a Coffee から任意で応援していただけます。</p>
   <table><tr><td align="center" width="240">
     <a href="https://github.com/nevertoday/zhongguo-traditional-colors/blob/main/docs/images/buy-me-a-coffee-qr.png?raw=true"><img src="https://github.com/nevertoday/zhongguo-traditional-colors/blob/main/docs/images/buy-me-a-coffee-qr.png?raw=true" alt="Buy Me a Coffee で Xiaoxiaodong を支援" width="180"></a><br>
     <strong>Buy me a coffee</strong><br><sub>QR コードを読み取るか開いて支援できます</sub>
   </td></tr></table>
-  <p><sub>支援は任意であり、このオープンソースプロジェクトの利用権には影響しません。</sub></p>
 </div>

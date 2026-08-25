@@ -352,10 +352,9 @@ Skills 사용에 관한 일대일 상담은 시간당 CNY 299입니다. 아래 W
 
 <div align="center">
   <h2>☕ 오픈 소스 프로젝트 후원하기</h2>
-  <p>이 프로젝트가 시간을 아껴 주었다면 Star, 공유, 커피 한 잔으로 지속적인 개발을 응원해 주세요.</p>
+  <p>프로젝트가 도움이 되었다면 Buy Me a Coffee로 자율 후원할 수 있습니다.</p>
   <table><tr><td align="center" width="240">
     <a href="https://github.com/nevertoday/zhongguo-traditional-colors/blob/main/docs/images/buy-me-a-coffee-qr.png?raw=true"><img src="https://github.com/nevertoday/zhongguo-traditional-colors/blob/main/docs/images/buy-me-a-coffee-qr.png?raw=true" alt="Buy Me a Coffee로 Xiaoxiaodong 후원하기" width="180"></a><br>
     <strong>Buy me a coffee</strong><br><sub>QR 코드를 스캔하거나 열어 후원할 수 있습니다.</sub>
   </td></tr></table>
-  <p><sub>후원은 전적으로 선택 사항이며 이 오픈 소스 프로젝트의 이용 권한에는 영향을 주지 않습니다.</sub></p>
 </div>

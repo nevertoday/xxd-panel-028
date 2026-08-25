@@ -359,7 +359,7 @@ The General Skill is the command center for the entire numbered-Skill roster. Co
 
 <div align="center">
   <h2>☕ Support this open-source project</h2>
-  <p>If this project saved you time, a Star, a share, or a coffee helps keep it moving.</p>
+  <p>If this project helps you, you’re welcome to support it through Buy Me a Coffee—entirely optional.</p>
   <table>
     <tr>
       <td align="center" width="240">
@@ -369,5 +369,4 @@ The General Skill is the command center for the entire numbered-Skill roster. Co
       </td>
     </tr>
   </table>
-  <p><sub>Support is entirely optional and never changes access to this open-source project.</sub></p>
 </div>
