@@ -340,30 +340,30 @@ XXD is the abbreviated brand name of Xiaoxiaodong. This project is created and m
 
 One-to-one consultation for using the Skills is billed at CNY 299 per hour. Contact Xiaoxiaodong through the WeChat QR code below to book.
 
-### Xiaoxiaodong Skills User Community · CNY 168 to join
+### Xiaoxiaodong Commander · General Command Skill · CNY 100
 
-A one-time CNY 168 fee joins the community for workflow sharing, work discussion, and peer support. It does not include hourly one-to-one consultation. Include “Skills User Community” in your WeChat message.
+A one-time CNY 100 purchase unlocks this suite's General Command Skill (`xxd-panel-all`) for roster control, recommendations, Soldier dispatch, and batch coordination. Hourly one-to-one consultation is not included. Include “General Command Skill” in your WeChat message.
 
 <!-- xxd-panel-command-system:start -->
-**Community members can use the General Skill that commands the whole roster**
+**Your purchase unlocks the General Skill that commands the whole roster**
 
 | Level | Skill | Responsibility |
 |---|---|---|
 | **General** | [`xxd-panel-all`](https://github.com/nevertoday/xxd-panel-all) | Detect available numbered Skills; recommend by image, theme, or use; dispatch a chosen number; organize multi-style trials; and assign folders of images to individual jobs. |
 | **Soldiers** | `xxd-panel-NNN` (currently 001–060) | Each numbered Skill executes only its own original brief and aesthetic, completing the individual job assigned by the General. |
 
-The General Skill is the command center for the entire numbered-Skill roster. Community members can use it and receive help with installation, updates, roster setup, and dispatch workflows. The General organizes and routes; it never rewrites, blends, or overrides a Soldier's original aesthetic. Every finished asset is still created independently by the selected Soldier Skill.
+The General Skill is the command center for the entire numbered-Skill roster. Your purchase unlocks it together with help for installation, updates, roster setup, and dispatch workflows. The General organizes and routes; it never rewrites, blends, or overrides a Soldier's original aesthetic. Every finished asset is still created independently by the selected Soldier Skill.
 <!-- xxd-panel-command-system:end -->
 
-### Knowledge Planet + Member Prompt Library · CNY 699/year
+### Knowledge Planet + Member Prompt Library + All General Skills Membership · CNY 699/year
 
-[Knowledge Planet](https://wx.zsxq.com/group/15554814142882) and the [XXD Member Prompt Library](https://vip.xiaoxiaodong.ai/) are one membership: **one annual payment unlocks both, with no second purchase required.**
+[Knowledge Planet](https://wx.zsxq.com/group/15554814142882), the [XXD Member Prompt Library](https://vip.xiaoxiaodong.ai/), and membership for all General Skills are one membership: **one annual payment unlocks all three benefits, with no second purchase required.**
 
 1. Subscribe through [Knowledge Planet](https://wx.zsxq.com/group/15554814142882), then contact Xiaoxiaodong on WeChat for a Prompt Library redemption code.
 2. Subscribe through the [Member Prompt Library](https://vip.xiaoxiaodong.ai/), then contact Xiaoxiaodong on WeChat for a Knowledge Planet invitation.
 
 <p align="center">
-  <a href="https://xiaoxiaodong.pages.dev/assets/wechat-qr.png"><img src="https://xiaoxiaodong.pages.dev/assets/wechat-qr.png" alt="XXD paid community WeChat QR code" width="320"></a>
+  <a href="https://xiaoxiaodong.pages.dev/assets/wechat-qr.png"><img src="https://xiaoxiaodong.pages.dev/assets/wechat-qr.png" alt="XXD purchase and contact WeChat QR code" width="320"></a>
 </p>
 
 <div align="center">
