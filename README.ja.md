@@ -38,7 +38,7 @@
 雰囲気を確かめたいなら下の作例へ。すぐ作るなら [使い始める](#使い始める) へ。全モードと引数は、必要なときだけ開ける資料にまとめました。
 <!-- xxd-human-intro:end -->
 
-## 作例 · X より
+## X のオリジナル作例
 
 <table>
   <tr>
@@ -49,6 +49,11 @@
     <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-03.jpg" alt="XXD Panel 028 作例 3"></a></td>
     <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-04.jpg" alt="XXD Panel 028 作例 4"></a></td>
   </tr>
+</table>
+
+## 追加 16:9 左右構成サンプル
+
+<table>
   <tr>
     <td width="50%"><img src="./assets/examples/sample-05.png" alt="XXD Panel 028 作例 5"></td>
     <td width="50%"><img src="./assets/examples/sample-06.png" alt="XXD Panel 028 作例 6"></td>
@@ -330,7 +335,7 @@ xxd-panel-028/
 | [xxd-panel-017](https://github.com/nevertoday/xxd-panel-017) | 丸い形 · 粗く途切れる線 · 純色の平塗り · 明るい色面 · 軽快な非対称 |
 | [xxd-panel-018](https://github.com/nevertoday/xxd-panel-018) | 一つの視覚アンカー · 少数の前中後層 · 象牙色の余白 · マット紙 · 完全なマイクロタイプ |
 | [xxd-panel-019](https://github.com/nevertoday/xxd-panel-019) | RECOGNISE FIRST · REDUCE WITH INTENT · COMPOSE WITH TYPE |
-| [xxd-panel-020](https://github.com/nevertoday/xxd-panel-020) | 分解—選択—凝縮—再構成 · 少数の形 · 厳密な色役割 · 象牙色の余白 · アートブックの小文字 |
+| [xxd-panel-020](https://github.com/nevertoday/xxd-panel-020) | 厚塗りの島 · 立体ミニチュア · 本物のナイフ跡 · 大きな紙面余白 · 抑制された編集文字 |
 | [xxd-panel-021](https://github.com/nevertoday/xxd-panel-021) | 純黒矩形 · 主体の大半は内部 · 一つだけ越境 · 揺れるコピー線 · 白いネガ形と微小な灰色面 |
 | [xxd-panel-022](https://github.com/nevertoday/xxd-panel-022) | 純黒矩形 · 主体の大半は内部 · 一つだけ越境 · 滑らかで安定した線 · 一点だけの色 |
 | [xxd-panel-023](https://github.com/nevertoday/xxd-panel-023) | 元写真が選ぶ窓 · 淡く呼吸する背景 · 柔らかな色光 · スプレー粒子 · 虚実の投影と小文字 |

@@ -38,7 +38,7 @@
 미감을 먼저 보고 싶다면 아래 예시를 보세요. 바로 만들려면 [시작하기](#시작하기)로 이동하세요. 전체 모드와 매개변수는 필요할 때 펼쳐 보는 자료에 담았습니다.
 <!-- xxd-human-intro:end -->
 
-## 예시 · X에서
+## X 원본 예시
 
 <table>
   <tr>
@@ -49,6 +49,11 @@
     <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-03.jpg" alt="XXD Panel 028 예시 3"></a></td>
     <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-04.jpg" alt="XXD Panel 028 예시 4"></a></td>
   </tr>
+</table>
+
+## 추가 16:9 좌우 구성 예시
+
+<table>
   <tr>
     <td width="50%"><img src="./assets/examples/sample-05.png" alt="XXD Panel 028 예시 5"></td>
     <td width="50%"><img src="./assets/examples/sample-06.png" alt="XXD Panel 028 예시 6"></td>
@@ -330,7 +335,7 @@ xxd-panel-028/
 | [xxd-panel-017](https://github.com/nevertoday/xxd-panel-017) | 둥근 형태 · 거칠고 끊긴 선 · 순색 평면 채색 · 밝은 색면 · 경쾌한 비대칭 |
 | [xxd-panel-018](https://github.com/nevertoday/xxd-panel-018) | 하나의 시각 앵커 · 소수의 전중후경 종이 층 · 아이보리 여백 · 무광 종이 · 완전한 마이크로타입 |
 | [xxd-panel-019](https://github.com/nevertoday/xxd-panel-019) | 먼저 알아보고 · 의도를 갖고 덜어 내며 · 글자와 함께 구성합니다 |
-| [xxd-panel-020](https://github.com/nevertoday/xxd-panel-020) | 해체—선별—정제—재구성 · 소수 형태 · 엄격한 색 역할 · 아이보리 여백 · 아트북 미세 조판 |
+| [xxd-panel-020](https://github.com/nevertoday/xxd-panel-020) | 임파스토 섬 · 입체 미니어처 · 실제 나이프 자국 · 넓은 종이 여백 · 절제된 편집 글자 |
 | [xxd-panel-021](https://github.com/nevertoday/xxd-panel-021) | 순검정 직사각형 · 주제 대부분은 내부 · 특징 하나만 돌파 · 떨리는 복사선 · 흰 음형과 미세 회색면 |
 | [xxd-panel-022](https://github.com/nevertoday/xxd-panel-022) | 순검정 직사각형 · 주제 대부분은 내부 · 특징 하나만 돌파 · 매끄럽고 안정적인 선 · 색 신호 하나 |
 | [xxd-panel-023](https://github.com/nevertoday/xxd-panel-023) | 원본이 고른 창 · 옅고 숨 쉬는 배경 · 부드러운 유색광 · 분사 입자 · 흐린 투영과 미세 조판 |

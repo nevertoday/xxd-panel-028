@@ -38,7 +38,7 @@
 想先确认审美，就看下面的样张；想马上开做，直接跳到 [开始使用](#开始使用)。完整模式、尺寸和参数都保留在后面的折叠资料里，需要时再查。
 <!-- xxd-human-intro:end -->
 
-## 样张 · 来自 X
+## 原始 X 样张
 
 <table>
   <tr>
@@ -49,6 +49,11 @@
     <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-03.jpg" alt="XXD Panel 028 样张 3"></a></td>
     <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128"><img src="./assets/examples/sample-04.jpg" alt="XXD Panel 028 样张 4"></a></td>
   </tr>
+</table>
+
+## 新增 16:9 左右双联样张
+
+<table>
   <tr>
     <td width="50%"><img src="./assets/examples/sample-05.png" alt="XXD Panel 028 样张 5"></td>
     <td width="50%"><img src="./assets/examples/sample-06.png" alt="XXD Panel 028 样张 6"></td>
@@ -337,7 +342,7 @@ xxd-panel-028/
 | [xxd-panel-017](https://github.com/nevertoday/xxd-panel-017) | 圆润形体 · 粗糙断线 · 纯色平涂 · 明亮色场 · 轻快不对称 |
 | [xxd-panel-018](https://github.com/nevertoday/xxd-panel-018) | 一个视觉锚点 · 前中后少量纸层 · 暖象牙留白 · 哑光纸触感 · 完整微排版 |
 | [xxd-panel-019](https://github.com/nevertoday/xxd-panel-019) | RECOGNISE FIRST · REDUCE WITH INTENT · COMPOSE WITH TYPE |
-| [xxd-panel-020](https://github.com/nevertoday/xxd-panel-020) | 解构—筛选—提炼—重构 · 少量形体 · 严格色彩角色 · 象牙色留白 · 艺术书微排版 |
+| [xxd-panel-020](https://github.com/nevertoday/xxd-panel-020) | 厚涂颜料岛 · 立体微缩场景 · 真实刀痕 · 大面积纸面留白 · 克制编辑排版 |
 | [xxd-panel-021](https://github.com/nevertoday/xxd-panel-021) | 纯黑矩形 · 主体大部入场 · 一个特征越界 · 抖动复印线 · 白色负形与微灰面 |
 | [xxd-panel-022](https://github.com/nevertoday/xxd-panel-022) | 纯黑矩形 · 主体大部入场 · 一个特征越界 · 流畅稳定线 · 唯一单点彩色 |
 | [xxd-panel-023](https://github.com/nevertoday/xxd-panel-023) | 源图择窗 · 浅色呼吸背景 · 柔和有色光影 · 喷绘颗粒 · 虚实投影与微排版 |
