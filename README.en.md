@@ -17,25 +17,25 @@
 </div>
 
 <!-- xxd-human-intro:start -->
-## The short, honest version
+## Where this Panel fits — and what it solves
 
-Ever had a photo you loved turn into generic “AI design”? The subject survives, but the relationship, mood, and tiny details that made the photo yours disappear.
+When a photograph needs to become a poster, cover, social asset, or wallpaper, the real design problem is rarely a simple change of style. The challenge is to redesign it while preserving identity, key relationships, mood, and recognisability.
 
-That frustration is why I made **Panel 028**. It does not press a template onto your image. It first works out what must not be lost, then translates it into **Place the photograph into a source-colour isometric miniature on paper**.
+**Panel 028** is suited to work that must retain the source's essential content while pursuing this visual direction: **Place the photograph into a source-colour isometric miniature on paper**. It begins with intended use and desired outcome; layout, size, text, and delivery format follow from those needs.
 
-### Understand it in 30 seconds
+### Use it when
 
-- **Give it:** one photo, a folder of images, or a rough idea.
-- **It does:** preserves recognizable people, objects, actions, and relationships, then redesigns them in this Panel’s own visual language.
-- **You get:** ready-to-use PNGs—comparison layouts, design-only artwork, multiple ratios, or a wallpaper set.
+- **Content must remain anchored:** people, objects, actions, and relationships should not be replaced by an unrelated template.
+- **The image needs stronger expression:** you want a clearer editorial language, artistic treatment, or narrative focus.
+- **Delivery must stay flexible:** one source needs comparison layouts, design-only artwork, multiple ratios, or a wallpaper set.
 
-### The easiest way to try it
+### A simple way to begin
 
-You do not need to study every option first. Give your Agent an image and say:
+You do not need to review every option first. Send your Agent an image and say:
 
 > Use XXD Panel 028 on this image and recommend the best layout and size first.
 
-Check the samples below if you want to feel out the aesthetic. If you are ready, jump to [Get started](#get-started). The full modes, sizes, and parameters are tucked into an expandable reference for later.
+Review the samples below if you want to confirm the visual direction first. When you are ready, continue to [Get started](#get-started). Full modes, sizes, and parameters remain available in the expandable reference.
 <!-- xxd-human-intro:end -->
 
 ## Original Samples from X
