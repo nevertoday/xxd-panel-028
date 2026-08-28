@@ -64,6 +64,21 @@
   </tr>
 </table>
 
+## نماذج إضافية 3:4 بتكوين أعلى–أسفل
+
+تعيد هذه الأعمال الأربعة استخدام المصادر المستقلة نفسها في مجموعة 16:9 أعلاه، لكن داخل لوحات كاملة 3:4 بتكوين أعلى–أسفل. تبقى الصورة الواقعية في الأعلى، ويُعاد بناء التصميم السفلي وفق الموجّه الأصلي لـ Panel 028. لا يُولَّد النص الإنجليزي إلا من محتوى كل صورة أو مزاجها أو دلالتها، وقد روجعت النتائج واحدةً واحدة.
+
+<table>
+  <tr>
+    <td width="50%"><img src="./assets/examples/sample-09.png" alt="XXD Panel 028 نموذج إضافي أعلى–أسفل 1"></td>
+    <td width="50%"><img src="./assets/examples/sample-10.png" alt="XXD Panel 028 نموذج إضافي أعلى–أسفل 2"></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="./assets/examples/sample-11.png" alt="XXD Panel 028 نموذج إضافي أعلى–أسفل 3"></td>
+    <td width="50%"><img src="./assets/examples/sample-12.png" alt="XXD Panel 028 نموذج إضافي أعلى–أسفل 4"></td>
+  </tr>
+</table>
+
 > [Xiaoxiaodong (@xiaoxiaodong01)](https://x.com/xiaoxiaodong01/status/2090447110168822128) · 2026-08-20<br>
 > GPT2 x 立体 x 模型 x 微缩 x 美学提示词 x VOL.028
 

@@ -64,6 +64,21 @@
   </tr>
 </table>
 
+## 追加 3:4 上下構成作例
+
+上の 16:9 作例と同じ4点の独立素材を、完全な 3:4 上下構成として再生成しました。上部は現実の写真を保ち、下部は Panel 028 の原文プロンプトに従って再構成しています。英語コピーは各写真の内容・空気・含意だけから生成し、全点を個別に確認しました。
+
+<table>
+  <tr>
+    <td width="50%"><img src="./assets/examples/sample-09.png" alt="XXD Panel 028 追加上下作例 1"></td>
+    <td width="50%"><img src="./assets/examples/sample-10.png" alt="XXD Panel 028 追加上下作例 2"></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="./assets/examples/sample-11.png" alt="XXD Panel 028 追加上下作例 3"></td>
+    <td width="50%"><img src="./assets/examples/sample-12.png" alt="XXD Panel 028 追加上下作例 4"></td>
+  </tr>
+</table>
+
 > [小小東（@xiaoxiaodong01）](https://x.com/xiaoxiaodong01/status/2090447110168822128) · 2026-08-20<br>
 > GPT2 x 立体 x 模型 x 微缩 x 美学提示词 x VOL.028
 

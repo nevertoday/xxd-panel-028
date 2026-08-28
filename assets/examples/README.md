@@ -22,3 +22,16 @@
 - Delivery: 1536×864 PNG, 16:9 left-right composition, English copy governed by the Panel brief.
 
 The project READMEs keep original X samples and additional landscape samples in separate sections so their provenance is never conflated.
+
+## Additional portrait samples
+
+- Source reuse: the same four verified inputs listed above, in the same order.
+- `sample-09.png` ← `group_003/009.jpg`
+- `sample-10.png` ← `group_003/010.jpg`
+- `sample-11.png` ← `group_003/011.jpg`
+- `sample-12.png` ← `group_003/012.png`
+- Style identity: XXD Panel 028; reviewed against its original prompt and original X samples.
+- Delivery: 1536×2048 PNG, 3:4 top-bottom composition, English copy governed by the Panel brief.
+- Acceptance: reality photograph above, Panel-specific transformed design below; no cross-Panel style reuse.
+
+The portrait and landscape sets reuse source content only; each is a separate complete-canvas generation.

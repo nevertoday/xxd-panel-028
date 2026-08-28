@@ -64,6 +64,21 @@
   </tr>
 </table>
 
+## 新增 3:4 上下双联样张
+
+以下四张复用上方 16:9 样张对应的四张独立素材，重新生成完整 3:4 上下双联画布；上部保留现实摄影，下部遵循 028 原始提示词重构。英文配字只从当前照片的内容、情绪或隐喻中生成，并已逐张复核。
+
+<table>
+  <tr>
+    <td width="50%"><img src="./assets/examples/sample-09.png" alt="XXD Panel 028 新增上下样张 1"></td>
+    <td width="50%"><img src="./assets/examples/sample-10.png" alt="XXD Panel 028 新增上下样张 2"></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="./assets/examples/sample-11.png" alt="XXD Panel 028 新增上下样张 3"></td>
+    <td width="50%"><img src="./assets/examples/sample-12.png" alt="XXD Panel 028 新增上下样张 4"></td>
+  </tr>
+</table>
+
 > [小小东（@xiaoxiaodong01）](https://x.com/xiaoxiaodong01/status/2090447110168822128) · 2026-08-20<br>
 > GPT2 x 立体 x 模型 x 微缩 x 美学提示词 x VOL.028
 
