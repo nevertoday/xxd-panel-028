@@ -406,6 +406,8 @@ XXD is the abbreviated brand name of Xiaoxiaodong. This project is created and m
 
 ## Support and Membership
 
+> **Advertising disclosure:** QR codes and paid membership/service links in this section are XXD promotional content. Scanning or purchasing is optional and does not affect access to this open-source project.
+
 ### Xiaoxiaodong Commander · General Command Skill · CNY 100
 
 A one-time CNY 100 purchase unlocks this suite's General Command Skill (`xxd-panel-all`) for roster control, recommendations, Soldier dispatch, and batch coordination. Include “General Command Skill” in your WeChat message.
