@@ -4,7 +4,7 @@
 
 <div align="center">
 
-# 🦁 XXD Panel 028
+# 🦁 XXD Panel 028｜等距微景观
 
 ### 把照片安放成一件源图配色的等距纸上微缩景观
 

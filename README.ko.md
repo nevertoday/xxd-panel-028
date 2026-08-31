@@ -4,7 +4,7 @@
 
 <div align="center">
 
-# 🦁 XXD Panel 028
+# 🦁 XXD Panel 028｜아이소메트릭 미니 풍경
 
 ### 사진을 원본 색으로 만든 종이 위 아이소메트릭 미니어처로
 

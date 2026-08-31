@@ -4,7 +4,7 @@
 
 <div align="center">
 
-# 🦁 XXD Panel 028
+# 🦁 XXD Panel 028｜Isometric Micro-Landscape
 
 ### Place the photograph into a source-colour isometric miniature on paper
 
