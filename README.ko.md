@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="./assets/banner.svg" alt="XXD Panel 028 프로젝트 배너" width="1200">
-</p>
-
 <div align="center">
 
 # 🦁 XXD Panel 028｜아이소메트릭 미니 풍경
@@ -319,7 +315,6 @@ xxd-panel-028/
 ├── SKILL.md
 ├── README.md / README.en.md / README.ja.md / README.ko.md / README.ar.md
 ├── agents/openai.yaml
-├── assets/banner.svg + examples/ (향후 로컬 예시용)
 ├── scripts/compose_panel.py + configured_imagegen.py
 └── references/xxd-panel-028-prompt.zh-CN.md + xxd-panel-028-prompt.en.md + 028-source.md
 ```
