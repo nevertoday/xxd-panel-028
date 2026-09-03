@@ -282,6 +282,14 @@ mkdir -p ~/.codex/skills
 ln -s "$(pwd)/xxd-panel-028" ~/.codex/skills/xxd-panel-028
 ```
 
+`npx skills` でも直接インストールできます：
+
+```bash
+npx skills add https://github.com/nevertoday/xxd-panel-028 --skill xxd-panel-028
+```
+
+このコマンドは GitHub からリポジトリを取得し、同名の Skill を現在の Agent にインストールします。ユーザー単位の Codex Skills ディレクトリへ入れる場合は、末尾に `--global --agent codex --yes` を追加してください。
+
 Claude Code では同じフォルダを `~/.claude/skills/xxd-panel-028` にリンクできます。インストール後に Agent セッションを再起動してください。
 
 ```text
