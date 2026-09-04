@@ -4,10 +4,6 @@
 
 ### Place the photograph into a source-colour isometric miniature on paper
 
-[![Codex Skill](https://img.shields.io/badge/Codex-Skill-000000?style=flat-square)](./SKILL.md)
-[![Four Modes](https://img.shields.io/badge/Modes-4-d75d32?style=flat-square)](#four-outputs-one-paper-miniature-logic)
-[![Raster Output](https://img.shields.io/badge/Output-PNG-3c6f67?style=flat-square)](#boundaries-and-trust)
-
 <a href="README.md">简体中文</a> · <strong>English</strong> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.ar.md">العربية</a>
 
 </div>
@@ -25,7 +21,7 @@
   </tr>
 </table>
 
-## New 16:9 Left–Right Samples
+## 16:9 Left–Right Samples
 
 <table>
   <tr>
@@ -38,9 +34,9 @@
   </tr>
 </table>
 
-## Additional 3:4 Top–Bottom Samples
+## 3:4 Top–Bottom Samples
 
-These four works reuse the same four independent sources as the 16:9 set above, now regenerated as complete 3:4 top–bottom canvases. The reality photograph stays above; the lower design follows Panel 028's original brief. English copy is generated only from each photograph's content, mood, or implication, and every result was individually reviewed.
+These four works reuse the same four independent sources as the 16:9 set above, now regenerated as complete 3:4 top–bottom canvases. The original photograph remains above; the lower design follows Panel 028's original brief. English copy is generated only from each photograph's content, mood, or implication, and every result was individually reviewed.
 
 <table>
   <tr>
@@ -312,7 +308,7 @@ Full specifications:
 - Every invocation creates a fresh task directory; even identical sources and parameters must generate anew.
 - Deliverables are PNG bitmaps, never SVG, HTML, Canvas, or programmatic-drawing substitutes.
 - The configured bitmap bridge emits sanitised status only and does not expose providers, endpoints, headers, credentials, prompts, or response bodies.
-- Each selected ordinary mode returns one file; selected `wallpaper-pack` adds four separate wallpapers. `all` returns seven PNGs per source across four sibling mode directories, never a contact sheet or overview.
+- Each selected ordinary mode returns one file; selected `wallpaper-pack` adds four separate wallpapers. `all` returns seven PNGs per source directly in one fresh task directory, never a contact sheet, overview, or mode subdirectory.
 
 Local composition needs Python 3 and Pillow. The safe bitmap bridge uses Python 3.11+ `tomllib`. Image generation still requires a host agent with built-in raster generation or an already configured compatible raster route.
 
@@ -324,7 +320,7 @@ xxd-panel-028/
 ├── README.md / README.en.md / README.ja.md / README.ko.md / README.ar.md
 ├── agents/openai.yaml
 ├── assets/
-│   └── examples/ (reserved for future local samples)
+│   └── examples/ (sample assets)
 ├── scripts/
 │   ├── compose_panel.py
 │   └── configured_imagegen.py
@@ -335,9 +331,9 @@ xxd-panel-028/
 ```
 
 <!-- xxd-panel-catalog:start -->
-## Complete XXD Panel catalog
+## Historical XXD Panel directory
 
-Each of the 60 Panels preserves its own original brief and aesthetic logic. The table lists every project address and its defining style characteristics; the current project is bold.
+This table is the historical 001–060 Panel directory. Each entry preserves its own original brief and aesthetic logic; the current project is bold.
 
 | Project | Style characteristics |
 |---|---|
@@ -421,7 +417,7 @@ A one-time CNY 100 purchase unlocks this suite's General Command Skill (`xxd-pan
 | Level | Skill | Responsibility |
 |---|---|---|
 | **General** | [`xxd-panel-all`](https://github.com/nevertoday/xxd-panel-all) | Detect available numbered Skills; recommend by image, theme, or use; dispatch a chosen number; organize multi-style trials; and assign folders of images to individual jobs. |
-| **Soldiers** | `xxd-panel-NNN` (currently 001–060) | Each numbered Skill executes only its own original brief and aesthetic, completing the individual job assigned by the General. |
+| **Soldiers** | `xxd-panel-NNN` (currently 001–112) | Each numbered Skill executes only its own original brief and aesthetic, completing the individual job assigned by the General. |
 
 The General Skill is the command center for the entire numbered-Skill roster. Your purchase unlocks it together with help for installation, updates, roster setup, and dispatch workflows. The General organizes and routes; it never rewrites, blends, or overrides a Soldier's original aesthetic. Every finished asset is still created independently by the selected Soldier Skill.
 <!-- xxd-panel-command-system:end -->

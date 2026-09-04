@@ -4,10 +4,6 @@
 
 ### 把照片安放成一件源图配色的等距纸上微缩景观
 
-[![Codex Skill](https://img.shields.io/badge/Codex-Skill-000000?style=flat-square)](./SKILL.md)
-[![Four Modes](https://img.shields.io/badge/Modes-4-d75d32?style=flat-square)](#四种输出共享同一种纸上微缩逻辑)
-[![Raster Output](https://img.shields.io/badge/Output-PNG-3c6f67?style=flat-square)](#边界与信任)
-
 <strong>简体中文</strong> · <a href="README.en.md">English</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.ar.md">العربية</a>
 
 </div>
@@ -25,7 +21,7 @@
   </tr>
 </table>
 
-## 新增 16:9 左右双联样张
+## 16:9 左右双联样张
 
 <table>
   <tr>
@@ -38,7 +34,7 @@
   </tr>
 </table>
 
-## 新增 3:4 上下双联样张
+## 3:4 上下双联样张
 
 以下四张复用上方 16:9 样张对应的四张独立素材，重新生成完整 3:4 上下双联画布；上部保留现实摄影，下部遵循 028 原始提示词重构。英文配字只从当前照片的内容、情绪或隐喻中生成，并已逐张复核。
 
@@ -312,7 +308,7 @@ $xxd-panel-028
 - 每次调用都创建新的任务子文件夹；相同原图和参数也要重新生成，旧成品不能冒充当前任务。
 - 最终交付为 PNG 位图，不是 SVG、HTML、Canvas 或程序绘图替代品。
 - 已配置位图桥接只返回脱敏状态，不显示供应商、端点、请求头、凭据、提示词或服务器响应正文。
-- 每个所选普通模式各返回一张；若选择 `wallpaper-pack`，再返回四张独立壁纸。选择 `全部` 时每张原图共返回 7 个 PNG，分处四个同级模式文件夹，绝不生成拼贴总览。
+- 每个所选普通模式各返回一张；若选择 `wallpaper-pack`，再返回四张独立壁纸。选择 `全部` 时每张原图共返回 7 个 PNG，全部直接放入同一个新任务目录，绝不生成拼贴总览或模式子目录。
 
 本地拼版需要 Python 3 和 Pillow。安全位图桥接使用 Python 3.11+ 的 `tomllib`。图像生成仍需要主机 Agent 的内置位图能力或已经配置好的兼容位图路径。
 
@@ -324,7 +320,7 @@ xxd-panel-028/
 ├── README.md / README.en.md / README.ja.md / README.ko.md / README.ar.md
 ├── agents/openai.yaml
 ├── assets/
-│   └── examples/（未来本地样张占位）
+│   └── examples/（样张文件）
 ├── scripts/
 │   ├── compose_panel.py
 │   └── configured_imagegen.py
@@ -335,9 +331,9 @@ xxd-panel-028/
 ```
 
 <!-- xxd-panel-catalog:start -->
-## XXD Panel 全系列项目
+## XXD Panel 历史目录
 
-60 个 Panel 各自保留独立的原始提示词与审美逻辑。下面列出全部项目地址和核心风格特点；当前项目以粗体标出。
+下表列出 001–060 的历史 Panel 目录；每个项目保留独立的原始提示词与审美逻辑，当前项目以粗体标出。
 
 | 项目地址 | 风格特点 |
 |---|---|
@@ -423,7 +419,7 @@ XXD 是小小东的品牌名称缩写。项目由 [@xiaoxiaodong01](https://x.co
 | 层级 | Skill | 负责什么 |
 |---|---|---|
 | **将军级** | [`xxd-panel-all`](https://github.com/nevertoday/xxd-panel-all) | 识别当前可用的编号 Skills；按图片、主题和用途推荐；按编号点将；组织同图多风格试稿；为图片文件夹批量分配并逐项派发。 |
-| **士兵级** | `xxd-panel-NNN`（当前 001–060） | 每个编号只执行自己独立的原始提示词与审美，把将军派发的单个任务完成为成品。 |
+| **士兵级** | `xxd-panel-NNN`（当前 001–112） | 每个编号只执行自己独立的原始提示词与审美，把将军派发的单个任务完成为成品。 |
 
 将军 Skill 是整个编号 Skills 队伍的总控入口。购买后即可使用，并获得安装、版本更新、队伍配置和调度方式的答疑。将军只负责组织与派发，不会改写、混合或覆盖士兵的原始美学；每张成品仍由被选中的士兵 Skill 独立完成。
 <!-- xxd-panel-command-system:end -->
