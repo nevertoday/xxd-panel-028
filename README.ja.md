@@ -429,17 +429,6 @@ XXD は小小東（Xiaoxiaodong）のブランド名の略称です。このプ�
 
 </div>
 
----
-
-<div align="center">
-  <h2>☕ オープンソースプロジェクトを支援</h2>
-  <p>このプロジェクトが役に立ったら、Buy Me a Coffee から任意で応援していただけます。</p>
-  <table><tr><td align="center" width="240">
-    <a href="https://github.com/nevertoday/zhongguo-traditional-colors/blob/main/docs/images/buy-me-a-coffee-qr.png?raw=true"><img src="https://github.com/nevertoday/zhongguo-traditional-colors/blob/main/docs/images/buy-me-a-coffee-qr.png?raw=true" alt="Buy Me a Coffee で Xiaoxiaodong を支援" width="180"></a><br>
-    <strong>Buy me a coffee</strong><br><sub>QR コードを読み取るか開いて支援できます</sub>
-  </td></tr></table>
-</div>
-
 ## ライセンス
 
 本プロジェクト（Skill、プロンプト、スクリプト、ドキュメント、付属サンプルを含む）は **PolyForm Noncommercial License 1.0.0** で提供されます。完全な法的条文は [LICENSE](LICENSE) に、公式ページは <https://polyformproject.org/licenses/noncommercial/1.0.0> にあります。

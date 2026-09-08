@@ -429,17 +429,6 @@ XXD는 Xiaoxiaodong의 브랜드 약칭입니다. 이 프로젝트는 [@xiaoxiao
 
 </div>
 
----
-
-<div align="center">
-  <h2>☕ 오픈 소스 프로젝트 후원하기</h2>
-  <p>프로젝트가 도움이 되었다면 Buy Me a Coffee로 자율 후원할 수 있습니다.</p>
-  <table><tr><td align="center" width="240">
-    <a href="https://github.com/nevertoday/zhongguo-traditional-colors/blob/main/docs/images/buy-me-a-coffee-qr.png?raw=true"><img src="https://github.com/nevertoday/zhongguo-traditional-colors/blob/main/docs/images/buy-me-a-coffee-qr.png?raw=true" alt="Buy Me a Coffee로 Xiaoxiaodong 후원하기" width="180"></a><br>
-    <strong>Buy me a coffee</strong><br><sub>QR 코드를 스캔하거나 열어 후원할 수 있습니다.</sub>
-  </td></tr></table>
-</div>
-
 ## 라이선스
 
 이 프로젝트(Skill, 프롬프트, 스크립트, 문서 및 함께 제공되는 샘플 포함)는 **PolyForm Noncommercial License 1.0.0**에 따라 제공됩니다. 전체 법적 전문은 [LICENSE](LICENSE), 공식 페이지는 <https://polyformproject.org/licenses/noncommercial/1.0.0>에서 확인할 수 있습니다.

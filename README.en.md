@@ -436,22 +436,6 @@ All General Skills are included in the CNY 699/year membership; no separate purc
 
 </div>
 
----
-
-<div align="center">
-  <h2>☕ Support this open-source project</h2>
-  <p>If this project helps you, you’re welcome to support it through Buy Me a Coffee—entirely optional.</p>
-  <table>
-    <tr>
-      <td align="center" width="240">
-        <a href="https://github.com/nevertoday/zhongguo-traditional-colors/blob/main/docs/images/buy-me-a-coffee-qr.png?raw=true"><img src="https://github.com/nevertoday/zhongguo-traditional-colors/blob/main/docs/images/buy-me-a-coffee-qr.png?raw=true" alt="Support Xiaoxiaodong through Buy Me a Coffee" width="180"></a><br>
-        <strong>Buy me a coffee</strong><br>
-        <sub>Scan or open the QR code to support Xiaoxiaodong</sub>
-      </td>
-    </tr>
-  </table>
-</div>
-
 ## License
 
 This project—including its Skill, prompts, scripts, documentation, and accompanying samples—is released under the **PolyForm Noncommercial License 1.0.0**. The complete legal text is in [LICENSE](LICENSE); the official page is <https://polyformproject.org/licenses/noncommercial/1.0.0>.

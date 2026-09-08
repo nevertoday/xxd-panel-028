@@ -433,17 +433,6 @@ XXD هو الاختصار التجاري لاسم Xiaoxiaodong. أنشأ الم�
 
 </div>
 
----
-
-<div align="center" dir="rtl">
-  <h2>☕ ادعم هذا المشروع مفتوح المصدر</h2>
-  <p>إذا أفادك المشروع، يمكنك دعمه اختيارياً عبر Buy Me a Coffee.</p>
-  <table><tr><td align="center" width="240">
-    <a href="https://github.com/nevertoday/zhongguo-traditional-colors/blob/main/docs/images/buy-me-a-coffee-qr.png?raw=true"><img src="https://github.com/nevertoday/zhongguo-traditional-colors/blob/main/docs/images/buy-me-a-coffee-qr.png?raw=true" alt="دعم Xiaoxiaodong عبر Buy Me a Coffee" width="180"></a><br>
-    <strong>Buy me a coffee</strong><br><sub>امسح رمز QR أو افتحه لدعم Xiaoxiaodong</sub>
-  </td></tr></table>
-</div>
-
 ## الترخيص
 
 يُقدَّم هذا المشروع — بما في ذلك Skill والموجّهات والبرامج النصية والوثائق والعينات المرفقة — بموجب **PolyForm Noncommercial License 1.0.0**. النص القانوني الكامل موجود في [LICENSE](LICENSE)، والصفحة الرسمية هي <https://polyformproject.org/licenses/noncommercial/1.0.0>.
