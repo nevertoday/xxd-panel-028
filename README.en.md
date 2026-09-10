@@ -23,6 +23,8 @@
 
 ## 16:9 Left–Right Samples
 
+Four independent sources on complete 16:9 canvases: reality left, this Panel's design right, exact 50:50. English copy is generated from each photograph.
+
 <table>
   <tr>
     <td width="50%"><img src="./assets/examples/sample-05.png" alt="XXD Panel 028 Sample 5"></td>
@@ -36,7 +38,7 @@
 
 ## 3:4 Top–Bottom Samples
 
-These four works reuse the same four independent sources as the 16:9 set above, now regenerated as complete 3:4 top–bottom canvases. The original photograph remains above; the lower design follows Panel 028's original brief. English copy is generated only from each photograph's content, mood, or implication, and every result was individually reviewed.
+Four further independent sources, different from the 16:9 set, regenerated as complete 3:4 top–bottom canvases. The original photograph remains above; the lower design follows this Panel's original brief.
 
 <table>
   <tr>
@@ -48,21 +50,6 @@ These four works reuse the same four independent sources as the 16:9 set above, 
     <td width="50%"><img src="./assets/examples/sample-12.png" alt="XXD Panel 028 additional top-bottom sample 4"></td>
   </tr>
 </table>
-
-> [Xiaoxiaodong (@xiaoxiaodong01)](https://x.com/xiaoxiaodong01/status/2090447110168822128) · 2026-08-20<br>
-> GPT2 x 立体 x 模型 x 微缩 x 美学提示词 x VOL.028
-
-<p align="center"><a href="https://x.com/xiaoxiaodong01/status/2090447110168822128">View the original post and full prompt →</a></p>
-
-These samples demonstrate the 028 aesthetic motive. Their subjects, composition, palette, copy, and earlier canvas ratio never become generation references or current defaults.
-
-> ORTHOGRAPHIC ISOMETRIC · SMALL PAPER BASE · SOURCE-DERIVED PALETTE · FINE INK · EDITORIAL MODEL
-
-XXD Panel 028 is an image-generation Skill for Codex and compatible agents. It simplifies the photograph's recognisable identity, silhouette, pose, and relation into one orthographic isometric miniature or architectural maquette placed on a small source-earned paper base.
-
-Clear masses, edge crop, slight projection, and very few tiny details establish scale, solitude, and collectible presence, surrounded by generous open paper. Colour is wholly extracted, reduced, purified, and softened from the source. Fine ink, flat colour, light shadow, and subtle paper grain create a quiet editorial illustration.
-
-<!-- xxd-human-intro:start -->
 ## Where this Panel fits — and what it solves
 
 When a photograph needs to become a poster, cover, social asset, or wallpaper, the real design problem is rarely a simple change of style. The challenge is to redesign it while preserving identity, key relationships, mood, and recognisability.
