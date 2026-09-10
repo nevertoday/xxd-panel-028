@@ -84,21 +84,6 @@ XXD Panel 028 是一个面向 Codex 与兼容 Agent 的图像生成 Skill。它�
 上方样张可用于确认视觉方向；准备开始时，直接前往[开始使用](#开始使用)。完整模式、尺寸和参数收录在后面的折叠资料中，可按需查阅。
 <!-- xxd-human-intro:end -->
 
-## 使用窍门
-
-- **先给一张清楚的照片：** 先选一张主体、动作和关系都容易辨认的图，再决定输出方式与比例。
-- **一句话串起参数：** 直接说“上下对照 / 左右对照 / 纯设计 + 16:9 / 3:4 / 手机壁纸”，也可以补充电脑、平板或电子手表尺寸。
-- **把必须保留的内容说清楚：** 指定人物、物件、动作、关系和文字；避免同时规定过多布局细节，让风格有空间完成设计。
-- **文字有三种选择：** 让模型按图片智能生成、用 `--text exact --copy` 锁定逐字文案，或用 `--text none` 完全不要文字。
-- **说明现实区与设计区：** 上下或左右对照时，注明哪一侧保留照片、哪一侧负责设计转译；纯设计和壁纸则说明整张画布都要重新设计。
-- **先单张试，再批量做：** 先用一张图确认模式、比例、文字和语言，再把同一套参数用于目录批处理；每轮只改一个变量，结果更容易比较。
-
-## 原始提示词 · 五种语言
-
-[打开统一的多语言目录](references/original-prompt/)： [简体中文原文](references/original-prompt/zh-CN.md) · [English](references/original-prompt/en.md) · [日本語](references/original-prompt/ja.md) · [한국어](references/original-prompt/ko.md) · [العربية](references/original-prompt/ar.md)
-
-简体中文文件保存小小东提供的逐字原文，并且是运行时唯一审美权威；其他四个版本是忠实的阅读译文，方便国际读者理解和转发，不会反过来改写生图提示词。
-
 <!-- xxd-panel-benefit:start -->
 ## 快速判断：XXD Panel 028 适合你吗？
 
@@ -109,6 +94,54 @@ XXD Panel 028 是一个面向 Codex 与兼容 Agent 的图像生成 Skill。它�
 | **它如何尊重你的输入** | 保留输入中可辨认的身份、关系、结构与事实；风格化负责重新组织视觉语言，不把你的内容替换成无关模板。 |
 | **可以用在哪里** | 可生成上下、左右、纯设计画面和四端壁纸，并支持多个比例与准确尺寸；交付形式会变化，这套 Panel 的风格身份不会被稀释。 |
 <!-- xxd-panel-benefit:end -->
+
+## 使用窍门
+
+- **先给一张清楚的照片：** 先选一张主体、动作和关系都容易辨认的图，再决定输出方式与比例。
+- **一句话串起参数：** 直接说“上下对照 / 左右对照 / 纯设计 + 16:9 / 3:4 / 手机壁纸”，也可以补充电脑、平板或电子手表尺寸。
+- **把必须保留的内容说清楚：** 指定人物、物件、动作、关系和文字；避免同时规定过多布局细节，让风格有空间完成设计。
+- **文字有三种选择：** 让模型按图片智能生成、用 `--text exact --copy` 锁定逐字文案，或用 `--text none` 完全不要文字。
+- **说明现实区与设计区：** 上下或左右对照时，注明哪一侧保留照片、哪一侧负责设计转译；纯设计和壁纸则说明整张画布都要重新设计。
+- **先单张试，再批量做：** 先用一张图确认模式、比例、文字和语言，再把同一套参数用于目录批处理；每轮只改一个变量，结果更容易比较。
+
+## 开始使用
+
+```bash
+git clone https://github.com/nevertoday/xxd-panel-028.git
+mkdir -p ~/.codex/skills
+ln -s "$(pwd)/xxd-panel-028" ~/.codex/skills/xxd-panel-028
+```
+
+也可以直接使用 `npx skills` 安装：
+
+```bash
+npx skills add https://github.com/nevertoday/xxd-panel-028 --skill xxd-panel-028
+```
+
+该命令会从 GitHub 获取仓库，并把同名 Skill 安装到当前 Agent。若要安装到用户级 Codex Skills 目录，可在命令末尾加上 `--global --agent codex --yes`。
+
+Claude Code 用户可以把同一目录链接到 `~/.claude/skills/xxd-panel-028`。安装后重新启动 Agent 会话。
+
+```text
+$xxd-panel-028
+把这张照片做成左右双联，文案由你根据照片内涵创作，使用自然韩语。
+```
+
+只上传照片也可以调用。Skill 会先用分行编号菜单询问一个或多个模式，再询问文字设置；选择壁纸时还会确认连贯或独立以及设备尺寸。
+
+完整规范：
+
+- [Skill 工作流](SKILL.md)
+- [中文运行适配器](references/xxd-panel-028-prompt.zh-CN.md)
+- [英文运行适配器](references/xxd-panel-028-prompt.en.md)
+- [原始风格提示词](references/original-prompt/zh-CN.md)
+
+## 原始提示词 · 五种语言
+
+[打开统一的多语言目录](references/original-prompt/)： [简体中文原文](references/original-prompt/zh-CN.md) · [English](references/original-prompt/en.md) · [日本語](references/original-prompt/ja.md) · [한국어](references/original-prompt/ko.md) · [العربية](references/original-prompt/ar.md)
+
+简体中文文件保存小小东提供的逐字原文，并且是运行时唯一审美权威；其他四个版本是忠实的阅读译文，方便国际读者理解和转发，不会反过来改写生图提示词。
+
 
 <details>
 <summary><strong>完整能力与参数（需要时再展开）</strong></summary>
@@ -256,38 +289,6 @@ GPT Image 2 是默认首选，并继续执行本项目现有的高保真垫图�
 如果没有合适的生图通道，Skill 会请用户启用生图工具或提供 API Key。用户主动提供的凭据可以用于当前任务，但不得在回复或日志中回显、展示或泄露；未经用户明确要求，不会长期保存凭据或修改供应商、账户、计费及全局路由配置。
 
 </details>
-
-## 开始使用
-
-```bash
-git clone https://github.com/nevertoday/xxd-panel-028.git
-mkdir -p ~/.codex/skills
-ln -s "$(pwd)/xxd-panel-028" ~/.codex/skills/xxd-panel-028
-```
-
-也可以直接使用 `npx skills` 安装：
-
-```bash
-npx skills add https://github.com/nevertoday/xxd-panel-028 --skill xxd-panel-028
-```
-
-该命令会从 GitHub 获取仓库，并把同名 Skill 安装到当前 Agent。若要安装到用户级 Codex Skills 目录，可在命令末尾加上 `--global --agent codex --yes`。
-
-Claude Code 用户可以把同一目录链接到 `~/.claude/skills/xxd-panel-028`。安装后重新启动 Agent 会话。
-
-```text
-$xxd-panel-028
-把这张照片做成左右双联，文案由你根据照片内涵创作，使用自然韩语。
-```
-
-只上传照片也可以调用。Skill 会先用分行编号菜单询问一个或多个模式，再询问文字设置；选择壁纸时还会确认连贯或独立以及设备尺寸。
-
-完整规范：
-
-- [Skill 工作流](SKILL.md)
-- [中文运行适配器](references/xxd-panel-028-prompt.zh-CN.md)
-- [英文运行适配器](references/xxd-panel-028-prompt.en.md)
-- [原始风格提示词](references/original-prompt/zh-CN.md)
 
 ## 边界与信任
 

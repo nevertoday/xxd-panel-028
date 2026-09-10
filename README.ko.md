@@ -84,21 +84,6 @@ XXD Panel 028는 Codex와 호환 에이전트를 위한 이미지 생성 Skill�
 시각 방향을 먼저 확인하려면 위 예시를 살펴보세요. 준비가 되면 [시작하기](#시작하기)로 이동할 수 있습니다. 전체 모드와 매개변수는 접이식 참고 자료에서 필요할 때 확인할 수 있습니다.
 <!-- xxd-human-intro:end -->
 
-## 사용 팁
-
-- **선명한 사진 한 장부터 시작하세요:** 피사체, 동작, 관계가 잘 보이는 이미지를 고른 뒤 출력 방식과 비율을 정합니다.
-- **파라미터를 한 문장으로 연결하세요:** “상하 / 좌우 / 순수 디자인 + 16:9 / 3:4 / 휴대폰 배경화면”처럼 말하고 컴퓨터·태블릿·스마트워치 크기도 덧붙일 수 있습니다.
-- **남겨야 할 것을 분명히 하세요:** 인물, 사물, 동작, 관계, 문구를 지정하되 레이아웃을 지나치게 고정하지 않아야 스타일이 자연스럽게 설계합니다.
-- **텍스트 방식을 고르세요:** 이미지에서 지능적으로 생성하게 하거나, `--text exact --copy`로 정확한 문구를 고정하거나, `--text none`으로 글자를 없앨 수 있습니다.
-- **사진 영역과 디자인 영역을 설명하세요:** 상하·좌우에서는 사진을 남길 쪽과 다시 디자인할 쪽을 말하고, 순수 디자인·배경화면은 전체 캔버스를 다시 설계한다고 알려 주세요.
-- **한 장을 먼저 시험한 뒤 일괄 처리하세요:** 모드, 비율, 텍스트, 언어를 한 장에서 확인하고 같은 설정을 폴더에 적용합니다. 비교를 위해 한 번에 한 변수만 바꾸세요.
-
-## 원본 프롬프트 · 5개 언어
-
-[통일된 다국어 디렉터리 열기](references/original-prompt/): [중국어 간체 원문](references/original-prompt/zh-CN.md) · [English](references/original-prompt/en.md) · [日本語](references/original-prompt/ja.md) · [한국어](references/original-prompt/ko.md) · [العربية](references/original-prompt/ar.md)
-
-중국어 간체 파일은 샤오샤오둥이 제공한 문구를 그대로 보존하며 실행 시 유일한 미적 기준입니다. 다른 네 파일은 국제 독자의 이해와 공유를 위한 충실한 번역이며 이미지 생성 프롬프트를 역으로 바꾸지 않습니다.
-
 <!-- xxd-panel-benefit:start -->
 ## 빠른 판단: XXD Panel 028이 나에게 맞을까요?
 
@@ -109,6 +94,54 @@ XXD Panel 028는 Codex와 호환 에이전트를 위한 이미지 생성 Skill�
 | **입력 자료를 존중하는 방식** | 입력에 담긴 식별 가능한 정체성, 관계, 구조와 사실을 유지합니다. 스타일 변환은 시각 언어를 새롭게 구성할 뿐, 내용을 무관한 템플릿으로 바꾸지 않습니다. |
 | **활용할 수 있는 형식** | 상하, 좌우, 디자인 전용, 4종 기기 배경화면을 여러 비율이나 정확한 크기로 만들 수 있습니다. 전달 형식이 달라져도 이 Panel의 스타일 정체성은 희석되지 않습니다. |
 <!-- xxd-panel-benefit:end -->
+
+## 사용 팁
+
+- **선명한 사진 한 장부터 시작하세요:** 피사체, 동작, 관계가 잘 보이는 이미지를 고른 뒤 출력 방식과 비율을 정합니다.
+- **파라미터를 한 문장으로 연결하세요:** “상하 / 좌우 / 순수 디자인 + 16:9 / 3:4 / 휴대폰 배경화면”처럼 말하고 컴퓨터·태블릿·스마트워치 크기도 덧붙일 수 있습니다.
+- **남겨야 할 것을 분명히 하세요:** 인물, 사물, 동작, 관계, 문구를 지정하되 레이아웃을 지나치게 고정하지 않아야 스타일이 자연스럽게 설계합니다.
+- **텍스트 방식을 고르세요:** 이미지에서 지능적으로 생성하게 하거나, `--text exact --copy`로 정확한 문구를 고정하거나, `--text none`으로 글자를 없앨 수 있습니다.
+- **사진 영역과 디자인 영역을 설명하세요:** 상하·좌우에서는 사진을 남길 쪽과 다시 디자인할 쪽을 말하고, 순수 디자인·배경화면은 전체 캔버스를 다시 설계한다고 알려 주세요.
+- **한 장을 먼저 시험한 뒤 일괄 처리하세요:** 모드, 비율, 텍스트, 언어를 한 장에서 확인하고 같은 설정을 폴더에 적용합니다. 비교를 위해 한 번에 한 변수만 바꾸세요.
+
+## 시작하기
+
+```bash
+git clone https://github.com/nevertoday/xxd-panel-028.git
+mkdir -p ~/.codex/skills
+ln -s "$(pwd)/xxd-panel-028" ~/.codex/skills/xxd-panel-028
+```
+
+`npx skills`로도 바로 설치할 수 있습니다:
+
+```bash
+npx skills add https://github.com/nevertoday/xxd-panel-028 --skill xxd-panel-028
+```
+
+이 명령은 GitHub에서 저장소를 가져와 같은 이름의 Skill을 현재 Agent에 설치합니다. 사용자 전역 Codex Skills 디렉터리에 설치하려면 명령 끝에 `--global --agent codex --yes`를 추가하세요.
+
+Claude Code 사용자는 같은 폴더를 `~/.claude/skills/xxd-panel-028`에 연결할 수 있습니다. 설치 후 에이전트 세션을 다시 시작하세요.
+
+```text
+$xxd-panel-028
+이 사진을 좌우 구성으로 만들어 주세요. 문구는 사진의 의미에서 만들고 자연스러운 한국어를 사용하세요.
+```
+
+사진만 첨부해 호출해도 됩니다. 번호가 붙은 여러 줄 메뉴로 모드와 문구 설정을 확인하고, 배경화면 모드에서는 연결형／독립형과 기기 크기도 확인합니다.
+
+전체 사양:
+
+- [Skill 워크플로](SKILL.md)
+- [중문 런타임 어댑터](references/xxd-panel-028-prompt.zh-CN.md)
+- [영문 런타임 어댑터](references/xxd-panel-028-prompt.en.md)
+- [원본 스타일 지시](references/original-prompt/zh-CN.md)
+
+## 원본 프롬프트 · 5개 언어
+
+[통일된 다국어 디렉터리 열기](references/original-prompt/): [중국어 간체 원문](references/original-prompt/zh-CN.md) · [English](references/original-prompt/en.md) · [日本語](references/original-prompt/ja.md) · [한국어](references/original-prompt/ko.md) · [العربية](references/original-prompt/ar.md)
+
+중국어 간체 파일은 샤오샤오둥이 제공한 문구를 그대로 보존하며 실행 시 유일한 미적 기준입니다. 다른 네 파일은 국제 독자의 이해와 공유를 위한 충실한 번역이며 이미지 생성 프롬프트를 역으로 바꾸지 않습니다.
+
 
 ## 입력을 고유한 완성작으로 바꾸는 방식
 
@@ -278,38 +311,6 @@ GPT Image 2를 기본 최우선 모델로 사용합니다. 고충실도 원본 �
 적합한 경로가 없으면 이미지 생성 도구를 활성화하거나 API Key를 제공하도록 사용자에게 요청합니다. 사용자가 제공한 인증 정보는 현재 작업에 사용할 수 있지만 답변이나 로그에 다시 표시·기록·노출하지 않습니다. 사용자가 명시적으로 요청하지 않는 한 장기 저장하거나 제공자, 계정, 결제 또는 전역 경로 설정을 변경하지 않습니다.
 
 </details>
-
-## 시작하기
-
-```bash
-git clone https://github.com/nevertoday/xxd-panel-028.git
-mkdir -p ~/.codex/skills
-ln -s "$(pwd)/xxd-panel-028" ~/.codex/skills/xxd-panel-028
-```
-
-`npx skills`로도 바로 설치할 수 있습니다:
-
-```bash
-npx skills add https://github.com/nevertoday/xxd-panel-028 --skill xxd-panel-028
-```
-
-이 명령은 GitHub에서 저장소를 가져와 같은 이름의 Skill을 현재 Agent에 설치합니다. 사용자 전역 Codex Skills 디렉터리에 설치하려면 명령 끝에 `--global --agent codex --yes`를 추가하세요.
-
-Claude Code 사용자는 같은 폴더를 `~/.claude/skills/xxd-panel-028`에 연결할 수 있습니다. 설치 후 에이전트 세션을 다시 시작하세요.
-
-```text
-$xxd-panel-028
-이 사진을 좌우 구성으로 만들어 주세요. 문구는 사진의 의미에서 만들고 자연스러운 한국어를 사용하세요.
-```
-
-사진만 첨부해 호출해도 됩니다. 번호가 붙은 여러 줄 메뉴로 모드와 문구 설정을 확인하고, 배경화면 모드에서는 연결형／독립형과 기기 크기도 확인합니다.
-
-전체 사양:
-
-- [Skill 워크플로](SKILL.md)
-- [중문 런타임 어댑터](references/xxd-panel-028-prompt.zh-CN.md)
-- [영문 런타임 어댑터](references/xxd-panel-028-prompt.en.md)
-- [원본 스타일 지시](references/original-prompt/zh-CN.md)
 
 ## 경계와 신뢰
 
