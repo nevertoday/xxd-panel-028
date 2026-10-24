@@ -1,6 +1,6 @@
 ---
 name: xxd-panel-028
-description: "Create XXD Panel 028 raster artwork from one image or a directory batch while treating the bundled original style brief as the sole aesthetic authority. Supports one or more top-bottom, left-right, design-only, and four-device wallpaper outputs; multiple ratios or exact sizes; prompt-generated, user-exact, or text-free typography; and inline parameters. Use when the user invokes xxd-panel-028 or requests the exact Panel 028 style."
+description: "XXD Panel 028｜Isometric Micro-Landscape: places the subject of a photo into a refined minimal isometric miniature on paper, like a small model or architectural diorama cut out and set on a little paper base: simplified blocks, clean edges and a few tiny details that keep it recognisable, surrounded by wide whitespace with slight shadows for scale, in a limited palette drawn entirely from the photo and softened while keeping its warm-cool character, rendered with fine ink line, flat colour planes, light shadow and paper grain, plus a short title and a few small numbers or notes set along the base or the isometric axes. Outputs PNG top-bottom or left-right comparisons, design-only images, or phone/tablet/desktop/watch wallpapers, from one photo or a folder. Use when the user invokes xxd-panel-028 or asks for isometric miniature dioramas, paper-model architecture illustration or source-colour isometric art from a photo."
 ---
 
 # XXD Panel 028

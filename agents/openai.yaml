@@ -1,7 +1,7 @@
 interface:
   display_name: "/xxd-panel-028"
-  short_description: "Create Panel 028 from images or a directory batch."
-  default_prompt: "Use $xxd-panel-028; accept one image or an image directory, keep the body of its bundled original style brief as the sole aesthetic authority, resolve shared batch settings once, isolate every source, send exactly one mode-specific delivery contract per asset, keep one flat task directory, make design-only and wallpaper outputs fully transformed, and ground factual-looking copy in supplied or verified facts."
+  short_description: "等距微景观：把照片安放成一件用源图配色、墨线和纸面颗粒画出的等距微缩模型"
+  default_prompt: "Use $xxd-panel-028 to turn my photo into Isometric Micro-Landscape artwork."
 
 policy:
   allow_implicit_invocation: true

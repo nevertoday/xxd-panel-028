@@ -1,0 +1,114 @@
+{
+  "skill_description": "XXD Panel 028｜Isometric Micro-Landscape: places the subject of a photo into a refined minimal isometric miniature on paper, like a small model or architectural diorama cut out and set on a little paper base: simplified blocks, clean edges and a few tiny details that keep it recognisable, surrounded by wide whitespace with slight shadows for scale, in a limited palette drawn entirely from the photo and softened while keeping its warm-cool character, rendered with fine ink line, flat colour planes, light shadow and paper grain, plus a short title and a few small numbers or notes set along the base or the isometric axes. Outputs PNG top-bottom or left-right comparisons, design-only images, or phone/tablet/desktop/watch wallpapers, from one photo or a folder. Use when the user invokes xxd-panel-028 or asks for isometric miniature dioramas, paper-model architecture illustration or source-colour isometric art from a photo.",
+  "short_description": "等距微景观：把照片安放成一件用源图配色、墨线和纸面颗粒画出的等距微缩模型",
+  "zh-CN": {
+    "name": "等距微景观",
+    "tagline": "把照片安放成一件用原图配色画出的等距纸上微缩模型，像一座小小的建筑沙盘。",
+    "look": "主体被切下来，安放在一小块纸面或微型基座上，用等距视角、概括体块、清晰边缘和少量微小细节重新表达，仍一眼认得出来。四周是大片留白，靠体量对比、边缘裁切和轻微投影带出尺度感和一点孤独感，辅助元素很少。颜色全部从照片里取，归纳、提纯、柔化成有限色盘，保留原图的冷暖性格，不加无关的固定配色；用精细墨线、扁平色面、轻微阴影和纸张颗粒表现结构。文字是一个短标题加少量编号或短注，沿基座、水平轴或等距结构排列。",
+    "traits": [
+      "正交等距",
+      "微缩基座",
+      "限定色盘",
+      "精细墨线",
+      "纸上插画"
+    ],
+    "good": [
+      "建筑和街角：一家咖啡馆、一栋老房子、一个小车站、一段石阶",
+      "有边界的场景：海边小码头、林间营地、屋顶花园、一间书房",
+      "交通工具和大件物品：一辆露营车、一艘渔船"
+    ],
+    "poor": [
+      "近距离人像，等距微缩会让脸太小、表情消失",
+      "想要高饱和撞色或与原图无关的配色的需求",
+      "想要塑料 3D 质感或复杂场景堆满画面的效果"
+    ]
+  },
+  "en": {
+    "name": "Isometric Micro-Landscape",
+    "tagline": "Sets your photo down as an isometric paper miniature in its own colours, like a small architectural model.",
+    "look": "The subject is cut out and set on a small piece of paper or a tiny base, rebuilt in isometric view with simplified blocks, clean edges and a few small details, and still recognisable at a glance. Wide whitespace surrounds it, with contrast of mass, cropped edges and soft shadows giving a sense of scale and a touch of solitude; extras are kept to a minimum. Every colour comes from the photo, gathered, purified and softened into a limited palette that keeps its warm-cool character, with no unrelated stock colours; structure is drawn with fine ink line, flat planes of colour, light shadow and paper grain. Text is a short title with a few numbers or brief notes set along the base, the horizontal axis or the isometric structure.",
+    "traits": [
+      "Orthographic isometric",
+      "Miniature base",
+      "Limited palette",
+      "Fine ink line",
+      "Illustration on paper"
+    ],
+    "good": [
+      "Buildings and street corners: a café, an old house, a small station, a flight of stone steps",
+      "Scenes with clear edges: a small seaside pier, a forest camp, a rooftop garden, a study",
+      "Vehicles and large objects: a camper van, a fishing boat"
+    ],
+    "poor": [
+      "Close-up portraits, since the miniature makes faces tiny and loses expression",
+      "Requests for saturated clashing colour or colours unrelated to the photo",
+      "Requests for plastic 3D or a crowded, packed scene"
+    ]
+  },
+  "ja": {
+    "name": "アイソメトリック・ミニ風景",
+    "tagline": "写真を、元の色で描いた紙の上のアイソメトリックなミニチュア模型、小さな建築ジオラマのように置き直します。",
+    "look": "主役を切り取り、小さな紙片やミニチュアの台座に載せ、アイソメトリックの視点、まとめた量塊、くっきりした縁、少しの小さな細部で描き直します。それでも一目でそれとわかります。まわりは大きな余白で、量感の対比、縁の切り取り、軽い影でスケール感と少しの孤独感を出し、補助の要素はごくわずかです。色はすべて写真から取り、まとめ、澄ませ、やわらげて限られたパレットにし、元の写真の寒暖の性格を残して、関係のない決まった配色は加えません。構造は細い墨線、平らな色面、軽い影、紙の粒子で表します。文字は短いタイトルと少しの番号や短い注記で、台座、水平の軸、アイソメトリックの構造に沿って並べます。",
+    "traits": [
+      "正投影アイソメ",
+      "ミニチュアの台座",
+      "限られたパレット",
+      "細い墨線",
+      "紙の上のイラスト"
+    ],
+    "good": [
+      "建物や街角：カフェ、古い家、小さな駅、石段",
+      "境界のはっきりした場面：海辺の小さな桟橋、森のキャンプ場、屋上庭園、書斎",
+      "乗り物や大きなモノ：キャンピングカー、漁船"
+    ],
+    "poor": [
+      "顔に寄った人物写真（ミニチュアにすると顔が小さくなり表情が消えます）",
+      "高彩度の色のぶつけ合いや、写真と関係のない配色を求める場合",
+      "プラスチック風の 3D や、場面を詰め込んだ仕上がりを求める場合"
+    ]
+  },
+  "ko": {
+    "name": "아이소메트릭 미니 풍경",
+    "tagline": "사진을 원래 색으로 그린 종이 위 아이소메트릭 미니어처 모형, 작은 건축 디오라마처럼 놓아 둡니다.",
+    "look": "주인공을 잘라 내 작은 종이 조각이나 미니 받침대 위에 올리고, 아이소메트릭 시점, 단순화한 덩어리, 깔끔한 가장자리, 약간의 작은 디테일로 다시 표현하며, 그래도 한눈에 알아볼 수 있습니다. 둘레는 넓은 여백이고, 부피 대비, 가장자리 잘림, 옅은 그림자로 크기감과 약간의 고독감을 주며 보조 요소는 아주 적습니다. 색은 모두 사진에서 가져와 정리하고 맑게 다듬고 부드럽게 한 한정 팔레트로 만들며, 원본의 차갑고 따뜻한 성격을 지키고 상관없는 고정 배색은 넣지 않습니다. 구조는 가는 먹선, 평평한 색면, 옅은 그림자, 종이 결로 나타냅니다. 글자는 짧은 제목과 약간의 번호나 짧은 메모로, 받침대, 수평축, 아이소메트릭 구조를 따라 놓입니다.",
+    "traits": [
+      "정투영 아이소메트릭",
+      "미니어처 받침대",
+      "한정 팔레트",
+      "가는 먹선",
+      "종이 위 일러스트"
+    ],
+    "good": [
+      "건물과 골목 모퉁이: 카페, 오래된 집, 작은 역, 돌계단",
+      "경계가 분명한 장면: 바닷가 작은 선착장, 숲속 캠핑장, 옥상 정원, 서재",
+      "탈것과 큰 물건: 캠핑카, 고깃배"
+    ],
+    "poor": [
+      "얼굴을 가까이 찍은 인물 사진(미니어처로 만들면 얼굴이 작아지고 표정이 사라집니다)",
+      "고채도 색 충돌이나 사진과 상관없는 배색을 원하는 경우",
+      "플라스틱 3D 질감이나 장면을 꽉 채운 결과를 원하는 경우"
+    ]
+  },
+  "ar": {
+    "name": "منظر مصغّر متساوي القياس",
+    "tagline": "يضع صورتك نموذجاً مصغّراً متساوي القياس على الورق بألوانها نفسها، كمجسّم معماري صغير.",
+    "look": "يُقتطع العنصر ويوضع على قطعة ورق صغيرة أو قاعدة مصغّرة، ويُعاد بناؤه بمنظور متساوي القياس وكتل مبسّطة وحواف نظيفة وبعض التفاصيل الصغيرة، ويبقى معروفاً من النظرة الأولى. يحيط به فراغ واسع، ويمنح تباين الكتل والحواف المقصوصة والظلال الخفيفة إحساساً بالحجم ولمسة من العزلة، مع أقل قدر من العناصر المساعدة. تُؤخذ الألوان كلها من الصورة، وتُجمع وتُنقّى وتُليَّن في لوحة محدودة تحفظ طابعها الدافئ والبارد، بلا ألوان جاهزة لا علاقة لها بها، وتُرسم البنية بخطوط حبر رفيعة ومساحات لونية مسطّحة وظل خفيف وحبيبات الورق. النص عنوان قصير مع أرقام قليلة أو ملاحظات موجزة على امتداد القاعدة أو المحور الأفقي أو البنية المتساوية القياس.",
+    "traits": [
+      "منظور متساوي القياس",
+      "قاعدة مصغّرة",
+      "لوحة ألوان محدودة",
+      "خط حبر رفيع",
+      "رسم على الورق"
+    ],
+    "good": [
+      "مبانٍ وزوايا شوارع: مقهى، بيت قديم، محطة صغيرة، درجات حجرية",
+      "مشاهد واضحة الحدود: رصيف بحري صغير، مخيم في غابة، حديقة على سطح، غرفة مكتب",
+      "مركبات وأشياء كبيرة: عربة تخييم، قارب صيد"
+    ],
+    "poor": [
+      "صور الوجوه القريبة، فالتصغير يجعل الوجه ضئيلاً ويضيع تعبيره",
+      "طلب ألوان مشبعة متصادمة أو ألوان لا علاقة لها بالصورة",
+      "طلب مظهر بلاستيكي ثلاثي الأبعاد أو مشهد مزدحم ممتلئ"
+    ]
+  }
+}
